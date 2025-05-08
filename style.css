@@ -259,11 +259,13 @@ nav {
   }
 
 .image {
+  text-align: center;
 }
 
 .para {
   margin: 40px;
   font-size: large;
+  text-align: left;
 }
 
 .line {
