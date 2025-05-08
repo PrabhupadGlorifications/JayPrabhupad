@@ -76,6 +76,7 @@ nav {
     justify-content: center;
     padding: 10px 0;
     font-size: 30px;
+    border-bottom: 2px solid #f5a623
   }
   
   .nav-link {
@@ -88,7 +89,6 @@ nav {
   
 
   .nav-link.active {
-
     color: #f5a623;
     border-bottom: 2px solid #f5a623
   }
