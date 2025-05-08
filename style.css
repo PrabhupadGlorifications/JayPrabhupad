@@ -50,6 +50,10 @@ body {
   background: url('https://assets.weforum.org/article/image/responsive_large_M6WwUWq0RPC7_MW5n6s81wgynwMAkV1RKeJfawkhDDo.jpg') no-repeat center center/cover;
 }
 
+.social {
+  text-align: left;
+}
+
 nav {
   background-color: #3b6978;
   padding: 15px;
