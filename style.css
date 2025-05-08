@@ -208,7 +208,9 @@ nav {
     .tablem{
       font-family: Arial, sans-serif;
       background: url('images/hqdefault4fet.jpg') no-repeat center center;
-      background-size: cover;    
+      background-size: cover;
+      border-bottom: 2px solid #f5a623;
+      border-top: 2px solid #f5a623;    
       margin: 0;
       padding: 40px;
       display: flex;
