@@ -1,0 +1,193 @@
+<!-- HTML Structure for Social Links -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Links</title>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Professional Social Links Styling */
+        
+        /* Basic page reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        /* Container styling */
+        .links {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Links styling */
+        .links .link-item {
+            display: flex;
+            align-items: center;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+            border-left: 4px solid transparent;
+        }
+        
+        /* Last item needs no margin bottom */
+        .links .link-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Hover effect */
+        .links .link-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fcfcfc;
+        }
+        
+        /* Active/focus state */
+        .links .link-item:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Icon styling */
+        .links i {
+            font-size: 20px;
+            margin-right: 15px;
+            width: 24px;
+            text-align: center;
+        }
+        
+        /* Individual platform color accents on hover */
+        .links .link-item:nth-child(2):hover,
+        .links .link-item:nth-child(3):hover {
+            border-left-color: #25D366; /* WhatsApp green */
+        }
+        
+        .links .link-item:nth-child(4):hover,
+        .links .link-item:nth-child(7):hover,
+        .links .link-item:nth-child(8):hover {
+            border-left-color: #FF0000; /* YouTube red */
+        }
+        
+        .links .link-item:nth-child(5):hover {
+            border-left-color: #0088cc; /* Telegram blue */
+        }
+        
+        .links .link-item:nth-child(6):hover {
+            border-left-color: #E1306C; /* Instagram pink */
+        }
+        
+        .links .link-item:nth-child(9):hover {
+            border-left-color: #FFD700; /* Donation gold */
+        }
+        
+        /* Section title */
+        .links-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        /* Alternative layout: 2-column grid for larger screens */
+        @media (min-width: 768px) {
+            .links {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .links-title {
+                grid-column: span 2;
+            }
+            
+            .links .link-item {
+                margin-bottom: 0;
+            }
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 767px) {
+            .links {
+                padding: 15px;
+                margin: 20px 15px;
+            }
+            
+            .links .link-item {
+                padding: 12px 14px;
+                font-size: 14px;
+            }
+            
+            .links i {
+                font-size: 18px;
+                margin-right: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="links">
+        <h3 class="links-title">Connect With Us</h3>
+        
+        <a href="https://whatsapp.com/channel/0029VagClb9E50UmVCPTNd3T" target="_blank" class="link-item">
+            <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+            Join Prabhupad Glorifications WhatsApp Channel
+        </a>
+        
+        <a href="https://whatsapp.com/channel/0029Vb4GWQ8KQuJBBFvPMi2q" target="_blank" class="link-item">
+            <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+            Join Prabhupad Glorifications WhatsApp Channel Hindi
+        </a>
+        
+        <a href="https://www.youtube.com/@PrabhupadGlorifications" target="_blank" class="link-item">
+            <i class="fa-brands fa-youtube" style="color: #ea0606;"></i>
+            Visit Prabhupad Glorifications YouTube Channel
+        </a>
+        
+        <a href="https://t.me/prabhupadglorifications" target="_blank" class="link-item">
+            <i class="fa-brands fa-telegram" style="color: #74C0FC;"></i>
+            Join Prabhupad Glorifications Telegram Channel
+        </a>
+        
+        <a href="https://www.instagram.com/prabhupad_glorifications_?igsh=MWd0NnNkbzduaWhlNg==" target="_blank" class="link-item">
+            <i class="fa-brands fa-instagram" style="color: #ed07b0;"></i>
+            Follow Prabhupad Glorifications Instagram Channel
+        </a>
+        
+        <a href="https://www.youtube.com/@BhaktiVikasaSwami" target="_blank" class="link-item">
+            <i class="fa-brands fa-youtube" style="color: #ea0606;"></i>
+            Visit HH Bhakti Vikasa Swami maharaj official YouTube Channel
+        </a>
+        
+        <a href="https://www.youtube.com/@LogicaSpiritus" target="_blank" class="link-item">
+            <i class="fa-brands fa-youtube" style="color: #ea0606;"></i>
+            Visit Logica Spiritus
+        </a>
+        
+        <a href="https://donate.bvksmedia.net/" target="_blank" class="link-item">
+            <i class="fa-solid fa-circle-dollar-to-slot" style="color: #FFD43B;"></i>
+            Support BVKS Media
+        </a>
+    </div>
+</body>
+</html>
