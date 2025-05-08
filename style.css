@@ -240,6 +240,7 @@ nav {
   ul {
       list-style-type: square;
       padding-left: 20px;
+      text-align: left;
   }
   ul li {
       margin-bottom: 15px;
