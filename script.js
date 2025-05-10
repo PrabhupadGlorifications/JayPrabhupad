@@ -30,3 +30,21 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+function addSearchFunctionality(searchInputId, listId) {
+    const searchInput = document.getElementById(searchInputId);
+    const list = document.getElementById(listId);
+    const items = list.getElementsByTagName('li');
+
+    searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        Array.from(items).forEach(item => {
+            const text = item.textContent.toLowerCase();
+            item.style.display = text.includes(searchTerm) ? '' : 'none';
+        });
+    });
+}
+
+addSearchFunctionality('writingsSearch', 'writingsList');
+addSearchFunctionality('pastimesSearch', 'pastimesList');
+
