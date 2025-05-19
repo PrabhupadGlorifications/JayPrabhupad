@@ -3,8 +3,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 40px 40px;
+
+    row-gap: 0px;
+    column-gap: 40px;
+    padding: 20px 20px;
 }
 
 .card {
@@ -165,7 +167,7 @@ h2 {
 }
 
 .card-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 
 }
@@ -177,58 +179,35 @@ h2 {
 
 
 /* Phone view: 2 cards per row */
-@media (max-width: 640px) {
+@media (min-width: 700px) {
     .card-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-
+        row-gap: 40px;
+        column-gap: 0px;
+        padding: 20px;
     }
-
     .card {
-        width: 200px;
-        height: 280px;
+        width: 400px;
+        height: 480px;
     }
-}
-
-/* Tablet view: 3 cards per row */
-@media (min-width: 641px) and (max-width: 1024px) {
-    .card-container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
     }
-
-    .card {
-        width: 250px;
-        height: 300px;
-    }
-}
-
 
 /* Desktop view: 4 cards per row */
 @media (min-width: 1025px) {
     .card-container {
         grid-template-columns: repeat(4, 1fr);
-        gap: 70px;
+        row-gap: 40px;
+        column-gap: 0px;
+        padding: 20px;
     }
 
     .card {
-        width: 250px;
+        width: 260px;
         height: 300px;
     }
 }
 
-@media (max-width: 640px) {
-    .card-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20 px;
 
-    }
-
-    .card {
-        width: 200px;
-        height: 280px;
-    }
-}
 
 .btn:hover {
     background: #81ecec;
