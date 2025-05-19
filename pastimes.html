@@ -1,71 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>About</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    /* Search Bar and Sort Dropdown Styling */
-.search-bar-container {
-    display: inline-block;
-    margin: 20px;
-    width: 250px;
-}
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Search Bar and Sort Dropdown Styling */
+        .search-bar-container {
+            display: inline-block;
+            margin: 20px;
+            width: 250px;
+        }
 
-.search-bar-container input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    background-color: #f8f8f8;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
+        .search-bar-container input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            background-color: #f8f8f8;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
 
-.search-bar-container input::placeholder {
-    color: #888;
-    font-weight: 300;
-}
+        .search-bar-container input::placeholder {
+            color: #888;
+            font-weight: 300;
+        }
 
-.search-bar-container input:focus {
-    background-color: #fff;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
+        .search-bar-container input:focus {
+            background-color: #fff;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
 
-/* Sort Dropdown Styling */
-.sortdropdown {
-    width: 150px;
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-    background-color: #f8f8f8;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    margin-left: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
+        /* Sort Dropdown Styling */
+        .sortdropdown {
+            width: 150px;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            background-color: #f8f8f8;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
 
-.sortdropdown:focus {
-    background-color: #fff;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-
-</style>
+        .sortdropdown:focus {
+            background-color: #fff;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
+
 <body>
     <div class="header">
         PRABHUPAD GLORIFICATIONS
     </div>
 
     <div class="sub-header">
-        <em>Ebe jaśa ghusuk tribhuvana</em><br>
-        Your fame is spread all over the three worlds.
+        <div id="sub-header">
+            <p><em>Ebe jaśa ghusuk tribhuvana</em></p>
+            <p>Your fame is spread all over the three worlds.</p>
+        </div>
     </div>
     <nav>
         <a href="home.html" class="nav-link">Home</a>
@@ -76,18 +80,18 @@
         <a href="donate.html" class="nav-link">Donate</a>
     </nav>
     <!-- Search Bar -->
-     <div>
-        <a class="search-bar-container" id=""articlesContainer">
-            <input type="text" id="searchBar" placeholder="Search Articles..." >
+    <div>
+        <a class="search-bar-container" id="" articlesContainer">
+            <input type="text" id="searchBar" placeholder="Search Articles...">
         </a>
         <a>
             <select id="writingsSort" class="sortdropdown" onchange="sortCards()">
-               <option value="asc">Sort A-Z</option>
-               <option value="desc">Sort Z-A</option>
+                <option value="asc">Sort A-Z</option>
+                <option value="desc">Sort Z-A</option>
             </select>
         </a>
-     </div>
-    <div class="card-container" id="articlesContainer">    
+    </div>
+    <div class="card-container" id="articlesContainer">
         <div class="card">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-04 at 8.01.49 PM.jpg" alt="Card 10">
@@ -98,7 +102,7 @@
                 <a href="die.html" class="btn">Read More</a>
             </div>
         </div>
-        
+
         <div class="card">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-05 at 11.44.54 AM.jpeg" alt="Card 11">
@@ -108,10 +112,10 @@
                 <h2>what to do when one is destroying that faith by criticizing Srila Prabhupada?</h2>
                 <a href="faith.html" class="btn">Read More</a>
             </div>
-        </div>     
+        </div>
     </div>
     <script src="script.js"></script>
-        <script>
+    <script>
         function sortCards() {
             const container = document.getElementById('articlesContainer');
             const cards = Array.from(container.getElementsByClassName('card'));
@@ -125,7 +129,7 @@
             cards.forEach(card => container.appendChild(card));
         }
     </script>
-        <footer class="bg-black text-white py-10">
+    <footer class="bg-black text-white py-10">
         <div class="footer-container">
             <!-- Left Box -->
             <div class="footer-box">
@@ -206,4 +210,5 @@
         </div>
     </footer>
 </body>
+
 </html>

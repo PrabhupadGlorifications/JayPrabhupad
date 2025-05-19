@@ -1,0 +1,59 @@
+.tablem {
+  font-family: Arial, sans-serif;
+  background: url('images/hqdefault4fet.jpg') no-repeat center center;
+  background-size: cover;
+  border-bottom: 2px solid #f5a623;
+  border-top: 2px solid #f5a623;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  font-size: 1.6em;
+}
+
+.table-container {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(148, 228, 250, 0.4);
+  width: 350px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.table-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(148, 228, 250, 0.4);
+}
+
+.table-title {
+  font-size: 1.8em;
+  color: #d35400;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+  text-align: left;
+}
+
+ul li {
+  margin-bottom: 15px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+
+ul li a:hover {
+  color: #d35400;
+  border-bottom: 2px solid #d35400;
+}
