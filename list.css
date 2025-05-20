@@ -34,17 +34,17 @@
   font-weight: bold;
 }
 
-ul {
+.table-container ul {
   list-style-type: square;
   padding-left: 20px;
   text-align: left;
 }
 
-ul li {
+.table-container ul li {
   margin-bottom: 15px;
 }
 
-ul li a {
+.table-container ul li a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -52,8 +52,7 @@ ul li a {
   border-bottom: 2px solid transparent;
 }
 
-
-ul li a:hover {
+.table-container ul li a:hover {
   color: #d35400;
   border-bottom: 2px solid #d35400;
 }

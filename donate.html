@@ -1,125 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>About</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        h1 {
+            font-size: 2.5rem;
+            color: #343a40;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
 
-    h1 {
-        font-size: 2.5rem;
-        color: #343a40;
-        margin-bottom: 20px;
-        text-align: center;
-        font-weight: 600;
-    }
-    .expand {
-        font-size: 1.2rem;
-        color: #495057;
-        text-align: center;
-        margin-bottom: 30px;
-        font-style: italic;
-        animation: fadeIn 1.5s ease-in-out;
-    }
-    .qr img {
-        width: 250px;
-        height: 250px;
-        border-radius: 20px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        margin-bottom: 30px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .qr img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    }
-    .form-container {
-        width: 90%;
-        max-width: 800px;
-        margin-bottom: 40px;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    }
-    .form-container h2 {
-        background-color: #343a40;
-        color: #ffffff;
-        padding: 15px;
-        font-weight: 500;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        text-align: center;
-        margin: 0;
-    }
-    iframe {
-        width: 100%;
-        height: 500px;
-        border: none;
-    }
-    .thank-you-message {
-        display: none;
-        background-color: #d4edda;
-        color: #155724;
-        padding: 15px;
-        border-radius: 20px;
-        margin-bottom: 20px;
-        text-align: center;
-        font-weight: 500;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        animation: fadeIn 1.5s ease-in-out;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-  </style>
-</head>
-<body>
-  <div class="header">PRABHUPAD GLORIFICATIONS</div>
+        .expand {
+            font-size: 1.2rem;
+            color: #495057;
+            text-align: center;
+            margin-bottom: 30px;
+            font-style: italic;
+            animation: fadeIn 1.5s ease-in-out;
+        }
 
-  <div class="sub-header">
-    <div id="sub-header">
-      <p><em>Ebe jaśa ghusuk tribhuvana</em></p>
-      <p>Your fame is spread all over the three worlds.</p>
-    </div>
-  </div>
-  <nav>
-    <a href="home.html" class="nav-link">Home</a>
-    <a href="articles.html" class="nav-link">Articles</a>
-    <a href="pastimes.html" class="nav-link">Pastimes</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="contact.html" class="nav-link">Contact</a>
-    <a href="donate.html" class="nav-link">Donate</a>
-  </nav>
+        .qr img {
+            width: 250px;
+            height: 250px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-  <div><h1>Support Prabhupad Glorifications</h1></div>
-  <p class="expand"><i>"Expand the Wave of Bhakti: Your Support Makes a Difference!"</i></p>
-  <h3>Pay via UPI</h3>
-  <p class="qr"><img src="images/WhatsApp Image 2025-05-07 at 4.57.59 PM.jpeg" alt=""></p>
+        .qr img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
 
-  <div class="form-container">
-    <h2>Please fill the form after donating</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdvkCCZVpq00B8AAJQ5LC-JY6F25K1OxIjnE4QdGRxYmgQfg/viewform?usp=header" id="donation-form" onload="addFormListener()"></iframe>
-  </div>
+        .form-container {
+            width: 90%;
+            max-width: 800px;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
 
-  <div class="thank-you-message" id="thank-you-message">
-    Hare Krishna! Thank you for your generous support!
-  </div>
+        .form-container h2 {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 15px;
+            font-weight: 500;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            text-align: center;
+            margin: 0;
+        }
 
-  <script>
-    function addFormListener() {
-        const formIframe = document.getElementById("donation-form");
-        formIframe.onload = () => {
-            const message = document.getElementById("thank-you-message");
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.has("submitted")) {
-                message.style.display = "block";
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        .thank-you-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
             }
         }
-    }
-  </script>
-      <footer class="bg-black text-white py-10">
+    </style>
+</head>
+
+<body>
+    <div class="header">PRABHUPAD GLORIFICATIONS</div>
+
+    <div class="sub-header">
+        <div id="sub-header">
+            <p><em>Ebe jaśa ghusuk tribhuvana</em></p>
+            <p>Your fame is spread all over the three worlds.</p>
+        </div>
+    </div>
+    <nav>
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="articles.html" class="nav-link">Articles</a>
+        <a href="pastimes.html" class="nav-link">Pastimes</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="donate.html" class="nav-link">Donate</a>
+    </nav>
+
+    <div>
+        <h1>Support Prabhupad Glorifications</h1>
+    </div>
+    <p class="expand"><i>"Expand the Wave of Bhakti: Your Support Makes a Difference!"</i></p>
+    <h3>Pay via UPI</h3>
+    <p class="qr"><img src="images/WhatsApp Image 2025-05-07 at 4.57.59 PM.jpeg" alt=""></p>
+
+    <div class="form-container">
+        <h2>Please fill the form after donating</h2>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfdvkCCZVpq00B8AAJQ5LC-JY6F25K1OxIjnE4QdGRxYmgQfg/viewform?usp=header"
+            id="donation-form" onload="addFormListener()"></iframe>
+    </div>
+
+    <div class="thank-you-message" id="thank-you-message">
+        Hare Krishna! Thank you for your generous support!
+    </div>
+
+    <script>
+        function addFormListener() {
+            const formIframe = document.getElementById("donation-form");
+            formIframe.onload = () => {
+                const message = document.getElementById("thank-you-message");
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.has("submitted")) {
+                    message.style.display = "block";
+                }
+            }
+        }
+    </script>
+    <footer class="bg-black text-white py-10">
         <div class="footer-container">
             <!-- Left Box -->
             <div class="footer-box">
@@ -200,5 +221,5 @@
         </div>
     </footer>
 </body>
-</html>
 
+</html>

@@ -204,6 +204,9 @@ footer {
   cursor: pointer;
 }
 
+a{
+  text-decoration: none;
+}
 .footer-links li:hover {
   color: #ffffff;
 }
@@ -231,7 +234,7 @@ footer {
 
 .footerlink a:hover {
   color: #ffffff;
-  border-bottom: 0px solid #000000;
+  
 }
 
 ul {
@@ -291,8 +294,6 @@ iframe {
 
 .search-bar {
   width: 30%;
-
-
   border: 1px solid #ccc;
   box-shadow: 0 2px 8px rgba(148, 228, 250, 0.4);
   font-family: 'Poppins', sans-serif;
@@ -302,7 +303,6 @@ iframe {
 
 .sort-dropdown {
   width: 30%;
-
   border: 1px solid #ccc;
   box-shadow: 0 2px 8px rgba(148, 228, 250, 0.4);
   font-family: 'Poppins', sans-serif;
