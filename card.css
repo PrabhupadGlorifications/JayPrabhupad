@@ -193,7 +193,7 @@ h2 {
     }
 
 /* Desktop view: 4 cards per row */
-@media (min-width: 1025px) {
+@media (min-width: 1234px) {
     .card-container {
         grid-template-columns: repeat(4, 1fr);
         row-gap: 40px;
@@ -207,7 +207,20 @@ h2 {
     }
 }
 
+/* Desktop view: 4 cards per row */
+@media (min-width: 1000px) and (max-width: 1234px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 40px;
+        column-gap: 0px;
+        padding: 20px;
+    }
 
+    .card {
+        width: 260px;
+        height: 300px;
+    }
+}
 
 .btn:hover {
     background: #81ecec;
