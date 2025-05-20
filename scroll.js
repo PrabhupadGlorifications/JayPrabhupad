@@ -7,3 +7,4 @@
     reset: true, // <--- This makes it animate again on re-entry
     delay: 100
   });
+
