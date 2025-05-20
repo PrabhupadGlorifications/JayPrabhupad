@@ -309,7 +309,8 @@ iframe {
   font-size: 20px;
 }
 
-@media (min-width: 600px) and (max-width: 1000px)  {
+@media (min-width: 100px) and (max-width: 1000px)  {
+
   .sub-header {
     width: 100vw;
     aspect-ratio: 15 / 2;
