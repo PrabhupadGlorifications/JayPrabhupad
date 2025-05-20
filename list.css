@@ -57,3 +57,9 @@ ul li a:hover {
   color: #d35400;
   border-bottom: 2px solid #d35400;
 }
+
+@media (min-width: 100px) and (max-width: 1000px) {
+  .tablem{
+    font-size: 2em;
+  }
+}
