@@ -120,7 +120,48 @@
           <li class="footerlink"><a href="donate.html">Donate</a></li>
         </ul>
         <div class="footer-divider"></div>
+
+        <a href="https://yourbookstore.com" class="book-badge">
+          <!-- Glowing rotating ring -->
+          <div class="glow-ring"></div>
+
+          <!-- Main SVG -->
+          <svg width="280" height="280" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- Background Circle -->
+            <circle cx="140" cy="140" r="140" fill="#fdf2e9" />
+
+            <!-- Golden Outer Border -->
+            <circle cx="140" cy="140" r="135" fill="none" stroke="#d4af37" stroke-width="4" />
+
+            <!-- Subtle Wood Texture -->
+            <path d="M30 100 q50 15 100 0 t100 0" stroke="#e0c7ac" stroke-width="1" fill="none" />
+            <path d="M10 140 q60 20 120 0 t120 0" stroke="#e0c7ac" stroke-width="1" fill="none" />
+            <path d="M20 180 q40 10 80 0 t80 0 q40 -10 80 0" stroke="#e0c7ac" stroke-width="1" fill="none" />
+
+            <!-- Cart -->
+            <g transform="translate(90, 100)">
+              <rect x="-25" y="60" width="155" height="20" rx="5" fill="#3a2c1d" />
+              <circle cx="15" cy="80" r="7" fill="#3a2c1d" />
+              <circle cx="95" cy="80" r="7" fill="#3a2c1d" />
+            </g>
+
+            <!-- Books -->
+            <g transform="translate(95, 75)">
+              <rect x="-15" y="10" width="22" height="65" rx="2" fill="#3a86ff" />
+              <rect x="20" y="0" width="22" height="75" rx="2" fill="#ffbe0b"  />
+              <rect x="55" y="5" width="22" height="70" rx="2" fill="#80ed99" />
+              <rect x="90" y="3" width="22" height="72" rx="2" fill="#ff6b6b" />
+            </g>
+            <!-- Text -->
+            <text x="140" y="210" text-anchor="middle" font-family="Poppins, sans-serif" font-size="20" fill="#3a2c1d">
+              Visit Our Book Store
+            </text>
+          </svg>
+        </a>
+
       </div>
+
       <!-- Right Box -->
       <div class="footer-box">
         <ul class="footer-links">
@@ -163,6 +204,52 @@
     <div class="copyright">
       © Prabhupad Glorifications
     </div>
+
+
+    <style>
+      .book-badge {
+        display: inline-block;
+        position: relative;
+        width: 280px;
+        height: 280px;
+      }
+
+      .glow-ring {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 280px;
+        border-radius: 49%;
+        box-shadow: 0 0 10px 10px rgba(212, 175, 55, 0.6);
+        animation: spin 6s linear infinite;
+        z-index: 1;
+      }
+
+      .book-badge svg {
+        position: relative;
+        z-index: 2;
+        transition: transform 0.3s ease, filter 0.3s ease;
+      }
+
+      .book-badge:hover svg {
+        transform: scale(1.05);
+        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      
+    </style>
+
   </footer>
 </body>
 
