@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
     <div class="header">
         PRABHUPAD GLORIFICATIONS
@@ -36,14 +37,16 @@
         </div>
         <div id="sort">
             <select id="writingsSort" class="sortdropdown" onchange="sortCards()">
-                <option value="asc">Sort A-Z</option>
-                <option value="desc">Sort Z-A</option>
+                <option value="asc">Title A–Z</option>
+                <option value="desc">Title Z–A</option>
+                <option value="id-asc">Card Number ↑, Oldest First</option>
+                <option value="id-desc">Card Number ↓, Newest First</option>
             </select>
         </div>
     </div>
 
     <div class="card-container" id="articlesContainer">
-        <div class="card">
+        <div class="card" data-id="1">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-04 at 1.10.39 AM.jpeg" alt="Card 1">
                 <div class="overlay"></div>
@@ -55,7 +58,7 @@
         </div>
 
         <div class="card">
-            <div class="image-box">
+            <div class="image-box" data-id="2">
                 <img src="images/WhatsApp Image 2025-05-04 at 1.10.40 AM.jpeg" alt="Card 2">
                 <div class="overlay"></div>
             </div>
@@ -65,7 +68,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-id="3">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-04 at 1.10.41 AM.jpeg" alt="Card 3">
                 <div class="overlay"></div>
@@ -76,7 +79,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-id="4">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-04 at 1.10.41 AM (1).jpg" alt="Card 4">
                 <div class="overlay"></div>
@@ -87,7 +90,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-id="5">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-04 at 1.10.42 AM.jpeg" alt="Card 5">
                 <div class="overlay"></div>
@@ -98,7 +101,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-id="6">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-04 at 1.10.43 AM.jpeg" alt="Card 6">
                 <div class="overlay"></div>
@@ -109,7 +112,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-id="7">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-04 at 1.10.43 AM (1).jpeg" alt="Card 7">
                 <div class="overlay"></div>
@@ -120,7 +123,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-id="8">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-04 at 1.10.44 AM.jpeg" alt="Card 8">
                 <div class="overlay"></div>
@@ -131,7 +134,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-id="9">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-04 at 1.10.45 AM.jpg" alt="Card 9">
                 <div class="overlay"></div>
@@ -142,7 +145,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-id="10">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-04 at 1.10.45 AM (1).jpeg" alt="Card 10">
                 <div class="overlay"></div>
@@ -153,7 +156,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-id="11">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-05 at 11.27.39 PM.jpeg" alt="Card 11">
                 <div class="overlay"></div>
@@ -165,20 +168,8 @@
         </div>
     </div>
     <script src="script.js"></script>
-    <script>
-        function sortCards() {
-            const container = document.getElementById('articlesContainer');
-            const cards = Array.from(container.getElementsByClassName('card'));
-            const sortOption = document.getElementById('writingsSort').value;
-            cards.sort((a, b) => {
-                const titleA = a.querySelector('h2').textContent.trim().toLowerCase();
-                const titleB = b.querySelector('h2').textContent.trim().toLowerCase();
-                return sortOption === 'asc' ? titleA.localeCompare(titleB) : titleB.localeCompare(titleA);
-            });
-            container.innerHTML = '';
-            cards.forEach(card => container.appendChild(card));
-        }
-    </script>
+    <script src="sortcard.js"></script>
+
     <footer class="bg-black text-white py-10">
         <div class="footer-container">
             <!-- Left Box -->

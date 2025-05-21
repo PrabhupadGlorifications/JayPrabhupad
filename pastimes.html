@@ -39,13 +39,15 @@
         </a>
         <a>
             <select id="writingsSort" class="sortdropdown" onchange="sortCards()">
-                <option value="asc">Sort A-Z</option>
-                <option value="desc">Sort Z-A</option>
+                <option value="asc">Title A–Z</option>
+                <option value="desc">Title Z–A</option>
+                <option value="id-asc">Card Number ↑, Oldest First</option>
+                <option value="id-desc">Card Number ↓, Newest First</option>
             </select>
         </a>
     </div>
     <div class="card-container" id="articlesContainer">
-        <div class="card">
+        <div class="card" data-id="1">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-04 at 8.01.49 PM.jpg" alt="Card 10">
                 <div class="overlay"></div>
@@ -56,7 +58,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-id="2">
             <div class="image-box">
                 <img src="images/WhatsApp Image 2025-05-05 at 11.44.54 AM.jpeg" alt="Card 11">
                 <div class="overlay"></div>
@@ -68,20 +70,7 @@
         </div>
     </div>
     <script src="script.js"></script>
-    <script>
-        function sortCards() {
-            const container = document.getElementById('articlesContainer');
-            const cards = Array.from(container.getElementsByClassName('card'));
-            const sortOption = document.getElementById('writingsSort').value;
-            cards.sort((a, b) => {
-                const titleA = a.querySelector('h2').textContent.trim().toLowerCase();
-                const titleB = b.querySelector('h2').textContent.trim().toLowerCase();
-                return sortOption === 'asc' ? titleA.localeCompare(titleB) : titleB.localeCompare(titleA);
-            });
-            container.innerHTML = '';
-            cards.forEach(card => container.appendChild(card));
-        }
-    </script>
+    <script src="sortcard.js"></script>
     <footer class="bg-black text-white py-10">
         <div class="footer-container">
             <!-- Left Box -->

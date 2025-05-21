@@ -8,7 +8,20 @@ function addSearchAndSortFunctionality(searchInputId, listId, sortSelectId) {
         const sortedItems = items.sort((a, b) => {
             const textA = a.textContent.trim().toLowerCase();
             const textB = b.textContent.trim().toLowerCase();
-            return order === 'asc' ? textA.localeCompare(textB) : textB.localeCompare(textA);
+            const idA = parseInt(a.getAttribute('data-id'));
+            const idB = parseInt(b.getAttribute('data-id'));
+
+            if (order === 'asc') {
+                return textA.localeCompare(textB);
+            } else if (order === 'desc') {
+                return textB.localeCompare(textA);
+            } else if (order === 'id-asc') {
+                return idA - idB;
+            } else if (order === 'id-desc') {
+                return idB - idA;
+            } else {
+                return 0;
+            }
         });
 
         list.innerHTML = '';
@@ -31,5 +44,7 @@ function addSearchAndSortFunctionality(searchInputId, listId, sortSelectId) {
     sortList(sortSelect.value);
 }
 
+// Call function for both lists
 addSearchAndSortFunctionality('writingsSearch', 'writingsList', 'writingsSort');
 addSearchAndSortFunctionality('pastimesSearch', 'pastimesList', 'pastimesSort');
+

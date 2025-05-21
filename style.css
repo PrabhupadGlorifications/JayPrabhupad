@@ -388,3 +388,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
+.arrow {
+  text-align: center;
+}

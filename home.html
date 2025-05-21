@@ -49,22 +49,26 @@
       <div class="table-title">Articles</div>
       <input type="text" id="writingsSearch" class="search-bar" placeholder="Search">
       <select id="writingsSort" class="sort-dropdown">
-        <option value="asc">Sort A-Z</option>
-        <option value="desc">Sort Z-A</option>
+        <option value="asc">Title A–Z</option>
+        <option value="desc">Title Z–A</option>
+        <option value="id-asc">Oldest First</option>
+        <option value="id-desc">Newest First</option>
       </select>
+
       <ul id="writingsList">
-        <li><a href="kripa.html" target="_blank">Prabhupād and His Kripa Murti</a></li>
-        <li><a href="decades.html" target="_blank">The decades of 1960's and 70's</a></li>
-        <li><a href="example.html" target="_blank">This is Just one of many examples.
+        <li data-id="1"><a href="kripa.html" target="_blank">Prabhupād and His Kripa Murti</a></li>
+        <li data-id="2"><a href="decades.html" target="_blank">The decades of 1960's and 70's</a></li>
+        <li data-id="3"><a href="example.html" target="_blank">This is Just one of many examples.
           </a></li>
-        <li><a href="material.html" target="_blank">This material world is fooling us. </a></li>
-        <li><a href="jay.html" target="_blank">Jaya Prabhupāda!</a></li>
-        <li><a href="lord.html" target="_blank">Srīla Prabhupāda you are lord of my life</a></li>
-        <li><a href="glorify.html" target="_blank">Why You Glorify Srila Prabhupāda, so much?</a></li>
-        <li><a href="narsimha.html" target="_blank">Sri Bramhānda Purāna says</a></li>
-        <li><a href="trust.html" target="_blank"> Why you trust Śrīla Prabhupāda So much?</a></li>
-        <li><a href="sell.html" target="_blank">SELL YOURSELF FOR KRSNA!</a></li>
-        <li><a href="obeisances.html" target="_blank">Did you Offered your Obeisances today? If not then keep your phone
+        <li data-id="4"><a href="material.html" target="_blank">This material world is fooling us. </a></li>
+        <li data-id="5"><a href="jay.html" target="_blank">Jaya Prabhupāda!</a></li>
+        <li data-id="6"><a href="lord.html" target="_blank">Srīla Prabhupāda you are lord of my life</a></li>
+        <li data-id="7"><a href="glorify.html" target="_blank">Why You Glorify Srila Prabhupāda, so much?</a></li>
+        <li data-id="8"><a href="narsimha.html" target="_blank">Sri Bramhānda Purāna says</a></li>
+        <li data-id="9"><a href="trust.html" target="_blank"> Why you trust Śrīla Prabhupāda So much?</a></li>
+        <li data-id="10"><a href="sell.html" target="_blank">SELL YOURSELF FOR KRSNA!</a></li>
+        <li data-id="11"><a href="obeisances.html" target="_blank">Did you Offered your Obeisances today? If not then
+            keep your phone
             somewhere and just Dandavat!</a></li>
       </ul>
     </div>
@@ -149,7 +153,7 @@
             <!-- Books -->
             <g transform="translate(95, 75)">
               <rect x="-15" y="10" width="22" height="65" rx="2" fill="#3a86ff" />
-              <rect x="20" y="0" width="22" height="75" rx="2" fill="#ffbe0b"  />
+              <rect x="20" y="0" width="22" height="75" rx="2" fill="#ffbe0b" />
               <rect x="55" y="5" width="22" height="70" rx="2" fill="#80ed99" />
               <rect x="90" y="3" width="22" height="72" rx="2" fill="#ff6b6b" />
             </g>
@@ -246,8 +250,6 @@
           transform: rotate(360deg);
         }
       }
-
-      
     </style>
 
   </footer>

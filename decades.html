@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>About</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-  <div class="header">
-    PRABHUPAD GLORIFICATIONS
-</div>
+    <div class="header">
+        PRABHUPAD GLORIFICATIONS
+    </div>
 
-<div class="sub-header">
-    <em>Ebe jaśa ghusuk tribhuvana</em><br>
-    Your fame is spread all over the three worlds.
-</div>
+    <div class="sub-header">
+        <em>Ebe jaśa ghusuk tribhuvana</em><br>
+        Your fame is spread all over the three worlds.
+    </div>
 
-  <nav>
-    <a href="home.html" class="nav-link">Home</a>
-    <a href="articles.html" class="nav-link">Articles</a>
-    <a href="pastimes.html" class="nav-link">Pastimes</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="contact.html" class="nav-link">Contact</a>
-    <a href="donate.html" class="nav-link">Donate</a>
-  </nav>
+    <nav>
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="articles.html" class="nav-link">Articles</a>
+        <a href="pastimes.html" class="nav-link">Pastimes</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="donate.html" class="nav-link">Donate</a>
+    </nav>
 
-  <div class="para">
-    <h1 class="heading">The decades of 1960's and 70's </h1>
-    <p class="image"><img src="images/WhatsApp Image 2025-05-04 at 1.10.40 AM.jpeg" /></p>    
-    <p>
-        <strong>The decades of 1960's and 70's are just bunches of time.. But what made them Special was Rise of this personality over the horizon to remove all the darkness from the mortal dark world. </strong>
-    </p>
-    <hr class="line">
-    <p>~Admin</p>
-  </div>
-  <script src="script.js"></script>
-      <footer class="bg-black text-white py-10">
+    <div class="para">
+        <h1 class="heading">The decades of 1960's and 70's </h1>
+        <p class="image"><img src="images/WhatsApp Image 2025-05-04 at 1.10.40 AM.jpeg" /></p>
+        <p>
+            <strong>The decades of 1960's and 70's are just bunches of time.. But what made them Special was Rise of
+                this personality over the horizon to remove all the darkness from the mortal dark world. </strong>
+        </p>
+        <hr class="line">
+        <p>~Admin</p>
+        <div class="arrow">
+            <button class="sortdropdown" onclick="goToPreviousArticle()"><i class="fa-solid fa-left-long"></i> Previous</button>
+            <select id="writingsSort" class="sortdropdown">
+                <option value="id-asc">Oldest First</option>
+                <option value="id-desc">Newest First</option>
+            </select>
+            <button class="sortdropdown" onclick="goToNextArticle()">Next <i class="fa-solid fa-right-long"></i></button>
+        </div>
+
+        <ul id="writingsList" hidden>
+            <li data-id="1"><a href="kripa.html" target="_blank">Prabhupād and His Kripa Murti</a></li>
+            <li data-id="2"><a href="decades.html" target="_blank">The decades of 1960's and 70's</a></li>
+            <li data-id="3"><a href="example.html" target="_blank">This is Just one of many examples.
+                </a></li>
+            <li data-id="4"><a href="material.html" target="_blank">This material world is fooling us. </a></li>
+            <li data-id="5"><a href="jay.html" target="_blank">Jaya Prabhupāda!</a></li>
+            <li data-id="6"><a href="lord.html" target="_blank">Srīla Prabhupāda you are lord of my life</a></li>
+            <li data-id="7"><a href="glorify.html" target="_blank">Why You Glorify Srila Prabhupāda, so much?</a></li>
+            <li data-id="8"><a href="narsimha.html" target="_blank">Sri Bramhānda Purāna says</a></li>
+            <li data-id="9"><a href="trust.html" target="_blank"> Why you trust Śrīla Prabhupāda So much?</a></li>
+            <li data-id="10"><a href="sell.html" target="_blank">SELL YOURSELF FOR KRSNA!</a></li>
+            <li data-id="11"><a href="obeisances.html" target="_blank">Did you Offered your Obeisances today? If not
+                    then keep your phone somewhere and just Dandavat!</a></li>
+        </ul>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="next.js"></script>
+    <script src="next.js"></script>
+    <footer class="bg-black text-white py-10">
         <div class="footer-container">
             <!-- Left Box -->
             <div class="footer-box">
@@ -119,4 +150,5 @@
         </div>
     </footer>
 </body>
+
 </html>
