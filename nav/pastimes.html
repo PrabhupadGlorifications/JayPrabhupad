@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>About</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/card.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -31,146 +33,45 @@
         <a href="donate.html" class="nav-link">Donate</a>
     </nav>
     <!-- Search Bar -->
-    <div id="opt">
-        <div class="search-bar-container">
+    <div>
+        <a class="search-bar-container" id="" articlesContainer">
             <input type="text" id="searchBar" placeholder="Search Articles...">
-        </div>
-        <div id="sort">
+        </a>
+        <a>
             <select id="writingsSort" class="sortdropdown" onchange="sortCards()">
                 <option value="asc">Title A–Z</option>
                 <option value="desc">Title Z–A</option>
                 <option value="id-asc">Card Number ↑, Oldest First</option>
                 <option value="id-desc">Card Number ↓, Newest First</option>
             </select>
-        </div>
+        </a>
     </div>
-
     <div class="card-container" id="articlesContainer">
         <div class="card" data-id="1">
             <div class="image-box">
-                <img src="images/WhatsApp Image 2025-05-04 at 1.10.39 AM.jpeg" alt="Card 1">
+                <img src="images/WhatsApp Image 2025-05-04 at 8.01.49 PM.jpg" alt="Card 10">
                 <div class="overlay"></div>
             </div>
             <div class="card-content">
-                <h2>Prabhupād and His Kripa Murti</h2>
-                <a href="kripa.html" class="btn">Read More</a>
+                <h2>Yes! Let us all die..</h2>
+                <a href="die.html" class="btn">Read More</a>
             </div>
         </div>
 
-        <div class="card">
-            <div class="image-box" data-id="2">
-                <img src="images/WhatsApp Image 2025-05-04 at 1.10.40 AM.jpeg" alt="Card 2">
-                <div class="overlay"></div>
-            </div>
-            <div class="card-content">
-                <h2>The decades of 1960's and 70's</h2>
-                <a href="decades.html" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="card" data-id="3">
+        <div class="card" data-id="2">
             <div class="image-box">
-                <img src="images/WhatsApp Image 2025-05-04 at 1.10.41 AM.jpeg" alt="Card 3">
+                <img src="images/WhatsApp Image 2025-05-05 at 11.44.54 AM.jpeg" alt="Card 11">
                 <div class="overlay"></div>
             </div>
             <div class="card-content">
-                <h2>This is Just one of many examples.</h2>
-                <a href="example.html" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="card" data-id="4">
-            <div class="image-box">
-                <img src="images/WhatsApp Image 2025-05-04 at 1.10.41 AM (1).jpg" alt="Card 4">
-                <div class="overlay"></div>
-            </div>
-            <div class="card-content">
-                <h2>This material world is fooling us.</h2>
-                <a href="material.html" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="card" data-id="5">
-            <div class="image-box">
-                <img src="images/WhatsApp Image 2025-05-04 at 1.10.42 AM.jpeg" alt="Card 5">
-                <div class="overlay"></div>
-            </div>
-            <div class="card-content">
-                <h2>Jaya Prabhupāda!</h2>
-                <a href="jay.html" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="card" data-id="6">
-            <div class="image-box">
-                <img src="images/WhatsApp Image 2025-05-04 at 1.10.43 AM.jpeg" alt="Card 6">
-                <div class="overlay"></div>
-            </div>
-            <div class="card-content">
-                <h2>Śrīla Prabhupāda you are lord of my life</h2>
-                <a href="lord.html" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="card" data-id="7">
-            <div class="image-box">
-                <img src="images/WhatsApp Image 2025-05-04 at 1.10.43 AM (1).jpeg" alt="Card 7">
-                <div class="overlay"></div>
-            </div>
-            <div class="card-content">
-                <h2>Why You Glorify Srila Prabhupāda, so much?</h2>
-                <a href="glorify.html" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="card" data-id="8">
-            <div class="image-box">
-                <img src="images/WhatsApp Image 2025-05-04 at 1.10.44 AM.jpeg" alt="Card 8">
-                <div class="overlay"></div>
-            </div>
-            <div class="card-content">
-                <h2>Sri Bramhānda Purāna says</h2>
-                <a href="narsimha.html" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="card" data-id="9">
-            <div class="image-box">
-                <img src="images/WhatsApp Image 2025-05-04 at 1.10.45 AM.jpg" alt="Card 9">
-                <div class="overlay"></div>
-            </div>
-            <div class="card-content">
-                <h2>Why you trust Śrīla Prabhupāda So much?</h2>
-                <a href="trust.html" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="card" data-id="10">
-            <div class="image-box">
-                <img src="images/WhatsApp Image 2025-05-04 at 1.10.45 AM (1).jpeg" alt="Card 10">
-                <div class="overlay"></div>
-            </div>
-            <div class="card-content">
-                <h2>SELL YOURSELF FOR KRSNA!</h2>
-                <a href="sell.html" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="card" data-id="11">
-            <div class="image-box">
-                <img src="images/WhatsApp Image 2025-05-05 at 11.27.39 PM.jpeg" alt="Card 11">
-                <div class="overlay"></div>
-            </div>
-            <div class="card-content">
-                <h2>Did you Offered your Obeisances today?</h2>
-                <a href="obeisances.html" class="btn">Read More</a>
+                <h2>what to do when one is destroying that faith by criticizing Srila Prabhupada?</h2>
+                <a href="faith.html" class="btn">Read More</a>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
-    <script src="sortcard.js"></script>
-    <script src="articles.js"></script>
-
+    <script src="../js/script.js"></script>
+    <script src="../js/sortcard.js"></script>
+    <script src="../js/pastimes.js"></script>
     <footer class="bg-black text-white py-10">
         <div class="footer-container">
             <!-- Left Box -->

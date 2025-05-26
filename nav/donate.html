@@ -4,19 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <title>About</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        h1 {
+            font-size: 2.5rem;
+            color: #343a40;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .expand {
+            font-size: 1.2rem;
+            color: #495057;
+            text-align: center;
+            margin-bottom: 30px;
+            font-style: italic;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .qr img {
+            width: 250px;
+            height: 250px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .qr img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container {
+            width: 90%;
+            max-width: 800px;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-container h2 {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 15px;
+            font-weight: 500;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            text-align: center;
+            margin: 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        .thank-you-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="header">
-        PRABHUPAD GLORIFICATIONS
-    </div>
+    <div class="header">PRABHUPAD GLORIFICATIONS</div>
 
     <div class="sub-header">
         <div id="sub-header">
@@ -32,45 +109,37 @@
         <a href="contact.html" class="nav-link">Contact</a>
         <a href="donate.html" class="nav-link">Donate</a>
     </nav>
-    <!-- Search Bar -->
-    <div>
-        <a class="search-bar-container" id="" articlesContainer">
-            <input type="text" id="searchBar" placeholder="Search Articles...">
-        </a>
-        <a>
-            <select id="writingsSort" class="sortdropdown" onchange="sortCards()">
-                <option value="asc">Title A–Z</option>
-                <option value="desc">Title Z–A</option>
-                <option value="id-asc">Card Number ↑, Oldest First</option>
-                <option value="id-desc">Card Number ↓, Newest First</option>
-            </select>
-        </a>
-    </div>
-    <div class="card-container" id="articlesContainer">
-        <div class="card" data-id="1">
-            <div class="image-box">
-                <img src="images/WhatsApp Image 2025-05-04 at 8.01.49 PM.jpg" alt="Card 10">
-                <div class="overlay"></div>
-            </div>
-            <div class="card-content">
-                <h2>Yes! Let us all die..</h2>
-                <a href="die.html" class="btn">Read More</a>
-            </div>
-        </div>
 
-        <div class="card" data-id="2">
-            <div class="image-box">
-                <img src="images/WhatsApp Image 2025-05-05 at 11.44.54 AM.jpeg" alt="Card 11">
-                <div class="overlay"></div>
-            </div>
-            <div class="card-content">
-                <h2>what to do when one is destroying that faith by criticizing Srila Prabhupada?</h2>
-                <a href="faith.html" class="btn">Read More</a>
-            </div>
-        </div>
+    <div>
+        <h1>Support Prabhupad Glorifications</h1>
     </div>
-    <script src="script.js"></script>
-    <script src="sortcard.js"></script>
+    <p class="expand"><i>"Expand the Wave of Bhakti: Your Support Makes a Difference!"</i></p>
+    <h3>Pay via UPI</h3>
+    <p class="qr"><img src="images/WhatsApp Image 2025-05-07 at 4.57.59 PM.jpeg" alt=""></p>
+
+    <div class="form-container">
+        <h2>Please fill the form after donating</h2>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfdvkCCZVpq00B8AAJQ5LC-JY6F25K1OxIjnE4QdGRxYmgQfg/viewform?usp=header"
+            id="donation-form" onload="addFormListener()"></iframe>
+    </div>
+
+    <div class="thank-you-message" id="thank-you-message">
+        Hare Krishna! Thank you for your generous support!
+    </div>
+
+    <script>
+        function addFormListener() {
+            const formIframe = document.getElementById("donation-form");
+            formIframe.onload = () => {
+                const message = document.getElementById("thank-you-message");
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.has("submitted")) {
+                    message.style.display = "block";
+                }
+            }
+        }
+    </script>
     <footer class="bg-black text-white py-10">
         <div class="footer-container">
             <!-- Left Box -->
