@@ -1,11 +1,11 @@
 .tablem {
-  font-family: Arial, sans-serif;
-  background: url('images/hqdefault4fet.jpg') no-repeat center center;
+  font-family: 'Libre Baskerville', serif;
+  background: linear-gradient(135deg, #5F374B, #B28E7C, #E9AD5D);
   background-size: cover;
   border-bottom: 2px solid #f5a623;
   border-top: 2px solid #f5a623;
   margin: 0;
-  padding: 40px;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -14,11 +14,11 @@
 }
 
 .table-container {
-  background-color: #fff;
+  background-color: #ffffffe9;
   padding: 30px 20px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(148, 228, 250, 0.4);
-  width: 350px;
+  box-shadow: 0 10px 30px rgba(13, 13, 14, 0.4);
+  width: 40%;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
