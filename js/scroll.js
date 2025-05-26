@@ -4,7 +4,7 @@
     origin: 'bottom',
     distance: '50px',
     easing: 'ease-in-out',
-    reset: true, // <--- This makes it animate again on re-entry
+    reset: false, // <--- This makes it animate again on re-entry
     delay: 100
   });
 
