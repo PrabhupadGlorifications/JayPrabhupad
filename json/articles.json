@@ -17,12 +17,7 @@
     "image": "images/fisherman.jpg",
     "link": "fish.html"
   },
-  {
-    "id": 4,
-    "title": "He is empowered! Can’t you understand this thing?",
-    "image": "images/empowered.jpg",
-    "link": "empowered.html"
-  },
+
   {
     "id": 5,
     "title": "The proper method of dressing Jagannatha is as a Ksatriya King.",
@@ -127,7 +122,7 @@
   },
   {
     "id": 22,
-    "title": "The flag of Japa, which depicts the rising sun.",
+    "title": "Prabhupada is like the rising sun of Sri Chaitanya Mahaprabhu",
     "image": "images/japan.jpg",
     "link": "japan.html"
   },
