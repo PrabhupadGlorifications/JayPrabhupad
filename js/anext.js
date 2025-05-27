@@ -1,4 +1,4 @@
-fetch("../r/alist.html")
+fetch("2alist.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("anext-container").innerHTML = data;

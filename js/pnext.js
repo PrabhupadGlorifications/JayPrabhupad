@@ -1,4 +1,8 @@
-
+fetch("2plist.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("anext-container").innerHTML = data;
+    })
 let pastimesList = [];
 let currentIndex = -1;
 

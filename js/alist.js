@@ -1,4 +1,4 @@
-fetch("../a/alist.html")
+fetch("2alist.html")
     .then(res => res.text())
     .then(data => document.getElementById("alist-container").innerHTML = data);
 

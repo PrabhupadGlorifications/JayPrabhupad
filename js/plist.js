@@ -1,4 +1,4 @@
-fetch("../r/plist.html")
+fetch("2plist.html")
     .then(res => res.text())
     .then(data => document.getElementById("plist-container").innerHTML = data);
 
