@@ -26,7 +26,7 @@
   {
     "id": 5,
     "title": "The proper method of dressing Jagannatha is as a Ksatriya King.",
-    "image": "images/dress.jpg",
+    "image": "images/dressing.jpg",
     "link": "dress.html"
   },
   {
@@ -38,19 +38,19 @@
   {
     "id": 7,
     "title": "Vyas Puja, HH Bhakti Caru Swami Maharaj.",
-    "image": "images/bcsm.jpg",
+    "image": "images/vyas.jpg",
     "link": "bcsm.html"
   },
   {
     "id": 8,
     "title": "Slokas Applicable to Srila Prabhupad.",
-    "image": "images/slokas.jpg",
+    "image": "images/shlokas.jpg",
     "link": "slokas.html"
   },
   {
     "id": 9,
     "title": "How can we Repay?",
-    "image": "images/repay.jpg",
+    "image": "images/who.jpg",
     "link": "repay.html"
   },
   {
@@ -74,19 +74,19 @@
   {
     "id": 13,
     "title": "The Lord in His incarnation of Dhanvantari.",
-    "image": "images/dhanvantri.jpg",
+    "image": "images/dhanmmantri.jpg",
     "link": "dhanvantri.html"
   },
   {
     "id": 14,
     "title": "Srila Prabhupād ki! Jay!",
-    "image": "images/spjay.jpg",
+    "image": "images/paramhansa.jpg",
     "link": "spjay.html"
   },
   {
     "id": 15,
     "title": "Oh Lord you are mercifully appeared in the land of Thane.",
-    "image": "images/lthane.jpg",
+    "image": "images/jagannath.jpg",
     "link": "lthane.html"
   },
   {
@@ -116,13 +116,13 @@
   {
     "id": 20,
     "title": "'Before the creation there was only Nārāyaṇa.'",
-    "image": "images/narayan.jpg",
+    "image": "images/isa.jpg",
     "link": "narayan.html"
   },
   {
     "id": 21,
     "title": "The Ācārya Of entire Universe!",
-    "image": "images/universe.jpg",
+    "image": "images/yellow.jpg",
     "link": "universe.html"
   },
   {
@@ -146,7 +146,7 @@
   {
     "id": 25,
     "title": "The perfect representative and incarnation of Lord Nityananda's shakti.",
-    "image": "images/nitai.jpg",
+    "image": "images/ldth.jpg",
     "link": "nitai.html"
   },
   {

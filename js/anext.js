@@ -1,4 +1,9 @@
-
+fetch("../r/alist.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("anext-container").innerHTML = data;
+    })
+    
 let articlesList = [];
 let currentIndex = -1;
 

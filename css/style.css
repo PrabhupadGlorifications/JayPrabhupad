@@ -116,7 +116,6 @@ nav {
 
 main {
   display: flex;
-  padding: 60px 60px;
   text-align: center;
   font-size: 24px;
 }
@@ -251,8 +250,9 @@ ul {
 
 .para {
   margin: 4em;
-  margin-top: 1em;
-  font-size: 1.5em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  font-size: 1em;
   text-align: left;
 }
 

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const searchBar = document.getElementById("searchBar");
-    const articlesContainer = document.getElementById("articlesContainer");
+    const articlesContainer = document.getElementById("pastimesContainer");
 
     fetch("../json/pastimes.json")
         .then(res => res.json())
