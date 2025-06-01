@@ -23,7 +23,7 @@ body {
 }
 
 .header {
-  background: url('../logoback.jpg') no-repeat center center;
+  background: url('logoback.jpg') no-repeat center center;
   background-size: cover;
   font-family: 'Libre Baskerville', serif;
   min-height: 100vh;
