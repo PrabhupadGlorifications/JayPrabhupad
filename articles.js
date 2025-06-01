@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchBar = document.getElementById("searchBar");
     const articlesContainer = document.getElementById("articlesContainer");
 
-    fetch("../json/articles.json")
+    fetch("articles.json")
         .then(res => res.json())
         .then(data => {
             // Render cards

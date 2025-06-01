@@ -7,7 +7,7 @@ let pastimesList = [];
 let currentIndex = -1;
 
 window.addEventListener("DOMContentLoaded", () => {
-    fetch("../json/alist.json")
+    fetch("alist.json")
         .then(response => response.json())
         .then(data => {
             pastimesList = data;

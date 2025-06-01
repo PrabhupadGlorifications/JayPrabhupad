@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let pastimesData = [];
 
   // Fetch JSON data
-  fetch("../json/plist.json")
+  fetch("plist.json")
     .then(response => response.json())
     .then(data => {
       pastimesData = data;
