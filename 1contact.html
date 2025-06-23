@@ -4,246 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <title>About</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    .contact-form {
-      max-width: 500px;
-      margin: 30px auto;
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      padding: 25px;
-      background-color: #292929;
-      padding: 40px;
-      border-radius: 20px;
-      width: 100%;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-      transition: transform 0.3s, box-shadow 0.3s;
-
-    }
-
-    .contact-form:hover {
-      transform: scale(1.01);
-      box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
-    }
-
-    .contact-form h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      font-weight: 600;
-      color: #fff;
-    }
-
-    .contact-form label {
-      font-weight: 600;
-      margin-bottom: 10px;
-      display: block;
-      color: #ccc;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      border: none;
-      background-color: #f7f7f7;
-      font-size: 1em;
-      color: #333;
-      transition: all 0.3s ease;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    }
-
-    .contact-form button {
-      background-color: #fff;
-      color: #333;
-      border: none;
-      padding: 15px 30px;
-      border-radius: 30px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-    }
-
-    .contact-form button:hover {
-      background-color: #f0f0f0;
-      box-shadow: 0 15px 30px rgba(255, 255, 255, 0.4);
-    }
-
-    .success-message,
-    .error-message {
-      margin-bottom: 20px;
-      padding: 15px;
-      border-radius: 10px;
-      display: none;
-    }
-
-    .success-message {
-      background-color: #28a745;
-      color: #fff;
-    }
-
-    .error-message {
-      background-color: #dc3545;
-      color: #fff;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
-  <div class="header">
-    PRABHUPAD GLORIFICATIONS
+
+  <div id="header-container"></div>
+
+
+  <div>
+    <h1>Connect with us!</h1>
   </div>
-  <div class="sub-header">
-    <div id="sub-header">
-      <p><em>Ebe jaśa ghusuk tribhuvana</em></p>
-      <p>Your fame is spread all over the three worlds.</p>
-    </div>
+  <div>
+    <h3>For general queries or feedback, reach out at <a
+        href="mailto:jaysrilaprabhupad108@gmail.com">jaysrilaprabhupad108@gmail.com</a></h3>
   </div>
-  <nav>
-    <a href="home.html" class="nav-link">Home</a>
-    <a href="articles.html" class="nav-link">Articles</a>
-    <a href="pastimes.html" class="nav-link">Pastimes</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="contact.html" class="nav-link">Contact</a>
-    <a href="donate.html" class="nav-link">Donate</a>
-  </nav>
-  </head>
-
-  <body>
-    <div><h1>Connect with us!</h1></div>
-    <div><h3>For general queries or feedback, reach out at <a href="mailto:jaysrilaprabhupad108@gmail.com">jaysrilaprabhupad108@gmail.com</a></h3></div>
-    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
-      onsubmit="return handleSubmit(event)">
-      <h1>SEND A MESSAGE</h1>
-      <div class="success-message" id="successMessage">Your message has been sent successfully!</div>
-      <div class="error-message" id="errorMessage">There was an error sending your message. Please try again.</div>
-      <label for="first-name">Name *</label>
-      <div style="display: flex; gap: 20px;">
-        <input type="text" id="first-name" name="first_name" placeholder="First" required>
-        <input type="text" id="last-name" name="last_name" placeholder="Last" required>
-      </div>
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
-      <button type="submit">SUBMIT</button>
-    </form>
-    <script>
-      function handleSubmit(event) {
-        event.preventDefault();
-        const form = event.target;
-        const formData = new FormData(form);
-        fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        }).then(response => {
-          if (response.ok) {
-            document.getElementById('successMessage').style.display = 'block';
-            document.getElementById('errorMessage').style.display = 'none';
-            form.reset();
-          } else {
-            document.getElementById('errorMessage').style.display = 'block';
-            document.getElementById('successMessage').style.display = 'none';
-          }
-        }).catch(error => {
-          document.getElementById('errorMessage').style.display = 'block';
-          document.getElementById('successMessage').style.display = 'none';
-        });
-      }
-    </script>
-
-
-
-    <script src="script.js"></script>
-
-      <footer class="bg-black text-white py-10">
-
-
-    <div class="footer-container">
-      <!-- Left Box -->
-      <div class="footer-box">
-        <h2 class="footer-title">PRABHUPAD GLORIFICATIONS</h2>
-        <p>Glorifying the Lord and glorifying the Lord's devotees are the same. Or, rather, glorifying the devotee is
-          more important than glorifying the Lord directly. Narottama dāsa Ṭhākura explains this fact: chāḍiyā
-          vaiṣṇava-sevā, nistāra pāyeche kebā. One cannot be liberated from material contamination without sincerely
-          serving a devotee of Kṛṣṇa.</p>
-        <p>-HDG A.C Bhaktivedanta swami srila prabhupad (SB 10.1.69 Purport)</p>
-        <a href="https://iskcon.org/" target="_blank" class="flex items-center text-white font-semibold">
-          <span>LEARN MORE ABOUT ISKCON</span>
-          <span class="ml-2">→</span>
-        </a>
-        <div class="footer-divider"></div>
-      </div>
-
-      <!-- Middle Box -->
-      <div class="footer-box">
-        <ul class="footer-links">
-          <li class="footerlink"><a href="home.html">Home</a></li>
-          <li class="footerlink"><a href="articles.html" >Articles</a></li>
-          <li class="footerlink"><a href="about.html" >About</a></li>
-          <li class="footerlink"><a href="contact.html">Contact</a></li>
-          <li class="footerlink"><a href="donate.html" >Donate</a></li>
-        </ul>
-        <div class="footer-divider"></div>
-      </div>
-
-      <!-- Right Box -->
-      <div class="footer-box">
-        <ul class="footer-links">
-          <li class="footerlink"><a href="https://whatsapp.com/channel/0029VagClb9E50UmVCPTNd3T" target="_blank"
-              class="link-item">
-              <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> Join Prabhupad Glorifications WhatsApp
-              Channel</a></li>
-          <li class="footerlink"><a href="https://whatsapp.com/channel/0029Vb4GWQ8KQuJBBFvPMi2q" target="_blank"
-              class="link-item">
-              <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> Join Prabhupad Glorifications WhatsApp
-              Channel Hindi
-            </a></li>
-          <li class="footerlink"><a href="https://www.instagram.com/prabhupad_glorifications_?igsh=MWd0NnNkbzduaWhlNg=="
-              target="_blank" class="link-item">
-              <i class="fa-brands fa-instagram" style="color: #ed07b0;"></i> Follow Prabhupad Glorifications Instagram
-              Channel
-            </a></li>
-          <li class="footerlink"><a href="https://www.youtube.com/@PrabhupadGlorifications" target="_blank"
-              class="link-item">
-              <i class="fa-brands fa-youtube" style="color: #ea0606;"></i> Visit Prabhupad Glorifications YouTube
-              Channel
-            </a></li>
-          <li class="footerlink"> <a href="https://www.youtube.com/@BhaktiVikasaSwami" target="_blank"
-              class="link-item">
-              <i class="fa-brands fa-youtube" style="color: #ea0606;"></i> Visit HH Bhakti Vikasa Swami maharaj official
-              YouTube Channel
-            </a></li>
-          <li class="footerlink"> <a href="https://www.youtube.com/@LogicaSpiritus" target="_blank" class="link-item">
-              <i class="fa-brands fa-youtube" style="color: #ea0606;"></i> Visit Logica Spiritus
-            </a></li>
-          <li class="footerlink"><a href="donate.html" target="_blank" class="link-item">
-              <i class="fa-solid fa-circle-dollar-to-slot" style="color: #FFD43B;"></i> Support Prabhupad Glorifications
-            </a></li>
-          <li class="footerlink"><a href="https://donate.bvksmedia.net/" target="_blank" class="link-item">
-              <i class="fa-solid fa-circle-dollar-to-slot" style="color: #FFD43B;"></i> Support BVKS Media
-            </a></li>
-        </ul>
-      </div>
+  <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+    onsubmit="return handleSubmit(event)">
+    <h1>SEND A MESSAGE</h1>
+    <div class="success-message" id="successMessage">Your message has been sent successfully!</div>
+    <div class="error-message" id="errorMessage">There was an error sending your message. Please try again.</div>
+    <label for="first-name">Name *</label>
+    <div style="display: flex; gap: 20px;">
+      <input type="text" id="first-name" name="first_name" placeholder="First" required>
+      <input type="text" id="last-name" name="last_name" placeholder="Last" required>
     </div>
-    <div class="copyright">
-      © Prabhupad Glorifications
-    </div>
-  </footer>
-  </body>
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+    <button type="submit">SUBMIT</button>
+  </form>
+
+
+  <div id="footer-container"></div>
+
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+  <script src="head.js"></script>
+  <script src="footer.js"></script>
+
+</body>
 
 </html>

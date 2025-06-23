@@ -1,0 +1,87 @@
+.contact-form {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #292929;
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.contact-form:hover {
+    transform: scale(1.01);
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
+}
+
+.contact-form h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.contact-form label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    color: #ccc;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f7f7f7;
+    font-size: 1em;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.contact-form button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.contact-form button:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.4);
+}
+
+.success-message,
+.error-message {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+}
+
+.success-message {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.error-message {
+    background-color: #dc3545;
+    color: #fff;
+}
