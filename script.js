@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Highlighting the Active Link in the Navbar
-    const links = document.querySelectorAll(".nav-link");
+    const links = document.querySelectorAll("nav-link");
     const currentPage = window.location.pathname.split("/").pop();
   
     links.forEach(link => {
         const linkPage = link.getAttribute("href");
-        if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+        if (linkPage === currentPage || (currentPage === "" && linkPage === "1home.html")) {
             link.classList.add("active");
         }
     });
