@@ -72,10 +72,7 @@ function handleShare() {
 }
 
 // Like button toggle
-
-
-
-// ✅ Firebase config
+// Firebase config from your project
 const firebaseConfig = {
   apiKey: "AIzaSyDtokJkJ4F34LMs-fJGEsFOMejPWk3fmls",
   authDomain: "prabhupadglorify.firebaseapp.com",
@@ -87,51 +84,32 @@ const firebaseConfig = {
   measurementId: "G-ML01WXJGJP"
 };
 
-// ✅ Initialize Firebase
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
-// ✅ Get article ID from filename
-const path = window.location.pathname;
-const fileName = path.substring(path.lastIndexOf('/') + 1);
-const articleId = fileName.replace('.html', '') || 'defaultArticle';
-console.log("📄 Article ID:", articleId);
+// Get current article ID from file name
+const articleId = window.location.pathname.split('/').pop().replace('.html', '');
 
-// ✅ Load current like count
-firebase.database().ref('likes/' + articleId).once('value')
-  .then(snapshot => {
-    const count = snapshot.val() || 0;
-    document.querySelector('.likeCount').innerText = count;
-    console.log("👍 Current like count:", count);
-  })
-  .catch(error => {
-    console.error("🚫 Error fetching likes:", error);
-  });
+// Load like count from Firebase
+firebase.database().ref('likes/' + articleId).once('value').then(snapshot => {
+  const count = snapshot.val() || 0;
+  document.querySelector('.likeCount').innerText = count;
+});
 
-// ✅ Handle Like button click
+// Handle like toggle
 function handleLike(btn) {
   const span = btn.querySelector('.likeCount');
   let count = parseInt(span.innerText);
   const liked = btn.dataset.liked === "true";
 
-  if (liked) {
-    count--;
-    btn.dataset.liked = "false";
-  } else {
-    count++;
-    btn.dataset.liked = "true";
-  }
-
+  // Toggle like state
+  count = liked ? count - 1 : count + 1;
   span.innerText = count;
-  console.log("🔄 New like count:", count);
+  btn.dataset.liked = !liked;
 
-  firebase.database().ref('likes/' + articleId).set(count)
-    .then(() => {
-      console.log("✅ Like count saved to Firebase!");
-    })
-    .catch(error => {
-      console.error("🚫 Error writing to Firebase:", error);
-    });
+  // Save to Firebase
+  firebase.database().ref('likes/' + articleId).set(count);
 }
 
 // Web share
@@ -139,7 +117,7 @@ function handleShare() {
   if (navigator.share) {
     navigator.share({
       title: document.title,
-      text: 'Check out this beautiful article on Prabhupad Glorifications!',
+      text: 'Check out this article on Srila Prabhupada!',
       url: window.location.href
     });
   } else {
@@ -147,5 +125,16 @@ function handleShare() {
   }
 }
 
-
+// Share logic
+function handleShare() {
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      text: 'Check out this beautiful article on Prabhupad!',
+      url: window.location.href
+    });
+  } else {
+    alert('Sharing not supported in this browser.');
+  }
+}
 
