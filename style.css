@@ -295,6 +295,7 @@ iframe {
     width: 90%;
     margin: 2px;
     padding: 4px;
+    background-color: #ffffff;
     border: 1px solid #ccc;
     box-shadow: 0 2px 8px rgba(148, 228, 250, 0.4);
     font-size: 30px;
@@ -305,6 +306,7 @@ iframe {
     width: 90%;
     margin: 2px;
     padding: 4px;
+    background-color: #ffffff;
     border: 1px solid #ccc;
     box-shadow: 0 2px 8px rgba(148, 228, 250, 0.4);
     font-size: 30px;
@@ -340,7 +342,7 @@ iframe {
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    font-size: 30px;
+    font-size: 25px;
     border-bottom: 2px solid #f5a623;
   }
 
