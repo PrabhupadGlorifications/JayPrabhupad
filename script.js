@@ -72,59 +72,31 @@ function handleShare() {
 }
 
 // Like button toggle
-// Firebase config from your project
-const firebaseConfig = {
-  apiKey: "AIzaSyDtokJkJ4F34LMs-fJGEsFOMejPWk3fmls",
-  authDomain: "prabhupadglorify.firebaseapp.com",
-  databaseURL: "https://prabhupadglorify-default-rtdb.firebaseio.com",
-  projectId: "prabhupadglorify",
-  storageBucket: "prabhupadglorify.firebasestorage.app",
-  messagingSenderId: "702261459411",
-  appId: "1:702261459411:web:9703791602c5080025d726",
-  measurementId: "G-ML01WXJGJP"
-};
-
-// Initialize Firebase
+// Init Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
-// Get current article ID from file name
-const articleId = window.location.pathname.split('/').pop().replace('.html', '');
+// Get article ID from file name
+const articleId = window.location.pathname.split('/').pop().replace('.html', '') || "default";
 
-// Load like count from Firebase
-firebase.database().ref('likes/' + articleId).once('value').then(snapshot => {
+// Load like count
+db.ref('likes/' + articleId).once('value').then(snapshot => {
   const count = snapshot.val() || 0;
   document.querySelector('.likeCount').innerText = count;
 });
 
-// Handle like toggle
+// Like handler
 function handleLike(btn) {
   const span = btn.querySelector('.likeCount');
   let count = parseInt(span.innerText);
   const liked = btn.dataset.liked === "true";
 
-  // Toggle like state
   count = liked ? count - 1 : count + 1;
-  span.innerText = count;
   btn.dataset.liked = !liked;
+  span.innerText = count;
 
-  // Save to Firebase
-  firebase.database().ref('likes/' + articleId).set(count);
+  db.ref('likes/' + articleId).set(count);
 }
-
-// Web share
-function handleShare() {
-  if (navigator.share) {
-    navigator.share({
-      title: document.title,
-      text: 'Check out this article on Srila Prabhupada!',
-      url: window.location.href
-    });
-  } else {
-    alert("Share feature is not supported in this browser.");
-  }
-}
-
 // Share logic
 function handleShare() {
   if (navigator.share) {
