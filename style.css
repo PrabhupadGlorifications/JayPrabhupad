@@ -90,7 +90,6 @@ nav {
   transition: background-color 0.3s, color 0.3s;
 }
 
-
 .nav-link.active {
   color: #f5a623;
   border-bottom: 2px solid #f5a623;
@@ -98,15 +97,6 @@ nav {
 
 .nav-link:hover {
   color: #f5a623;
-}
-
-
-
-
-main {
-  display: flex;
-  text-align: center;
-  font-size: 24px;
 }
 
 .hero-container {
@@ -191,6 +181,7 @@ footer {
   font-weight: 500;
   margin-bottom: 8px;
   cursor: pointer;
+  font-size: 20px;
 }
 
 a {
@@ -242,7 +233,7 @@ ul {
   margin: 4em;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
-  font-size: 1em;
+  font-size: 24px;
   text-align: left;
 }
 
@@ -326,7 +317,7 @@ iframe {
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    font-size: 20px;
+    font-size: 30px;
     border-bottom: 2px solid #f5a623;
   }
 
@@ -381,10 +372,6 @@ iframe {
     text-align: justify;
     font-size: 40px;
   }
-
-  .fault {
-  font-size: 1.06em;
-}
 
 }
 
