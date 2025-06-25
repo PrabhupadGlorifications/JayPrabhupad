@@ -11,55 +11,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
 
-<script>
-  const firebaseConfig = {
-    apiKey: "AIzaSyBRkjmOthCtiS0hHglgZHj4_PZ4wCsfOtk",
-    authDomain: "myweb-77e0a.firebaseapp.com",
-    databaseURL: "https://myweb-77e0a-default-rtdb.firebaseio.com",
-    projectId: "myweb-77e0a",
-    storageBucket: "myweb-77e0a.firebasestorage.app",
-    messagingSenderId: "855120432423",
-    appId: "1:855120432423:web:3240db2df641705005ed02",
-    measurementId: "G-PRNLZFWBF2"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-
-  const articleId = window.location.pathname.split("/").pop().replace(".html", "");
-
-  firebase.database().ref('likes/' + articleId).once('value').then(snapshot => {
-    const count = snapshot.val() || 0;
-    document.querySelector('.likeCount').innerText = count;
-  });
-
-  function handleLike(btn) {
-    const countSpan = btn.querySelector('.likeCount');
-    let count = parseInt(countSpan.innerText);
-    const liked = btn.dataset.liked === "true";
-
-    count = liked ? count - 1 : count + 1;
-    btn.dataset.liked = !liked;
-    countSpan.innerText = count;
-
-    firebase.database().ref('likes/' + articleId).set(count);
-  }
-
-  function handleShare() {
-    if (navigator.share) {
-      navigator.share({
-        title: document.title,
-        text: 'Check out this article!',
-        url: window.location.href
-      });
-    } else {
-      alert('Sharing not supported.');
-    }
-  }
-</script>
 
 
 <body>
@@ -161,6 +113,7 @@
         </button>
     </div>
 
+
     <div id="footer-container"></div>
 
     <script src="script.js"></script>
@@ -168,6 +121,56 @@
     <script src="anext.js"></script>
     <script src="alist.js"></script>
     <script src="footer.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBRkjmOthCtiS0hHglgZHj4_PZ4wCsfOtk",
+            authDomain: "myweb-77e0a.firebaseapp.com",
+            databaseURL: "https://myweb-77e0a-default-rtdb.firebaseio.com",
+            projectId: "myweb-77e0a",
+            storageBucket: "myweb-77e0a.firebasestorage.app",
+            messagingSenderId: "855120432423",
+            appId: "1:855120432423:web:3240db2df641705005ed02",
+            measurementId: "G-PRNLZFWBF2"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+
+        const articleId = window.location.pathname.split("/").pop().replace(".html", "");
+
+        firebase.database().ref('likes/' + articleId).once('value').then(snapshot => {
+            const count = snapshot.val() || 0;
+            document.querySelector('.likeCount').innerText = count;
+        });
+
+        function handleLike(btn) {
+            const countSpan = btn.querySelector('.likeCount');
+            let count = parseInt(countSpan.innerText);
+            const liked = btn.dataset.liked === "true";
+
+            count = liked ? count - 1 : count + 1;
+            btn.dataset.liked = !liked;
+            countSpan.innerText = count;
+
+            firebase.database().ref('likes/' + articleId).set(count);
+        }
+
+        function handleShare() {
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    text: 'Check out this article!',
+                    url: window.location.href
+                });
+            } else {
+                alert('Sharing not supported.');
+            }
+        }
+    </script>
 </body>
 
 </html>
