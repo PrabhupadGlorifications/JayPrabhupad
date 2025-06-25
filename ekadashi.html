@@ -11,7 +11,6 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<!-- Firebase SDKs -->
 <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
 
@@ -30,10 +29,8 @@
   firebase.initializeApp(firebaseConfig);
   const db = firebase.database();
 
-  // Auto detect article ID from filename
   const articleId = window.location.pathname.split("/").pop().replace(".html", "");
 
-  // Load like count
   firebase.database().ref('likes/' + articleId).once('value').then(snapshot => {
     const count = snapshot.val() || 0;
     document.querySelector('.likeCount').innerText = count;
@@ -44,12 +41,10 @@
     let count = parseInt(countSpan.innerText);
     const liked = btn.dataset.liked === "true";
 
-    // Toggle like
     count = liked ? count - 1 : count + 1;
     btn.dataset.liked = !liked;
     countSpan.innerText = count;
 
-    // Save to Firebase
     firebase.database().ref('likes/' + articleId).set(count);
   }
 
@@ -61,10 +56,11 @@
         url: window.location.href
       });
     } else {
-      alert('Sharing is not supported in this browser.');
+      alert('Sharing not supported.');
     }
   }
 </script>
+
 
 <body>
     <div id="header-container"></div>
