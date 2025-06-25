@@ -72,7 +72,10 @@ function handleShare() {
 }
 
 // Like button toggle
-// Firebase config from your project
+
+
+
+// ✅ Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyDtokJkJ4F34LMs-fJGEsFOMejPWk3fmls",
   authDomain: "prabhupadglorify.firebaseapp.com",
@@ -84,32 +87,51 @@ const firebaseConfig = {
   measurementId: "G-ML01WXJGJP"
 };
 
-// Initialize Firebase
+// ✅ Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
-// Get current article ID from file name
-const articleId = window.location.pathname.split('/').pop().replace('.html', '');
+// ✅ Get article ID from filename
+const path = window.location.pathname;
+const fileName = path.substring(path.lastIndexOf('/') + 1);
+const articleId = fileName.replace('.html', '') || 'defaultArticle';
+console.log("📄 Article ID:", articleId);
 
-// Load like count from Firebase
-firebase.database().ref('likes/' + articleId).once('value').then(snapshot => {
-  const count = snapshot.val() || 0;
-  document.querySelector('.likeCount').innerText = count;
-});
+// ✅ Load current like count
+firebase.database().ref('likes/' + articleId).once('value')
+  .then(snapshot => {
+    const count = snapshot.val() || 0;
+    document.querySelector('.likeCount').innerText = count;
+    console.log("👍 Current like count:", count);
+  })
+  .catch(error => {
+    console.error("🚫 Error fetching likes:", error);
+  });
 
-// Handle like toggle
+// ✅ Handle Like button click
 function handleLike(btn) {
   const span = btn.querySelector('.likeCount');
   let count = parseInt(span.innerText);
   const liked = btn.dataset.liked === "true";
 
-  // Toggle like state
-  count = liked ? count - 1 : count + 1;
-  span.innerText = count;
-  btn.dataset.liked = !liked;
+  if (liked) {
+    count--;
+    btn.dataset.liked = "false";
+  } else {
+    count++;
+    btn.dataset.liked = "true";
+  }
 
-  // Save to Firebase
-  firebase.database().ref('likes/' + articleId).set(count);
+  span.innerText = count;
+  console.log("🔄 New like count:", count);
+
+  firebase.database().ref('likes/' + articleId).set(count)
+    .then(() => {
+      console.log("✅ Like count saved to Firebase!");
+    })
+    .catch(error => {
+      console.error("🚫 Error writing to Firebase:", error);
+    });
 }
 
 // Web share
@@ -124,3 +146,6 @@ function handleShare() {
     alert("Share feature is not supported in this browser.");
   }
 }
+
+
+
