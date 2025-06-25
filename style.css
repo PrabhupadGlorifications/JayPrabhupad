@@ -288,6 +288,7 @@ iframe {
   font-size: 20px;
 }
 
+
 @media (min-width: 100px) and (max-width: 1000px) {
 
   .search-bar {
@@ -393,6 +394,11 @@ iframe {
     position: relative;
     text-align: justify;
     font-size: 40px;
+  }
+
+  .book-badge {
+    padding-top: 500px;
+    padding-left: 40px;
   }
 
 }
