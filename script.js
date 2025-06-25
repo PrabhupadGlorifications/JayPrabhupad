@@ -117,24 +117,10 @@ function handleShare() {
   if (navigator.share) {
     navigator.share({
       title: document.title,
-      text: 'Check out this article on Srila Prabhupada!',
+      text: 'Check out this beautiful article on Prabhupad Glorifications!',
       url: window.location.href
     });
   } else {
     alert("Share feature is not supported in this browser.");
   }
 }
-
-// Share logic
-function handleShare() {
-  if (navigator.share) {
-    navigator.share({
-      title: document.title,
-      text: 'Check out this beautiful Krishna article!',
-      url: window.location.href
-    });
-  } else {
-    alert('Sharing not supported in this browser.');
-  }
-}
-
