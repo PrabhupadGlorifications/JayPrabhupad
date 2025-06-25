@@ -3,7 +3,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
     row-gap: 0px;
     column-gap: 40px;
     padding: 20px 20px;
@@ -17,7 +16,8 @@
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-    background-color: #fff;
+    background-color: #000000;
+
 }
 
 .card img {
@@ -25,6 +25,7 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
+    opacity: 0.7;
 }
 
 .card:hover img {
@@ -34,7 +35,6 @@
 .card-overlay {
     position: absolute;
     bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
     color: white;
     width: 100%;
     padding: 15px;
@@ -47,12 +47,18 @@
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
+.card h2{
+    color: #ffffff;
+    text-shadow: 0px 1px 8px rgb(193, 193, 192);
+}
+
 .card a {
     display: block;
     width: 100%;
     height: 100%;
     color: inherit;
-    text-decoration: none;
+    text-shadow: 0px 2px 8px rgb(252, 234, 146);
+    font-size: 20px;
 }
 
 .card-container {
@@ -86,7 +92,6 @@
     right: 20px;
     color: white;
     z-index: 2;
-
     border-radius: 15px;
     padding: 15px;
     transition: 0.5s ease-in-out;
