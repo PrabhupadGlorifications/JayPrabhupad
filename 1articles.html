@@ -17,22 +17,18 @@
 
     <!-- Search Bar -->
     <div id="opt">
-        <div class="search-bar-container">
-            <input type="text" id="searchBar" placeholder="Search Articles...">
-        </div>
-        <div id="sort">
-            <select id="writingsSort" class="sortdropdown" onchange="sortCards()">
-                <option value="asc">Title A–Z</option>
-                <option value="desc">Title Z–A</option>
-                <option value="id-asc"> Oldest First</option>
-                <option value="id-desc"> Newest First</option>
-            </select>
-        </div>
+        <input type="text" class="search-bar-container" id="searchBar" placeholder="Search Articles...">
+        <select id="writingsSort" class="sort-dropdown" onchange="sortCards()">
+            <option value="asc">Title A–Z</option>
+            <option value="desc">Title Z–A</option>
+            <option value="id-asc"> Oldest First</option>
+            <option value="id-desc"> Newest First</option>
+        </select>
     </div>
 
     <div class="card-container" id="articlesContainer"></div>
 
-     <div id="footer-container"></div>
+    <div id="footer-container"></div>
 
     <script src="script.js"></script>
     <script src="sortcard.js"></script>

@@ -5,3 +5,54 @@ main {
   text-align: center;
   font-size: 24px;
 }
+
+.search-bar-container {
+        margin-top: 2em;
+        margin-bottom: 1em;
+        margin-right: 2em;
+        width: 15em;
+    }
+
+    .search-bar-container input {
+        width: 15em;
+        padding: 0.5em;
+        border-radius: 2em;
+        border: none;
+        outline: none;
+        background-color: #f8f8f8;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-bar-container input::placeholder {
+        color: #888;
+        font-weight: 300;
+    }
+
+    .search-bar-container input:focus {
+        background-color: #fff;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Sort Dropdown Styling */
+    .sortdropdown {
+        width: 10em;
+        padding: 0.5em;
+        border-radius: 2em;
+        border: none;
+        background-color: #f8f8f8;
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .sortdropdown:focus {
+        background-color: #fff;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
