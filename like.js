@@ -55,3 +55,25 @@ document.addEventListener("DOMContentLoaded", () => {
 function updateButton(btn) {
   btn.style.color = hasLiked ? "red" : "black";
 }
+
+// share.js
+
+export function handleShare() {
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      text: 'Check out this beautiful article on Prabhupad!',
+      url: window.location.href
+    }).catch((err) => console.error("Sharing failed:", err));
+  } else {
+    alert("Sharing not supported in this browser.");
+  }
+}
+
+// Optional: Auto-attach to button with id="shareBtn"
+document.addEventListener("DOMContentLoaded", () => {
+  const shareBtn = document.getElementById("shareBtn");
+  if (shareBtn) {
+    shareBtn.addEventListener("click", handleShare);
+  }
+});

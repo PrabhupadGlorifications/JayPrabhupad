@@ -49,18 +49,4 @@ addSearchFunctionality('writingsSearch', 'writingsList');
 addSearchFunctionality('pastimesSearch', 'pastimesList');
 
 
-// Like button toggle
 
-
-
-function handleShare() {
-  if (navigator.share) {
-    navigator.share({
-      title: document.title,
-      text: 'Check out this beautiful article on Prabhupad!',
-      url: window.location.href
-    });
-  } else {
-    alert("Sharing not supported in this browser.");
-  }
-}
