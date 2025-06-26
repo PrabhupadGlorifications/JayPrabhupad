@@ -72,20 +72,16 @@ function handleShare() {
 }
 
 // Like button toggle
-// Init Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
-// Get article ID from file name
 const articleId = window.location.pathname.split('/').pop().replace('.html', '') || "default";
 
-// Load like count
 db.ref('likes/' + articleId).once('value').then(snapshot => {
   const count = snapshot.val() || 0;
   document.querySelector('.likeCount').innerText = count;
 });
 
-// Like handler
 function handleLike(btn) {
   const span = btn.querySelector('.likeCount');
   let count = parseInt(span.innerText);
@@ -97,7 +93,7 @@ function handleLike(btn) {
 
   db.ref('likes/' + articleId).set(count);
 }
-// Share logic
+
 function handleShare() {
   if (navigator.share) {
     navigator.share({
@@ -106,7 +102,6 @@ function handleShare() {
       url: window.location.href
     });
   } else {
-    alert('Sharing not supported in this browser.');
+    alert("Sharing not supported in this browser.");
   }
 }
-
