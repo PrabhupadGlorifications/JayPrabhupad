@@ -234,17 +234,24 @@
     }
 
     .btn {
-        background: #f5a623;
-        color: #fff;
+        background: linear-gradient(135deg, #f8c291, #f6e58d, #ffcccc);
         padding: 0.5rem 0.5rem;
         border-radius: 30px;
         text-align: center;
-        transition: background 0.3s;
+        transition: background-color 0.3s;
         text-decoration: none;
         margin-bottom: 15px;
         margin-top: 40px;
         text-align: center;
-        font-size: 90px;
+        font-size: 40px;
+        width: 100px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn:hover {
+        background: linear-gradient(135deg, #f8c291, #f3e7ab, #f2d1d1);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 
     .card a {
@@ -303,17 +310,25 @@
     }
 
     .btn {
-        background: #f5a623;
+        background: linear-gradient(135deg, #f8c291, #f6e58d, #ffcccc);
         color: #fff;
         padding: 0.5rem 0.5rem;
         border-radius: 30px;
         text-align: center;
-        transition: background 0.3s;
+        transition: background-color 0.3s;
         text-decoration: none;
         margin-bottom: 15px;
         margin-top: 40px;
         text-align: center;
-        font-size: 1.3em;
+        font-size: 30px;
+        width: 90px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn:hover {
+        background: linear-gradient(135deg, #f8c291, #f3e7ab, #f2d1d1);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 
     .card a {
@@ -369,7 +384,8 @@
     }
 
     .btn {
-        background: #f5a623;
+        background: linear-gradient(135deg, #f8c291, #f6e58d, #ffcccc);
+        border-color: #000000;
         color: #fff;
         padding: 0.5rem 0.5rem;
         border-radius: 20px;
@@ -379,11 +395,15 @@
         margin-bottom: 10px;
         margin-top: 40px;
         text-align: center;
-        font-size: 1em;
+        font-size: 20px;
+        width: 90px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     }
 
     .btn:hover {
-        background-color: #3893c4;
+        background: linear-gradient(135deg, #f8c291, #f3e7ab, #f2d1d1);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 
     .btn span {
