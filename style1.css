@@ -56,3 +56,123 @@ main {
         background-color: #fff;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     }
+
+
+    footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+}
+
+.footer-box {
+  flex: 1 1 300px;
+  margin: 20px;
+  padding: 0 20px;
+  position: relative;
+  text-align: justify;
+  font-size: 1.3rem;
+}
+
+.footer-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.footer-text {
+  color: #888888;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.footer-links li {
+  color: #aaaaaa;
+  font-weight: 500;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer-links li:hover {
+  color: #ffffff;
+}
+
+.copyright {
+  color: #555555;
+  border-top: 1px solid #333333;
+  padding-top: 24px;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.footer-divider {
+  height: 100%;
+  width: 1px;
+  background-color: #444444;
+  position: absolute;
+  right: -10px;
+  top: 0;
+}
+
+.footerlink a {
+  color: #888888;
+}
+
+.footerlink a:hover {
+  color: #ffffff;
+
+}
+
+.copyright {
+    color: #555555;
+    border-top: 1px solid #333333;
+    padding-top: 24px;
+    margin-top: 32px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .footer-links li {
+    color: #aaaaaa;
+    font-weight: 500;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+  .footer-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .footer-box {
+    flex: 1 1 300px;
+    margin: 20px;
+    padding: 0 20px;
+    position: relative;
+    text-align: justify;
+    font-size: 40px;
+  }
+
+  .book-badge {
+    padding-top: 500px;
+    padding-left: 40px;
+  }
+7b

@@ -131,84 +131,371 @@ nav {
   border-color: #000;
 }
 
+/* Modern Professional Footer Styles */
+* {
+  box-sizing: border-box;
+}
+
 footer {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 40px 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #000000 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
-  border-top: 1px solid #333333;
-  border-bottom: 1px solid #333333;
+  padding: 60px 30px 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-box {
-  flex: 1 1 300px;
-  margin: 20px;
-  padding: 0 20px;
   position: relative;
-  text-align: justify;
-  font-size: 1.3rem;
+}
+
+/* Left Box - Prabhupad Glorifications */
+.footer-box:first-child {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .footer-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 16px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 25px;
   text-align: center;
+  letter-spacing: 2px;
+  position: relative;
 }
 
-.footer-text {
-  color: #888888;
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-.footer-links li {
-  color: #aaaaaa;
-  font-weight: 500;
-  margin-bottom: 8px;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-a {
-  text-decoration: none;
-}
-
-.footer-links li:hover {
-  color: #ffffff;
-}
-
-.copyright {
-  color: #555555;
-  border-top: 1px solid #333333;
-  padding-top: 24px;
-  margin-top: 32px;
-  text-align: center;
-}
-
-.footer-divider {
-  height: 100%;
-  width: 1px;
-  background-color: #444444;
+.footer-title::after {
+  content: '';
   position: absolute;
-  right: -10px;
-  top: 0;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  border-radius: 2px;
+}
+
+.footer-box:first-child p {
+  color: #e8e8e8;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  text-align: justify;
+  font-weight: 300;
+}
+
+.footer-box:first-child p:last-of-type {
+  color: #d4af37;
+  font-style: italic;
+  text-align: right;
+  font-weight: 400;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  padding-top: 15px;
+  margin-top: 20px;
+}
+
+.footer-box:first-child > a {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.footer-box:first-child > a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+  background: linear-gradient(135deg, #f4d03f 0%, #d4af37 100%);
+}
+
+/* Middle Box - Book Store */
+.footer-box:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation Links Styling */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footerlink {
+  position: relative;
 }
 
 .footerlink a {
-  color: #888888;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 20px;
+  display: block;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid transparent;
 }
 
 .footerlink a:hover {
-  color: #ffffff;
+  background: rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.4);
+  color: #d4af37;
+  transform: translateX(5px);
+}
 
+/* Right Box - Social Links */
+.footer-box:last-child {
+  padding: 20px;
+}
+
+.footer-box:last-child .footer-links {
+  gap: 15px;
+  margin: 0;
+}
+
+.footer-box:last-child .footerlink a {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.4s ease;
+}
+
+.footer-box:last-child .footerlink a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.link-item i {
+  font-size: 1.4rem;
+  min-width: 25px;
+  text-align: center;
+}
+
+/* Enhanced Book Badge */
+.book-badge {
+  display: block;
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.glow-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #d4af37,
+    #f4d03f,
+    #d4af37,
+    #f4d03f,
+    #d4af37
+  );
+  animation: spin 6s linear infinite;
+  padding: 3px;
+}
+
+.glow-ring::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.book-badge svg {
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+}
+
+.book-badge:hover {
+  transform: scale(1.05);
+}
+
+.book-badge:hover svg {
+  transform: rotate(5deg);
+}
+
+.book-badge:hover .glow-ring {
+  animation-duration: 2s;
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.8);
+}
+
+/* Copyright */
+.copyright {
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  color: #888;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.copyright::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+/* Dividers */
+.footer-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  margin: 25px 0;
+  border-radius: 1px;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 50px 25px 30px;
+  }
+  
+  .footer-box:nth-child(2) {
+    grid-column: 1 / -1;
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 20px 25px;
+  }
+  
+  .footer-title {
+    font-size: 1.5rem;
+  }
+  
+  .book-badge {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .footer-box:first-child {
+    padding: 25px;
+  }
+  
+  .footerlink a {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 30px 15px 20px;
+    gap: 30px;
+  }
+  
+  .footer-title {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+  
+  .book-badge {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .footer-box:first-child p {
+    font-size: 0.95rem;
+  }
+  
+  .footer-box:last-child .footerlink a {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+  
+  .link-item i {
+    font-size: 1.2rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .glow-ring {
+    animation: none;
+  }
+  
+  * {
+    transition: none !important;
+  }
+}
+
+a:focus {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
 }
 
 ul {
@@ -363,44 +650,6 @@ iframe {
   .nav-link.active {
     color: #f5a623;
     border-bottom: 2px solid #f5a623;
-  }
-
-  .copyright {
-    color: #555555;
-    border-top: 1px solid #333333;
-    padding-top: 24px;
-    margin-top: 32px;
-    font-size: 30px;
-    text-align: center;
-  }
-
-  .footer-links li {
-    color: #aaaaaa;
-    font-weight: 500;
-    margin-bottom: 8px;
-    cursor: pointer;
-    font-size: 30px;
-  }
-
-  .footer-title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-    text-align: center;
-  }
-
-  .footer-box {
-    flex: 1 1 300px;
-    margin: 20px;
-    padding: 0 20px;
-    position: relative;
-    text-align: justify;
-    font-size: 40px;
-  }
-
-  .book-badge {
-    padding-top: 500px;
-    padding-left: 40px;
   }
 
 }
