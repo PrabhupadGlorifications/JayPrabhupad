@@ -376,12 +376,12 @@ footer::before {
     grid-template-columns: 1fr;
     gap: 40px;
     padding: 40px 20px 25px;
+    font-size: 40px;
   }
   
   .footer-title {
     font-size: 1.5rem;
   }
-  
   
   .footer-box:first-child {
     padding: 25px;
@@ -390,32 +390,6 @@ footer::before {
   .footerlink a {
     padding: 15px;
     font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-container {
-    padding: 30px 15px 20px;
-    gap: 30px;
-  }
-  
-  .footer-title {
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-  }
-  
-  
-  .footer-box:first-child p {
-    font-size: 0.95rem;
-  }
-  
-  .footer-box:last-child .footerlink a {
-    padding: 12px;
-    font-size: 0.9rem;
-  }
-  
-  .link-item i {
-    font-size: 1.2rem;
   }
 }
 
