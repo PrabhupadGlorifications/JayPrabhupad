@@ -59,6 +59,19 @@
 
 @media (min-width: 100px) and (max-width: 1000px) {
   .table-container ul li {
-  margin-bottom: 40px;
-}
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+
+  .table-container {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .table-title {
+    font-size: 60px;
+  }
+  .cont {
+    font-size: 40px;
+  }
 }
