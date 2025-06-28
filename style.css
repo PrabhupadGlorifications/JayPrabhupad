@@ -164,6 +164,7 @@ footer::before {
   gap: 60px;
   position: relative;
   z-index: 1;
+  font-size: 1.5rem;
 }
 
 .footer-box {
@@ -208,7 +209,7 @@ footer::before {
   color: #e8e8e8;
   line-height: 1.8;
   margin-bottom: 20px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: justify;
   font-weight: 300;
 }
@@ -381,10 +382,6 @@ footer::before {
     font-size: 1.5rem;
   }
   
-  .book-badge {
-    width: 220px;
-    height: 220px;
-  }
   
   .footer-box:first-child {
     padding: 25px;
@@ -407,10 +404,6 @@ footer::before {
     letter-spacing: 1px;
   }
   
-  .book-badge {
-    width: 200px;
-    height: 200px;
-  }
   
   .footer-box:first-child p {
     font-size: 0.95rem;

@@ -234,6 +234,14 @@
         margin-bottom: 10px;
     }
 
+    .sortdropdown {
+        font-size: 40px;
+    }
+
+    .nav-title {
+        font-size: 40px;
+    }
+
     .btn {
         background: linear-gradient(135deg, #f8c291, #f6e58d, #ffcccc);
         padding: 0.5rem 0.5rem;
@@ -297,6 +305,14 @@
         row-gap: 40px;
         column-gap: 0px;
         padding: 20px;
+    }
+
+    .sortdropdown {
+        font-size: 20px;
+    }
+
+    .nav-title {
+        font-size: 20px;
     }
 
     .card {
@@ -376,6 +392,14 @@
     .card {
         width: 260px;
         height: 300px;
+    }
+
+    .sortdropdown {
+        font-size: 20px;
+    }
+
+    .nav-title {
+        font-size: 20px;
     }
 
     h2 {
