@@ -203,7 +203,7 @@ footer::before {
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
+  width: 120px;
   height: 3px;
   background: linear-gradient(90deg, transparent, #d4af37, transparent);
   border-radius: 2px;
@@ -505,9 +505,14 @@ iframe {
 
   }
 
+  .footer-title::after {
+    width: 200px;
+  }
+
   .footerlink a {
     font-size: 40px;
   }
+
   .link-item i {
     font-size: 40px;
     margin: 20px;
