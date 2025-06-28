@@ -216,7 +216,7 @@ footer::before {
 .footer-box:first-child p:last-of-type {
   color: #d4af37;
   font-style: italic;
-  text-align: right;
+  text-align: center;
   font-weight: 400;
   border-top: 1px solid rgba(212, 175, 55, 0.3);
   padding-top: 15px;
@@ -366,9 +366,6 @@ footer::before {
   transform: scale(1.05);
 }
 
-.book-badge:hover svg {
-  transform: rotate(5deg);
-}
 
 .book-badge:hover .glow-ring {
   animation-duration: 2s;
@@ -415,7 +412,7 @@ footer::before {
 /* Responsive Design */
 @media (max-width: 1200px) {
   .footer-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 40px;
     padding: 50px 25px 30px;
   }
