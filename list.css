@@ -58,7 +58,7 @@
 }
 
 @media (min-width: 100px) and (max-width: 1000px) {
-  .tablem{
-    font-size: 3em;
-  }
+  .table-container ul li {
+  margin-bottom: 40px;
+}
 }
