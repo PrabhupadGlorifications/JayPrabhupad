@@ -502,7 +502,6 @@ iframe {
     border: 1px solid #ccc;
     box-shadow: 0 2px 8px rgba(148, 228, 250, 0.4);
     font-size: 30px;
-
   }
 
   .footer-title::after {
@@ -580,15 +579,11 @@ iframe {
     color: #f5a623;
     border-bottom: 2px solid #f5a623;
   }
-
 }
-
 
 html {
   scroll-behavior: smooth;
 }
-
-
 .arrow {
   text-align: center;
 }
