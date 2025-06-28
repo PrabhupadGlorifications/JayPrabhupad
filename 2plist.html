@@ -1,11 +1,13 @@
 <div class="arrow">
-    <button onclick="goToPreviousPastime()">Previous</button>
-    <select id="pastimesSort" class="sortdropdown">
-        <option value="id-asc">Oldest First</option>
-        <option value="id-desc">Newest First</option>
-    </select>
-    <button onclick="goToNextPastime()">Next</button>
+    <button class="sortdropdown" id="ps" onclick="goToPreviousPastime()">
+        <div><i class="fa-solid fa-left-long"></i> Previous</div>
+        <div id="prev-title" class="title"></div>
+    </button>
 
+    <button class="sortdropdown" id="ns" onclick="goToNextArticle()">
+        <div>Next <i class="fa-solid fa-right-long"></i></div>
+        <div id="next-title" class="title"></div>
+    </button>
 </div>
 
 <ul id="pastimesList" hidden></ul>
