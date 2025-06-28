@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function updateButton(btn) {
-  btn.style.color = hasLiked ? "red" : "black";
+  btn.style.color = hasLiked ? "black" : "black";
 }
 
 

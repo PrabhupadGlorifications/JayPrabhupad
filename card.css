@@ -1,52 +1,91 @@
 .arrow {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin: 30px 0;
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 0 20px;
     flex-wrap: wrap;
 }
 
 .sortdropdown {
-    background-color: #3b6978;
-    color: #ffffff;
+    background-color: #1e2024;
+    color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 20px;
-    font-weight: 600;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 2px solid rgb(245, 166, 35, 0.5);
+    font-size: 1.1rem;
     cursor: pointer;
+    flex: 1 1 300px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 40%;
-    /* increased width to show longer titles */
-    max-width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 300px;
+    max-width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+#ps {
+    margin-left: 2em;
+}
+
+#ns {
+    margin-right: 2em;
 }
 
 .sortdropdown:hover {
-    background-color: #204051;
-    transform: translateY(-2px);
+    background-color: #2a2d33;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+#ps::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    transition: right 0.5s ease;
+}
+
+#ps:hover::after {
+    right: 100%;
+}
+
+#ns::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  transition: left 0.5s ease;
+}
+
+#ns:hover::after {
+  left: 100%;
 }
 
 .sortdropdown i {
-    font-size: 20px;
-    flex-shrink: 0;
-    /* icon won't shrink */
+    margin-right: 8px;
 }
 
 .nav-title {
-    font-size: 20px;
-    font-weight: 500;
-    font-style: italic;
-    color: #ffd369;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    flex-grow: 1;
+    margin-top: 8px;
+    font-size: 1rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    white-space: normal;
     text-align: left;
+    font-style: italic;
 }
 
 /* --------- Card Section --------- */
@@ -237,8 +276,9 @@
     .sortdropdown {
         font-size: 40px;
     }
+
     .nav-title {
-    font-size: 40px;
+        font-size: 30px;
     }
 
     .btn {
@@ -248,7 +288,7 @@
         text-align: center;
         transition: background-color 0.3s;
         text-decoration: none;
-        margin-bottom: 15px;
+        margin-bottom: 90px;
         margin-top: 40px;
         text-align: center;
         font-size: 40px;
@@ -257,6 +297,26 @@
     }
 
     .btn:hover {
+        background: linear-gradient(135deg, #f8c291, #f3e7ab, #f2d1d1);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+    .lbtn {
+        background: linear-gradient(135deg, #f8c291, #f6e58d, #ffcccc);
+        padding: 0.5rem 0.5rem;
+        border-radius: 30px;
+        text-align: center;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        margin-bottom: 90px;
+        margin-top: 40px;
+        text-align: center;
+        font-size: 40px;
+        width: 100px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .lbtn:hover {
         background: linear-gradient(135deg, #f8c291, #f3e7ab, #f2d1d1);
         transform: translateY(-1px);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -309,8 +369,9 @@
     .sortdropdown {
         font-size: 20px;
     }
+
     .nav-title {
-    font-size: 20px;
+        font-size: 20px;
     }
 
     .card {
@@ -332,7 +393,7 @@
         text-align: center;
         transition: background-color 0.3s;
         text-decoration: none;
-        margin-bottom: 15px;
+        margin-bottom: 90px;
         margin-top: 40px;
         text-align: center;
         font-size: 30px;
@@ -341,6 +402,27 @@
     }
 
     .btn:hover {
+        background: linear-gradient(135deg, #f8c291, #f3e7ab, #f2d1d1);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+    .lbtn {
+        background: linear-gradient(135deg, #f8c291, #f6e58d, #ffcccc);
+        color: #fff;
+        padding: 0.5rem 0.5rem;
+        border-radius: 30px;
+        text-align: center;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        margin-bottom: 90px;
+        margin-top: 40px;
+        text-align: center;
+        font-size: 30px;
+        width: 90px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .lbtn:hover {
         background: linear-gradient(135deg, #f8c291, #f3e7ab, #f2d1d1);
         transform: translateY(-1px);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -395,8 +477,9 @@
     .sortdropdown {
         font-size: 20px;
     }
+
     .nav-title {
-    font-size: 20px;
+        font-size: 20px;
     }
 
     h2 {
@@ -407,8 +490,8 @@
 
     .btn {
         background: linear-gradient(135deg, #f8c291, #f6e58d, #ffcccc);
-        border-color: #000000;
-        color: #fff;
+        border-color: rgba(0, 0, 0, 0.5);;
+        color: #000000;
         padding: 0.5rem 0.5rem;
         border-radius: 20px;
         text-align: center;
@@ -430,6 +513,29 @@
 
     .btn span {
         margin-left: 8px;
+    }
+
+    .lbtn {
+        background: linear-gradient(135deg, #f8c291, #f6e58d, #ffcccc);
+        border-color: rgba(0, 0, 0, 0.5);;
+        color: #000000;
+        padding: 0.5rem 0.5rem;
+        border-radius: 20px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        margin-bottom: 90px;
+        margin-top: 40px;
+        text-align: center;
+        font-size: 20px;
+        width: 90px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .lbtn:hover {
+        background: linear-gradient(135deg, #f8c291, #f3e7ab, #f2d1d1);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 
     .card a {

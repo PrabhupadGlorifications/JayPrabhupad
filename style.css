@@ -365,10 +365,6 @@ footer::before {
     padding: 50px 25px 30px;
   }
   
-  .footer-box:nth-child(2) {
-    grid-column: 1 / -1;
-    order: -1;
-  }
 }
 
 @media (max-width: 768px) {
@@ -498,6 +494,10 @@ iframe {
     box-shadow: 0 2px 8px rgba(148, 228, 250, 0.4);
     font-size: 30px;
 
+  }
+
+  .footerlink a {
+    font-size: 40px;
   }
 
   .sort-dropdown {

@@ -34,8 +34,8 @@ function updateNavTitles() {
     const prevTitle = window.sortedArticles[prevIndex].title;
     const nextTitle = window.sortedArticles[nextIndex].title;
 
-    document.getElementById("prev-title").textContent = `: ${prevTitle}`;
-    document.getElementById("next-title").textContent = `: ${nextTitle}`;
+    document.getElementById("prev-title").textContent = `${prevTitle}`;
+    document.getElementById("next-title").textContent = `${nextTitle}`;
 }
 
 function goToNextArticle() {
