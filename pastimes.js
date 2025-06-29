@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
         .catch(error => {
-            console.error("Failed to load articles.json:", error);
+            console.error("Failed to load pastimes.json:", error);
         });
 
     // Optional: For other list-based search bars
