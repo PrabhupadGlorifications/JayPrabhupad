@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("pastimes.json")
         .then(res => res.json())
         .then(data => {
-            // Render cards
+            // ✅ Sort in descending order by ID (newest first)
+            data.sort((a, b) => b.id - a.id);
+
+            // ✅ Render cards
             data.forEach(article => {
                 const card = document.createElement("div");
                 card.className = "card";

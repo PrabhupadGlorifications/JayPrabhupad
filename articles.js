@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("articles.json")
         .then(res => res.json())
         .then(data => {
-            // Render cards
+            // ✅ Sort descending by ID before rendering
+            data.sort((a, b) => b.id - a.id); // Newest first
+
+            // ✅ Render cards
             data.forEach(article => {
                 const card = document.createElement("div");
                 card.className = "card";
@@ -23,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
                 articlesContainer.appendChild(card);
             });
-
             // Enable search functionality after cards are added
             if (searchBar) {
                 searchBar.addEventListener("input", () => {

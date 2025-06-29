@@ -11,14 +11,14 @@ function sortCards() {
         const idB = parseInt(b.getAttribute('data-id'));
 
         switch (sortOption) {
+            case 'id-desc':
+                return idB - idA;
+            case 'id-asc':
+                return idA - idB;
             case 'asc':
                 return titleA.localeCompare(titleB);
             case 'desc':
                 return titleB.localeCompare(titleA);
-            case 'id-asc':
-                return idA - idB;
-            case 'id-desc':
-                return idB - idA;
             default:
                 return 0;
         }

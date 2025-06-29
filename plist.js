@@ -1,6 +1,7 @@
+// Load external HTML list into container
 fetch("2plist.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("plist-container").innerHTML = data);
+  .then(res => res.text())
+  .then(data => document.getElementById("plist-container").innerHTML = data);
 
 document.addEventListener("DOMContentLoaded", function () {
   const listElement = document.getElementById("pastimesList");
@@ -13,12 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("plist.json")
     .then(response => response.json())
     .then(data => {
-      pastimesData = data;
+      // ✅ Sort in descending order by ID
+      pastimesData = data.sort((a, b) => b.id - a.id);
       renderList(pastimesData);
     })
     .catch(error => console.error("Error loading plist.json:", error));
 
-  // Render function
+  // Render list
   function renderList(data) {
     listElement.innerHTML = "";
     data.forEach(item => {
@@ -48,17 +50,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const value = this.value;
 
     switch (value) {
+      case "id-desc":
+        sorted.sort((a, b) => b.id - a.id);
+        break;
+      case "id-asc":
+        sorted.sort((a, b) => a.id - b.id);
+        break;
       case "asc":
         sorted.sort((a, b) => a.title.localeCompare(b.title));
         break;
       case "desc":
         sorted.sort((a, b) => b.title.localeCompare(a.title));
-        break;
-      case "id-asc":
-        sorted.sort((a, b) => a.id - b.id);
-        break;
-      case "id-desc":
-        sorted.sort((a, b) => b.id - a.id);
         break;
     }
 

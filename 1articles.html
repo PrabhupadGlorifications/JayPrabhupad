@@ -19,10 +19,10 @@
     <div id="opt">
         <input type="text" class="search-bar-container" id="searchBar" placeholder="Search Articles...">
         <select id="writingsSort" class="sort-dropdown" onchange="sortCards()">
+            <option value="id-desc"> Newest First</option>
+            <option value="id-asc"> Oldest First</option>
             <option value="asc">Title A–Z</option>
             <option value="desc">Title Z–A</option>
-            <option value="id-asc"> Oldest First</option>
-            <option value="id-desc"> Newest First</option>
         </select>
     </div>
 
@@ -31,6 +31,7 @@
     <div id="footer-container"></div>
 
     <script src="script.js"></script>
+    <script src="1reverse.js"></script>
     <script src="asort.js"></script>
     <script src="head.js"></script>
     <script src="footer.js"></script>
