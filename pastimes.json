@@ -242,7 +242,7 @@
     {
         "id": 41,
         "title": "I am always with you.",
-        "image": "images/always.jpg",
+        "image": "images/die.jpg",
         "link": "always.html"
     },
     {
@@ -326,7 +326,7 @@
     {
         "id": 55,
         "title": "As an artist, I am most grateful for Srila Prabhupada's efforts.",
-        "image": "images/artits.jpg",
+        "image": "images/lata.jpg",
         "link": "artits.html"
     },
     {
@@ -370,12 +370,6 @@
         "title": "Demon-cracy.",
         "image": "images/democracy.jpg",
         "link": "democracy.html"
-    },
-    {
-        "id": 63,
-        "title": "I worship Srila Prabhupāda.",
-        "image": "images/worship.jpg",
-        "link": "worship.html"
     },
     {
         "id": 64,
