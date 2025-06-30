@@ -11,7 +11,7 @@
     "image": "images/ekadasi.jpg",
     "link": "ekadashi.html"
   },
-    {
+  {
     "id": 3,
     "title": "The proper method of dressing Jagannatha is as a Ksatriya King.",
     "image": "images/dressing.jpg",
@@ -22,6 +22,12 @@
     "title": "One who is a Prabhupada-anuga, is certainly a Raganuga-bhakta.",
     "image": "images/anuga.jpg",
     "link": "anuga.html"
+  },
+  {
+    "id": 5,
+    "title": "\"I RIDE AS A SERVANT\"",
+    "image": "images/ride.jpg",
+    "link": "ride.html"
   },
   {
     "id": 6,
