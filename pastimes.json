@@ -814,5 +814,30 @@
         "title": "Ahaituki apratihatā",
         "image": "images/unstoppable.jpg",
         "link": "unstoppable.html"
+    },
+    {
+        "id": 139,
+        "title": "Quoting Prabhupād = Quoting Śāstrās",
+        "image": "images/Quoting.jpg",
+        "link": "Quoting.html"
+    },
+    {
+        "id": 140,
+        "title": "You do not know about Lord Nityananda’s mercy.",
+        "image": "images/nm.jpg",
+        "link": "nm.html"
+    },
+    {
+        "id": 141,
+        "title": "You can test yourself.",
+        "image": "images/envy.jpg",
+        "link": "envy.html"
+    },
+    {
+        "id": 141,
+        "title": "Every thing is Coming From Him.",
+        "image": "images/Coming.jpg",
+        "link": "Coming.html"
     }
+    
 ]

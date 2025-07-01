@@ -262,5 +262,11 @@
     "title": "Problematic tunes",
     "image": "images/tunes.jpg",
     "link": "tunes.html"
+  },
+  {
+    "id": 45,
+    "title": "The highest happiness",
+    "image": "images/highest.jpg",
+    "link": "highest.html"
   }
 ]
