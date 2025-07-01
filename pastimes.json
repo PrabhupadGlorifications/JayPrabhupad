@@ -805,8 +805,14 @@
     },
     {
         "id": 137,
-        "title": "He can go on glorifying śrīla Prabhupāda forever.",
-        "image": "images/gmgf.jpg",
-        "link": "gmgf.html"
+        "title": "You should not have dared!",
+        "image": "images/dare.jpg",
+        "link": "dare.html"
+    },
+    {
+        "id": 138,
+        "title": "Ahaituki apratihatā",
+        "image": "images/unstoppable.jpg",
+        "link": "unstoppable.html"
     }
 ]
