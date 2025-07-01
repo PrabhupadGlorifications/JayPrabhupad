@@ -760,5 +760,41 @@
         "title": "Śrīla Prabhupāda, you have given us everything.",
         "image": "images/given.jpg",
         "link": "given.html"
+    },
+    {
+        "id": 130,
+        "title": "Was Śrīla Prabhupāda old fashioned?",
+        "image": "images/of.jpg",
+        "link": "of.html"
+    },
+    {
+        "id": 131,
+        "title": "Be chaste! Don't behave like a wandering prostitute",
+        "image": "images/wp.jpg",
+        "link": "wp.html"
+    },
+    {
+        "id": 132,
+        "title": "Siksa outside ISKCON?",
+        "image": "images/soi.jpg",
+        "link": "soi.html"
+    },
+    {
+        "id": 133,
+        "title": "When does learning of Scriptures attains Perfection?",
+        "image": "images/scipture.jpg",
+        "link": "scipture.html"
+    },
+    {
+        "id": 134,
+        "title": "Approved intoxication for devotees",
+        "image": "images/intoxication.jpg",
+        "link": "intoxication.html"
+    },
+    {
+        "id": 135,
+        "title": "My Vishnujana Maharaja can get the whole world to chant Hare Krishna.",
+        "image": "images/vjm.jpg",
+        "link": "vjm.html"
     }
 ]
