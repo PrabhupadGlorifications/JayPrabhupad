@@ -268,5 +268,17 @@
     "title": "The highest happiness",
     "image": "images/highest.jpg",
     "link": "highest.html"
+  },
+  {
+    "id": 46,
+    "title": "How one does not become vaishnava even in assosiation of Devotees?",
+    "image": "images/snake.jpg",
+    "link": "snake.html"
+  },
+  {
+    "id": 47,
+    "title": "Courage?",
+    "image": "images/Courage.jpg",
+    "link": "Courage.html"
   }
 ]
