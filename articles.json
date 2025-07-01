@@ -244,5 +244,11 @@
     "title": "Did you Offered your Obeisances today?",
     "image": "images/obeisance.jpg",
     "link": "obeisance.html"
+  },
+  {
+    "id": 42,
+    "title": "Kirtan Week",
+    "image": "images/Kirtanweek.jpg",
+    "link": "Kirtanweek.html"
   }
 ]
