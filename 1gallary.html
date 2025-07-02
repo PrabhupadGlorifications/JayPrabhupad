@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="gallary.css">
+</head>
+
+<body>
+
+    <div id="header-container"></div>
+
+    <div class="hem">
+        <h1>🙏 Prabhupad Photo Gallery 🙏</h1>
+        <p>Sacred moments and divine teachings captured in time</p>
+    </div>
+
+    <div class="container">
+        <div class="filter-nav">
+            <button class="filter-btn active" data-filter="all">
+                Show All <span class="count" id="all-count">0</span>
+            </button>
+            <button class="filter-btn" data-filter="maharaj-sanand">
+                With Maharaj Sanand <span class="count" id="maharaj-sanand-count">0</span>
+            </button>
+            <button class="filter-btn" data-filter="newyork">
+                Single <span class="count" id="newyork-count">0</span>
+            </button>
+            <button class="filter-btn" data-filter="quotes">
+                With Quotes <span class="count" id="quotes-count">0</span>
+            </button>
+            <button class="filter-btn" data-filter="comics">
+                Comic Style <span class="count" id="comics-count">0</span>
+            </button>
+            <button class="filter-btn" data-filter="comics">
+                Comic Style <span class="count" id="comics-count">0</span>
+            </button>
+        </div>
+
+        <div class="photos-grid" id="photos-grid"></div>
+
+        <div class="no-results" id="no-results">
+            No photos found for this category
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <button class="nav-btn prev-btn" id="prev-btn">&#8249;</button>
+        <button class="nav-btn next-btn" id="next-btn">&#8250;</button>
+        <div class="modal-content">
+            <img id="modal-img" class="modal-img" />
+            <div class="modal-info">
+                <div id="modal-title" class="photo-title"></div>
+                <div id="modal-description" class="photo-description"></div>
+            </div>
+
+        </div>
+
+        <div class="modal-counter" id="modal-counter">1 / 18</div>
+    </div>
+
+
+    <div id="footer-container"></div>
+
+    <script src="script.js"></script>
+    <script src="gallary.js"></script>
+    <script src="head.js"></script>
+    <script src="footer.js"></script>
+
+</body>
+
+</html>
