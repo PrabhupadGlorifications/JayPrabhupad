@@ -88,18 +88,18 @@ const photoData = [
         category: "newyork",
     },
     {
-        id: 14,
-        title: "Path of Devotion",
-        description: "Guidance for sincere seekers on the spiritual path.",
-        image: "https://via.placeholder.com/400x300/7bed9f/ffffff?text=Quote+Photo+2",
-        category: "quotes",
-        categoryName: "Photos with Quotes"
+        id: 19,
+        title: "Srila Prabhupada Kirtan",
+        type: "video",
+        video: "images/vover.mp4",
+        category: "newyork"
     },
+
     {
         id: 15,
         title: "Love Divine",
         description: "Teaching about the highest form of love - love for God.",
-        image: "images/sanand1.jpg",
+        image: "images/vover.jpg",
         category: "quotes",
         categoryName: "Photos with Quotes"
     },
@@ -229,8 +229,16 @@ function createPhotoCard(photo) {
 
     const hasContent = photo.title || photo.description;
 
+    let mediaHTML = '';
+
+    if (photo.type === 'video') {
+        mediaHTML = `<video class="photo-img" src="${photo.video}" muted autoplay loop playsinline></video>`;
+    } else {
+        mediaHTML = `<img src="${photo.image}" alt="${photo.title || 'Photo'}" class="photo-img">`;
+    }
+
     card.innerHTML = `
-        <img src="${photo.image}" alt="${photo.title || 'Photo'}" class="photo-img">
+        ${mediaHTML}
         ${hasContent ? `
             <div class="photo-content">
                 ${photo.title ? `<div class="photo-title">${photo.title}</div>` : ''}
@@ -241,6 +249,7 @@ function createPhotoCard(photo) {
 
     return card;
 }
+
 
 // Setup event listeners
 function setupEventListeners() {
@@ -314,9 +323,22 @@ function openModal(photo) {
 }
 
 function updateModalContent(photo) {
-    modalImg.src = photo.image;
+    const modalVideo = document.getElementById('modal-video');
+    const isVideo = photo.type === 'video';
 
-    // Check if either title or description exists
+    if (isVideo) {
+        modalImg.style.display = 'none';
+        modalVideo.style.display = 'block';
+        modalVideo.src = photo.video;
+        modalVideo.load();
+        modalVideo.play();
+    } else {
+        modalImg.src = photo.image;
+        modalImg.style.display = 'block';
+        modalVideo.pause();
+        modalVideo.style.display = 'none';
+    }
+
     const hasTitle = photo.title && photo.title.trim() !== "";
     const hasDescription = photo.description && photo.description.trim() !== "";
 
