@@ -1,25 +1,21 @@
 const photoData = [
     // Maharaj Sanand Category
     {
-        id: 1,
         title: "Prabhupad with Maharaj Sanand",
         image: "images/sanand1.jpg",
         category: "maharaj-sanand",
     },
     {
-        id: 2,
         title: "Prabhupad with Maharaj Sanand",
         image: "images/sanand2.jpg",
         category: "maharaj-sanand",
     },
     {
-        id: 3,
         title: "Prabhupad with Maharaj Sanand",
         image: "images/sanand3.jpg",
         category: "maharaj-sanand",
     },
     {
-        id: 4,
         title: "Prabhupad with Maharaj Sanand",
         image: "images/sanand4.jpg",
         category: "maharaj-sanand",
@@ -27,39 +23,33 @@ const photoData = [
 
     // Singles Category
     {
-        id: 5,
         image: "images/photo_6327649088564216278_y (1).jpg",
         title: "'Your ever well-wisher'",
         category: "newyork",
     },
     {
-        id: 6,
         title: "The symbol of devotional service in the highest degree is Radharani.",
         description: "(Nectar of Devotion, Chapter 1)",
         image: "images/photo_6327649088564216294_x (2).jpg",
         category: "newyork",
     },
     {
-        id: 7,
         title: "Finally Sadhguru gets 'Sat-guru'",
         description: "All glories to Śrīla Prabhupāda!",
         image: "images/photo_6327649088564216343_y (1).jpg",
         category: "newyork",
     },
     {
-        id: 8,
         title: "Question: Is there a Prayer to Krsna for a devotee who is Unwilling to Become Krishna Conscious?",
         image: "images/photo_6327649088564216348_y (1).jpg",
         category: "newyork",
     },
     {
-        id: 9,
         description: "'Great unalloyed devotees of the Lord are compassionate toward the fallen, and therefore they travel all over the world with the mission of bringing souls back to Godhead, back to home.'",
         image: "images/photo_6327649088564216351_y (1).jpg",
         category: "newyork",
     },
     {
-        id: 10,
         title: "CHĀRU VILĀS Reviving moments with HH Bhakti Charu Swami Maharaja",
         description: "Author : Krsna-Kisora Das",
         image: "images/photo_6062113822115741592_y (1).jpg",
@@ -67,13 +57,11 @@ const photoData = [
         categoryName: "Prabhupad at New York"
     },
     {
-        id: 11,
         title: "No one!",
         image: "images/photo_6149867189453308466_y (2).jpg",
         category: "newyork",
     },
     {
-        id: 12,
         title: "Shrila Prabhupad's original sweater",
         description: "Disciples distributing Prabhupad's books on New York streets.",
         image: "images/photo_6149867189453308691_y (2).jpg",
@@ -81,14 +69,12 @@ const photoData = [
         categoryName: "Prabhupad at New York"
     },
     {
-        id: 13,
         title: "Priceless moments with a pure devotee",
         description: "Author : Trivikrama Swami",
         image: "images/photo_6082631271730758946_y (3).jpg",
         category: "newyork",
     },
     {
-        id: 19,
         title: "Srila Prabhupada Kirtan",
         type: "video",
         video: "images/vover.mp4",
@@ -96,7 +82,6 @@ const photoData = [
     },
 
     {
-        id: 15,
         title: "Love Divine",
         description: "Teaching about the highest form of love - love for God.",
         image: "images/vover.jpg",
@@ -106,7 +91,6 @@ const photoData = [
     // Quotes Category
     // Comics Category
     {
-        id: 16,
         title: "The Mercy Comic",
         description: "Illustrating the boundless compassion of the spiritual master.",
         image: "https://via.placeholder.com/400x300/ff7675/ffffff?text=Comic+1",
@@ -114,7 +98,6 @@ const photoData = [
         categoryName: "Comic Style Photos"
     },
     {
-        id: 17,
         title: "Journey to the West",
         description: "Comic-style depiction of the historic voyage to America.",
         image: "https://via.placeholder.com/400x300/74b9ff/ffffff?text=Comic+2",
@@ -122,12 +105,17 @@ const photoData = [
         categoryName: "Comic Style Photos"
     },
     {
-        id: 18,
         title: "The Kirtan Revolution",
         description: "How chanting changed the world, told in comic format.",
         image: "https://via.placeholder.com/400x300/00b894/ffffff?text=Comic+3",
         category: "comics",
         categoryName: "Comic Style Photos"
+    },
+    {
+        title: "The Kirtan Revolution",
+        description: "How chanting changed the world, told in comic format.",
+        image: "https://via.placeholder.com/400x300/00b894/ffffff?text=Comic+3",
+        category: "shave",
     }
 ];
 
@@ -190,7 +178,8 @@ function updateCounts() {
         'maharaj-sanand': photoData.filter(p => p.category === 'maharaj-sanand').length,
         'newyork': photoData.filter(p => p.category === 'newyork').length,
         'quotes': photoData.filter(p => p.category === 'quotes').length,
-        'comics': photoData.filter(p => p.category === 'comics').length
+        'comics': photoData.filter(p => p.category === 'comics').length,
+        'shave': photoData.filter(p => p.category === 'shave').length
     };
 
     Object.keys(counts).forEach(category => {
