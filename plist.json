@@ -634,7 +634,7 @@
         "title": "Śrīla Prabhupāda, you have given us everything.",
         "link": "given.html"
     },
-    {
+     {
         "id": 130,
         "title": "Was Śrīla Prabhupāda old fashioned?",
         "link": "of.html"
@@ -642,7 +642,7 @@
     {
         "id": 131,
         "title": "Be chaste! Don't behave like a wandering prostitute",
-        "link": "wp.html"
+        "link": "wpr.html"
     },
     {
         "id": 132,
@@ -661,41 +661,76 @@
     },
     {
         "id": 135,
+        "title": "Preach now, Varṇāśrama-dharma now.",
+        "link": "vd.html"
+    },
+    {
+        "id": 136,
         "title": "My Vishnujana Maharaja can get the whole world to chant Hare Krishna.",
         "link": "vjm.html"
     },
     {
-        "id": 136,
+        "id": 137,
         "title": "He can go on glorifying śrīla Prabhupāda forever.",
         "link": "gmgf.html"
     },
     {
-        "id": 137,
+        "id": 138,
         "title": "You should not have dared!",
         "link": "dare.html"
     },
     {
-        "id": 138,
+        "id": 139,
         "title": "Ahaituki apratihatā",
         "link": "unstoppable.html"
     },
     {
-        "id": 139,
+        "id": 140,
         "title": "Quoting Prabhupād = Quoting Śāstrās",
         "link": "Quoting.html"
     },
     {
-        "id": 140,
+        "id": 141,
         "title": "You do not know about Lord Nityananda’s mercy.",
         "link": "nm.html"
     },
     {
-        "id": 141,
-        "title": "You can test yourself.",
-        "link": "envy.html"
+        "id": 142,
+        "title": "Dirty Politics to become Leader.",
+        "link": "Dirty.html"
     },
     {
-        "id": 142,
+        "id": 143,
+        "title": "Too much Control..gradually it will become a mundane institution!",
+        "link": "mi.html"
+    },
+    {
+        "id": 144,
+        "title": "If you ever have time, read Prabhupada's books.",
+        "link": "time.html"
+    },
+    {
+        "id": 144,
+        "title": "The bad leader is diverted intelligence.",
+        "link": "di.html"
+    },
+    {
+        "id": 145,
+        "title": "You can test yourself.",
+        "link": "envy.html"
+    }, 
+    {
+        "id": 146,
+        "title": "samskāra",
+        "link": "sams.html"
+    }, 
+    {
+        "id": 146,
+        "title": "It should be our definite policy that nobody is ill treated.",
+        "link": "ill.html"
+    },
+    {
+        "id": 147,
         "title": "Every thing is Coming From Him.",
         "link": "Coming.html"
     }

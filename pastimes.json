@@ -770,8 +770,8 @@
     {
         "id": 131,
         "title": "Be chaste! Don't behave like a wandering prostitute",
-        "image": "images/wp.jpg",
-        "link": "wp.html"
+        "image": "images/wpr.jpg",
+        "link": "wpr.html"
     },
     {
         "id": 132,
@@ -793,48 +793,90 @@
     },
     {
         "id": 135,
+        "title": "Preach now, Varṇāśrama-dharma now.",
+        "image": "images/vd.jpg",
+        "link": "vd.html"
+    },
+    {
+        "id": 136,
         "title": "My Vishnujana Maharaja can get the whole world to chant Hare Krishna.",
         "image": "images/vjm.jpg",
         "link": "vjm.html"
     },
     {
-        "id": 136,
+        "id": 137,
         "title": "He can go on glorifying śrīla Prabhupāda forever.",
         "image": "images/gmgf.jpg",
         "link": "gmgf.html"
     },
     {
-        "id": 137,
+        "id": 138,
         "title": "You should not have dared!",
         "image": "images/dare.jpg",
         "link": "dare.html"
     },
     {
-        "id": 138,
+        "id": 139,
         "title": "Ahaituki apratihatā",
         "image": "images/unstoppable.jpg",
         "link": "unstoppable.html"
     },
     {
-        "id": 139,
+        "id": 140,
         "title": "Quoting Prabhupād = Quoting Śāstrās",
         "image": "images/Quoting.jpg",
         "link": "Quoting.html"
     },
     {
-        "id": 140,
+        "id": 141,
         "title": "You do not know about Lord Nityananda’s mercy.",
         "image": "images/nm.jpg",
         "link": "nm.html"
     },
     {
-        "id": 141,
+        "id": 142,
+        "title": "Dirty Politics to become Leader.",
+        "image": "images/Dirty.jpg",
+        "link": "Dirty.html"
+    },
+    {
+        "id": 143,
+        "title": "Too much Control..gradually it will become a mundane institution!",
+        "image": "images/mi.jpg",
+        "link": "mi.html"
+    },
+    {
+        "id": 144,
+        "title": "If you ever have time, read Prabhupada's books.",
+        "image": "images/time.jpg",
+        "link": "time.html"
+    },
+    {
+        "id": 144,
+        "title": "The bad leader is diverted intelligence.",
+        "image": "images/di.jpg",
+        "link": "di.html"
+    },
+    {
+        "id": 145,
         "title": "You can test yourself.",
         "image": "images/envy.jpg",
         "link": "envy.html"
+    }, 
+    {
+        "id": 146,
+        "title": "samskāra",
+        "image": "images/sams.jpg",
+        "link": "sams.html"
+    }, 
+    {
+        "id": 146,
+        "title": "It should be our definite policy that nobody is ill treated.",
+        "image": "images/ill.jpg",
+        "link": "ill.html"
     },
     {
-        "id": 142,
+        "id": 147,
         "title": "Every thing is Coming From Him.",
         "image": "images/Coming.jpg",
         "link": "Coming.html"
