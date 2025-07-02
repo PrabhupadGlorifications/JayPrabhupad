@@ -48,53 +48,44 @@ const photoData = [
     },
     {
         id: 8,
-        title: "Teaching Western Disciples",
-        description: "Sharing ancient wisdom with eager Western seekers.",
-        image: "https://via.placeholder.com/400x300/9b59b6/ffffff?text=Teaching",
+        title: "Question: Is there a Prayer to Krsna for a devotee who is Unwilling to Become Krishna Conscious?",
+        image: "images/photo_6327649088564216348_y (1).jpg",
         category: "newyork",
-        categoryName: "Prabhupad at New York"
     },
     {
         id: 9,
-        title: "Brooklyn Temple",
-        description: "Expanding the mission with a beautiful temple in Brooklyn.",
-        image: "https://via.placeholder.com/400x300/1abc9c/ffffff?text=Brooklyn",
+        description: "'Great unalloyed devotees of the Lord are compassionate toward the fallen, and therefore they travel all over the world with the mission of bringing souls back to Godhead, back to home.'",
+        image: "images/photo_6327649088564216351_y (1).jpg",
         category: "newyork",
-        categoryName: "Prabhupad at New York"
     },
     {
         id: 10,
-        title: "Ratha Yatra NYC",
-        description: "Bringing the festival of chariots to the streets of New York.",
-        image: "https://via.placeholder.com/400x300/34495e/ffffff?text=Ratha+Yatra",
+        title: "CHĀRU VILĀS Reviving moments with HH Bhakti Charu Swami Maharaja",
+        description: "Author : Krsna-Kisora Das",
+        image: "images/photo_6062113822115741592_y (1).jpg",
         category: "newyork",
         categoryName: "Prabhupad at New York"
     },
     {
         id: 11,
-        title: "Morning Walk",
-        description: "Daily morning walks discussing spiritual philosophy in NYC parks.",
-        image: "https://via.placeholder.com/400x300/16a085/ffffff?text=Morning+Walk",
+        title: "No one!",
+        image: "images/photo_6149867189453308466_y (2).jpg",
         category: "newyork",
-        categoryName: "Prabhupad at New York"
     },
     {
         id: 12,
-        title: "Book Distribution",
+        title: "Shrila Prabhupad's original sweater",
         description: "Disciples distributing Prabhupad's books on New York streets.",
-        image: "https://via.placeholder.com/400x300/27ae60/ffffff?text=Book+Distribution",
+        image: "images/photo_6149867189453308691_y (2).jpg",
         category: "newyork",
         categoryName: "Prabhupad at New York"
     },
-
-    // Quotes Category
     {
         id: 13,
-        title: "Divine Wisdom",
-        description: "Words that transform hearts and minds.",
-        image: "https://via.placeholder.com/400x300/ff9f43/ffffff?text=Quote+Photo+1",
-        category: "quotes",
-        categoryName: "Photos with Quotes"
+        title: "Priceless moments with a pure devotee",
+        description: "Author : Trivikrama Swami",
+        image: "images/photo_6082631271730758946_y (3).jpg",
+        category: "newyork",
     },
     {
         id: 14,
@@ -112,7 +103,7 @@ const photoData = [
         category: "quotes",
         categoryName: "Photos with Quotes"
     },
-
+    // Quotes Category
     // Comics Category
     {
         id: 16,
