@@ -535,31 +535,21 @@ const photoData = [
         category: "quotes",
     },
     {
-        title: "The symbol of devotional service in the highest degree is Radharani.",
-        description: "(Nectar of Devotion, Chapter 1)",
-        image: "images/photo_6327649088564216294_x (2).jpg",
-        category: "newyork",
+        video: "images/vjagat.mp4",
+        type: "video",
+        title: "The Real Jagat-Guru",
+        category: "quotes",
     },
     {
-        title: "Finally Sadhguru gets 'Sat-guru'",
-        description: "All glories to Śrīla Prabhupāda!",
-        image: "images/photo_6327649088564216343_y (1).jpg",
-        category: "newyork",
+        video: "images/document_6154335569892611140.mp4",
+        type: "video",
+        title: "Let me spoil your sleeps.. Don't sleep!..Getup!",
+        category: "quotes",
     },
     {
-        title: "Question: Is there a Prayer to Krsna for a devotee who is Unwilling to Become Krishna Conscious?",
-        image: "images/photo_6327649088564216348_y (1).jpg",
-        category: "newyork",
-    },
-    {
-        description: "'Great unalloyed devotees of the Lord are compassionate toward the fallen, and therefore they travel all over the world with the mission of bringing souls back to Godhead, back to home.'",
-        image: "images/photo_6327649088564216351_y (1).jpg",
-        category: "newyork",
-    },
-    {
-        title: "CHĀRU VILĀS Reviving moments with HH Bhakti Charu Swami Maharaja",
-        description: "Author : Krsna-Kisora Das",
-        image: "images/photo_6062113822115741592_y (1).jpg",
+        title: "Shrila Prabhupad's original sweater",
+        description: "Disciples distributing Prabhupad's books on New York streets.",
+        image: "images/photo_6149867189453308691_y (2).jpg",
         category: "newyork",
         categoryName: "Prabhupad at New York"
     },
@@ -569,13 +559,99 @@ const photoData = [
         category: "newyork",
     },
     {
-        title: "Shrila Prabhupad's original sweater",
-        description: "Disciples distributing Prabhupad's books on New York streets.",
-        image: "images/photo_6149867189453308691_y (2).jpg",
+        title: "Both are looking at Rose in Prabhupād's hand.",
+        image: "images/photo_6136679157363490919_x (2).jpg",
+        category: "newyork",
+    },
+    {
+        description: "Jay Rādhā Rās Bihāri.. Rādhā Rās Bihāri Rādhe..Prabhupādera Prāna dhana he!",
+        image: "images/rasbihari.jpg",
+        category: "newyork",
+    },
+    {
+        video: "images/document_6075885827567654201.mp4",
+        type: "video",
+        title: "ISKCON Thane Yagya",
+        category: "quotes",
+    },
+    {
+        video: "images/mode.mp4",
+        type: "video",
+        title: "A new mode of thinking",
+        category: "quotes",
+    },
+    {
+        title: "CHĀRU VILĀS Reviving moments with HH Bhakti Charu Swami Maharaja",
+        description: "Author : Krsna-Kisora Das",
+        image: "images/photo_6062113822115741592_y (1).jpg",
         category: "newyork",
         categoryName: "Prabhupad at New York"
     },
-    
+    {
+        video: "images/notsaying.mp4",
+        type: "video",
+        title: "I am not saying anything",
+        category: "quotes",
+    },
+    {
+        video: "images/document_6329900887921660112.mp4",
+        type: "video",
+        title: "Prabhupād devotees are everywhere! 🚩😂",
+        description: "(Yes but don't go to watch the movie now..🙂 Prabhupād will not like it) ⚠Warning ⚠" ,
+        category: "quotes",
+    },
+     {
+        description: "'Great unalloyed devotees of the Lord are compassionate toward the fallen, and therefore they travel all over the world with the mission of bringing souls back to Godhead, back to home.'",
+        image: "images/photo_6327649088564216351_y (1).jpg",
+        category: "newyork",
+    },
+    {
+        title: "'I have never known a superhero, but I know of Prabhupada!'",
+        description: "Jaya Om Vishnu-pada paramahamsa parivrajakacharya ashtottara-shata Shri Srimad His Divine Grace A. C. Bhaktivedanta Swami Srila Prabhupada ki Jay !",
+        image: "images/photo_6327649088564216350_y (2).jpg",
+        category: "newyork",
+    },
+    {
+        title: "Question: Is there a Prayer to Krsna for a devotee who is Unwilling to Become Krishna Conscious?",
+        image: "images/photo_6327649088564216348_y (1).jpg",
+        category: "newyork",
+    },
+    {
+        title: "Speaking strongly in Shrila Prabhupada's service",
+        description: "Author : HH Bhakti Vikas Swami Maharaj",
+        image: "images/speak.jpg",
+        category: "newyork",
+    },
+    {
+        title: "Finally Sadhguru gets 'Sat-guru'",
+        description: "O life air of all the Supreme Lord's devotees.",
+        image: "images/photo_6327649088564216343_y (1).jpg",
+        category: "newyork",
+    },
+    {
+        title: "O master, Srimad-Bhagavatam!",
+        description: "All glories to Śrīla Prabhupāda!",
+        image: "images/photo_6327649088564216341_y (2).jpg",
+        category: "newyork",
+    },
+    {
+        video: "images/hhbcsm.mp4",
+        type: "video",
+        title: "Vaishnavas Love can Melt Mountains!",
+        description: "Beloved Prabhupāda's most Loved Solider who United everyone kept everyone together in service to Srila Prabhupāda.",
+        category: "quotes",
+    },
+    {
+        title: "The symbol of devotional service in the highest degree is Radharani.",
+        description: "(Nectar of Devotion, Chapter 1)",
+        image: "images/photo_6327649088564216294_x (2).jpg",
+        category: "newyork",
+    },
+   {
+        description: "For them I am always ready to come back from Goloka Vrindaban.",
+        image: "images/photo_6327649088564216278_y (2).jpg",
+        category: "newyork",
+    },
 ];
 
 // DOM elements
