@@ -651,7 +651,7 @@ const photoData = [
         description: "For them I am always ready to come back from Goloka Vrindaban.",
         image: "images/photo_6327649088564216278_y (2).jpg",
         category: "newyork",
-    },
+    }
 ];
 
 // DOM elements

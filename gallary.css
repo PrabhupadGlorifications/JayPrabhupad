@@ -1,30 +1,3 @@
-
-.hem {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 2rem 0;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    top: 0;
-    z-index: 100;
-}
-
-.hem h1 {
-    font-size: 3rem;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.hem p {
-    font-size: 1.2rem;
-    color: #666;
-    font-style: italic;
-}
-
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -52,6 +25,7 @@
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     position: relative;
+    border: 2px solid rgb(245, 166, 35, 0.5);
 }
 
 .filter-btn:hover {
@@ -61,7 +35,7 @@
 }
 
 .filter-btn.active {
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    background: linear-gradient(135deg,#5B344B, #B28E7C, #E9AD5D);
     color: rgba(255, 255, 255, 0.9);
     transform: translateY(-2px);
 }
@@ -311,5 +285,11 @@
 
     .container {
         padding: 1rem;
+    }
+    .close-modal {
+    font-size: 6rem;
+    }
+    .filter-btn {
+    font-size: 2.1rem;
     }
 }

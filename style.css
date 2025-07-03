@@ -66,6 +66,34 @@ body {
   padding: 0.5%;
 }
 
+.hem {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid #f5a623;
+}
+
+.hem h1 {
+  font-size: 3rem;
+  background: linear-gradient(135deg, #5B344B, #B28E7C, #E9AD5D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hem p {
+  font-size: 1.5rem;
+  color: #5B344B;
+  font-style: italic;
+  text-shadow: 40 20px 40px rgba(246, 184, 51, 0.1);
+}
+
 .social {
   text-align: left;
 }
@@ -353,7 +381,7 @@ footer::before {
   background: linear-gradient(90deg, transparent, #f5a623, transparent);
   margin: 25px 0;
   border-radius: 1px;
-} 
+}
 
 /* Animations */
 @keyframes spin {
@@ -579,11 +607,16 @@ iframe {
     color: #f5a623;
     border-bottom: 2px solid #f5a623;
   }
+
+  .para {
+    font-size: 20px;
+  }
 }
 
 html {
   scroll-behavior: smooth;
 }
+
 .arrow {
   text-align: center;
 }
