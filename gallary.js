@@ -1,6 +1,11 @@
 const photoData = [
     // Singles Category
     {
+        image: "images/rath.jpg",
+        title: "Śrīla Prabhupāda ki!",
+        category: "newyork",
+    },
+    {
         image: "images/photo_6260457297335667713_y.jpg",
         title: "Servant of the servant",
         category: "newyork",
