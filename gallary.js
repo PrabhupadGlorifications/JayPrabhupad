@@ -417,6 +417,124 @@ const photoData = [
         category: "shave",
     },
     {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686212_x (2).jpg",
+        category: "km",
+    },
+    {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686213_x (2).jpg",
+        category: "km",
+    },
+    {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686214_x (2).jpg",
+        category: "km",
+    },
+    {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686215_x (2).jpg",
+        category: "km",
+    },
+    {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686216_x (2).jpg",
+        category: "km",
+    },
+    {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686217_x (4).jpg",
+        category: "km",
+    },
+    {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686217_x (5).jpg",
+        category: "km",
+    },
+    {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686218_x (2).jpg",
+        category: "km",
+    },
+    {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686219_x (2).jpg",
+        category: "km",
+    },
+    {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686220_x (2).jpg",
+        category: "km",
+    },
+    {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686221_x (2).jpg",
+        category: "km",
+    },
+    {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686222_x (2).jpg",
+        category: "km",
+    },
+    {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686223_x (2).jpg",
+        category: "km",
+    },
+    {
+        description: "Srila Prabhupāda at the 1971 Allahabad Kumbh Mela.",
+        image: "images/photo_6093549276165686224_x (3).jpg",
+        category: "km",
+    },
+    {
+        title: "Priceless moments with a pure devotee",
+        description: "Author : Trivikrama Swami",
+        image: "images/photo_6082631271730758946_y (3).jpg",
+        category: "newyork",
+    },
+    {
+        description: "Looking at Lord Jagganath on Rathyatra,1974.",
+        image: "images/photo_6066833939634438475_x (1).jpg",
+        category: "newyork",
+    },
+    {
+        video: "images/document_6316577680326136448.mp4",
+        type: "video",
+        title: "When prabhupada would ring that bell everyone would go wild!",
+        category: "quotes",
+    },
+    {
+        video: "images/document_6240152963541636055.mp4",
+        type: "video",
+        title: "His Throne",
+        category: "quotes",
+    },
+    {
+        video: "images/document_6222117579821945844.mp4",
+        type: "video",
+        title: "Vaikuntha people",
+        category: "quotes",
+    },
+    {
+        video: "images/vover.mp4",
+        type: "video",
+        title: "When He Takes Over!",
+        category: "quotes",
+    },
+    {
+        video: "images/document_6212814912587043538.mp4",
+        type: "video",
+        title: "At that moment everyone went Absolutely Mad!",
+        description: "Patitpāvan Srila Prabhupād ki! Jay! Kirtan Samrāt Sripad Visnujana Maharaj ki! Jay! All Glories to Sankirtan Devotees.",
+        category: "quotes",
+    },
+    {
+        video: "images/document_6208311312959673747.mp4",
+        type: "video",
+        description: "Everything that Prabhupada was saying, there is evidence for",
+        category: "quotes",
+    },
+    {
         title: "The symbol of devotional service in the highest degree is Radharani.",
         description: "(Nectar of Devotion, Chapter 1)",
         image: "images/photo_6327649088564216294_x (2).jpg",
@@ -457,52 +575,7 @@ const photoData = [
         category: "newyork",
         categoryName: "Prabhupad at New York"
     },
-    {
-        title: "Priceless moments with a pure devotee",
-        description: "Author : Trivikrama Swami",
-        image: "images/photo_6082631271730758946_y (3).jpg",
-        category: "newyork",
-    },
-    {
-        title: "Srila Prabhupada Kirtan",
-        type: "video",
-        video: "images/vover.mp4",
-        category: "quotes"
-    },
-
-    {
-        title: "Love Divine",
-        image: "images/vover.jpg",
-        category: "quotes",
-        categoryName: "Photos with Quotes"
-    },
-    {
-        title: "The Mercy Comic",
-        description: "Illustrating the boundless compassion of the spiritual master.",
-        image: "https://via.placeholder.com/400x300/ff7675/ffffff?text=Comic+1",
-        category: "comics",
-        categoryName: "Comic Style Photos"
-    },
-    {
-        title: "Journey to the rWest",
-        description: "Comic-rstyle depiction of the historic voyage to America.",
-        image: "https://via.placeholder.com/400x300/74b9ff/ffffff?text=Comic+2",
-        category: "comics",
-        categoryName: "Comic Style Photos"
-    },
-    {
-        title: "The Kirtan Revoylution",
-        description: "How chanting chaynged the world, told in comic format.",
-        image: "https://via.placeholder.com/400x300/00b894/ffffff?text=Comic+3",
-        category: "comics",
-        categoryName: "Comic Style Photos"
-    },
-    {
-        title: "The Kirtan Revol4tion",
-        description: "How chanting4 changed the world, told in comic format.",
-        image: "https://via.placeholder.com/400x300/00b894/ffffff?text=Comic+3",
-        category: "shave",
-    }
+    
 ];
 
 // DOM elements
@@ -568,7 +641,8 @@ function updateCounts() {
         'shave': photoData.filter(p => p.category === 'shave').length,
         'ann': photoData.filter(p => p.category === 'ann').length,
         'cb': photoData.filter(p => p.category === 'cb').length,
-        'pms': photoData.filter(p => p.category === 'pms').length
+        'pms': photoData.filter(p => p.category === 'pms').length,
+        'km': photoData.filter(p => p.category === 'km').length
     };
 
     Object.keys(counts).forEach(category => {
