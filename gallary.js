@@ -357,6 +357,66 @@ const photoData = [
         category: "quotes",
     },
     {
+        description: "Prabhupād shaving",
+        image: "images/photo_6124929548475811077_x.jpg",
+        category: "shave",
+    },
+    {
+        description: "Prabhupād shaving",
+        image: "images/photo_6124929548475811078_x.jpg",
+        category: "shave",
+    },
+    {
+        description: "Prabhupād shaving",
+        image: "images/photo_6124929548475811079_x.jpg",
+        category: "shave",
+    },
+    {
+        description: "Prabhupād shaving",
+        image: "images/photo_6124929548475811080_x.jpg",
+        category: "shave",
+    },
+    {
+        description: "Prabhupād shaving",
+        image: "images/photo_6124929548475811081_x.jpg",
+        category: "shave",
+    },
+    {
+        description: "Prabhupād shaving",
+        image: "images/photo_6124929548475811082_x.jpg",
+        category: "shave",
+    },
+    {
+        description: "Prabhupād shaving",
+        image: "images/photo_6124929548475811083_x.jpg",
+        category: "shave",
+    },
+    {
+        description: "Prabhupād shaving",
+        image: "images/photo_6124929548475811084_x.jpg",
+        category: "shave",
+    },
+    {
+        description: "Prabhupād shaving",
+        image: "images/photo_6124929548475811085_x.jpg",
+        category: "shave",
+    },
+    {
+        description: "Prabhupād shaving",
+        image: "images/photo_6124929548475811086_x.jpg",
+        category: "shave",
+    },
+    {
+        description: "Prabhupād shaving",
+        image: "images/photo_6124929548475811087_x.jpg",
+        category: "shave",
+    },
+    {
+        description: "Prabhupād shaving",
+        image: "images/photo_6124929548475811088_x.jpg",
+        category: "shave",
+    },
+    {
         title: "The symbol of devotional service in the highest degree is Radharani.",
         description: "(Nectar of Devotion, Chapter 1)",
         image: "images/photo_6327649088564216294_x (2).jpg",
