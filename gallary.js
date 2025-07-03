@@ -1,27 +1,31 @@
 const photoData = [
-    // Maharaj Sanand Category
-    {
-        title: "Prabhupad with Maharaj Sanand",
-        image: "images/sanand1.jpg",
-        category: "maharaj-sanand",
-    },
-    {
-        title: "Prabhupad with Maharaj Sanand",
-        image: "images/sanand2.jpg",
-        category: "maharaj-sanand",
-    },
-    {
-        title: "Prabhupad with Maharaj Sanand",
-        image: "images/sanand3.jpg",
-        category: "maharaj-sanand",
-    },
-    {
-        title: "Prabhupad with Maharaj Sanand",
-        image: "images/sanand4.jpg",
-        category: "maharaj-sanand",
-    },
-
     // Singles Category
+    {
+        image: "images/photo_6260457297335667713_y.jpg",
+        title: "Servant of the servant",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6260457297335667714_y.jpg",
+        title: "HH Tamal Krishna Goswami Maharaj",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6217652454967855080_y.jpg",
+        title: "HDG AC Bhaktivedanta Swami Prabhupad ki jay!",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6215530101173503968_x.jpg",
+        title: "Śrimad Varadarāja Perumal",
+        description: "Worshipped by Śripād Rāmānujācārya.",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6215530101173503967_y.jpg",
+        title: "Jaya Prabhupāda! Jaya Prabhupāda!",
+        category: "newyork",
+    },
     {
         image: "images/photo_6327649088564216278_y (1).jpg",
         title: "'Your ever well-wisher'",
@@ -31,7 +35,7 @@ const photoData = [
         title: "The symbol of devotional service in the highest degree is Radharani.",
         description: "(Nectar of Devotion, Chapter 1)",
         image: "images/photo_6327649088564216294_x (2).jpg",
-        category: "newyork",
+        category: "newyor",
     },
     {
         title: "Finally Sadhguru gets 'Sat-guru'",
@@ -89,6 +93,27 @@ const photoData = [
         categoryName: "Photos with Quotes"
     },
     // Quotes Category
+    // Maharaj Sanand Category
+    {
+        title: "Prabhupad with Maharaj Sanand",
+        image: "images/sanand1.jpg",
+        category: "maharaj-sanand",
+    },
+    {
+        title: "Prabhupad with Maharaj Sanand",
+        image: "images/sanand2.jpg",
+        category: "maharaj-sanand",
+    },
+    {
+        title: "Prabhupad with Maharaj Sanand",
+        image: "images/sanand3.jpg",
+        category: "maharaj-sanand",
+    },
+    {
+        title: "Prabhupad with Maharaj Sanand",
+        image: "images/sanand4.jpg",
+        category: "maharaj-sanand",
+    },
     // Comics Category
     {
         title: "The Mercy Comic",
@@ -98,22 +123,22 @@ const photoData = [
         categoryName: "Comic Style Photos"
     },
     {
-        title: "Journey to the West",
-        description: "Comic-style depiction of the historic voyage to America.",
+        title: "Journey to the rWest",
+        description: "Comic-rstyle depiction of the historic voyage to America.",
         image: "https://via.placeholder.com/400x300/74b9ff/ffffff?text=Comic+2",
         category: "comics",
         categoryName: "Comic Style Photos"
     },
     {
-        title: "The Kirtan Revolution",
-        description: "How chanting changed the world, told in comic format.",
+        title: "The Kirtan Revoylution",
+        description: "How chanting chaynged the world, told in comic format.",
         image: "https://via.placeholder.com/400x300/00b894/ffffff?text=Comic+3",
         category: "comics",
         categoryName: "Comic Style Photos"
     },
     {
-        title: "The Kirtan Revolution",
-        description: "How chanting changed the world, told in comic format.",
+        title: "The Kirtan Revol4tion",
+        description: "How chanting4 changed the world, told in comic format.",
         image: "https://via.placeholder.com/400x300/00b894/ffffff?text=Comic+3",
         category: "shave",
     }
@@ -133,7 +158,7 @@ const nextBtn = document.getElementById('next-btn');
 const noResults = document.getElementById('no-results');
 
 let currentFilter = 'all';
-let currentPhotoIndex = 0;
+let currentPhotoIndex = 0; 
 let filteredPhotos = [];
 function updateFilteredPhotos() {
     if (currentFilter === 'all') {
