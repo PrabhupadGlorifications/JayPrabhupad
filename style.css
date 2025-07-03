@@ -75,6 +75,7 @@ body {
   top: 0;
   z-index: 100;
   border-bottom: 3px solid #f5a623;
+  padding: 50px;
 }
 
 .hem h1 {
@@ -451,6 +452,7 @@ ul {
 .image {
   text-align: center;
   border-radius: 12px;
+  margin: 50px;
 }
 
 .para {
@@ -633,7 +635,7 @@ iframe {
   height: 1.5px;
 }
 .heading {
-  margin: 70px;
+  margin: 20px;
 }
 }
 
