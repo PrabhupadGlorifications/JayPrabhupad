@@ -135,18 +135,64 @@ const photoData = [
         category: "newyork",
     },
     {
-        image: "images/photo_6325650902274393336_y (1).jpg",
-        title: "How many of you have this book?",
+        image: "images/photo_6312023280281832547_y (1).jpg",
+        description: "Today The Lord is Special because they are Srīla Prabhupāda's Lords.",
+        category: "ann",
+    },
+    {
+        image: "images/photo_6312023280281832548_y (1).jpg",
+        description: "Today The Lord is Special because they are Srīla Prabhupāda's Lords.",
+        category: "ann",
+    },
+    {
+        image: "images/photo_6312023280281832549_y.jpg",
+        description: "Today The Lord is Special because they are Srīla Prabhupāda's Lords.",
+        category: "ann",
+    },
+    {
+        image: "images/photo_6312023280281832550_x.jpg",
+        description: "Today The Lord is Special because they are Srīla Prabhupāda's Lords.",
+        category: "ann",
+    },
+    {
+        image: "images/photo_6312023280281832545_y (1).jpg",
+        title: "'Think of Krsna always and try to work sincerely.'",
         category: "newyork",
     },
     {
-        image: "images/photo_6325650902274393336_y (1).jpg",
-        title: "How many of you have this book?",
+        video: "images/document_6298686590327724049.mp4",
+        type: "video",
+        title: "If this is what Parkinsons does, then I want it.",
+        category: "quotes",
+    },
+    {
+        image: "images/photo_6298686590783963243_x (1).jpg",
+        title: "Hare Krsna Student Matajis & Prabhujis.",
         category: "newyork",
     },
     {
-        image: "images/photo_6325650902274393336_y (1).jpg",
-        title: "How many of you have this book?",
+        image: "images/photo_6298686590783963243_x (1).jpg",
+        title: "Hare Krsna Student Matajis & Prabhujis.",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6298686590783963243_x (1).jpg",
+        title: "Hare Krsna Student Matajis & Prabhujis.",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6298686590783963243_x (1).jpg",
+        title: "Hare Krsna Student Matajis & Prabhujis.",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6298686590783963243_x (1).jpg",
+        title: "Hare Krsna Student Matajis & Prabhujis.",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6298686590783963243_x (1).jpg",
+        title: "Hare Krsna Student Matajis & Prabhujis.",
         category: "newyork",
     },
     {
@@ -321,7 +367,8 @@ function updateCounts() {
         'newyork': photoData.filter(p => p.category === 'newyork').length,
         'quotes': photoData.filter(p => p.category === 'quotes').length,
         'comics': photoData.filter(p => p.category === 'comics').length,
-        'shave': photoData.filter(p => p.category === 'shave').length
+        'shave': photoData.filter(p => p.category === 'shave').length,
+        'ann': photoData.filter(p => p.category === 'ann').length
     };
 
     Object.keys(counts).forEach(category => {
