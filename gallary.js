@@ -232,14 +232,65 @@ const photoData = [
         category: "maharaj-sanand",
     },
     {
-        image: "images/photo_6282869746651218500_y (1).jpg",
-        description: "First day of Srutakirti prabhu as Srila prabhupada's servant",
+        image: "images/photo_6260564160416957100_x (1).jpg",
+        title: "🔑 You want?",
+        description: "A key which will take us to the one who has the back door key.",
+        category: "maharaj-sanand",
+    },
+    {
+        image: "images/photo_6255588221761208967_y (1).jpg",
+        description: "māyāvādi-bhāṣya śunile haya sarva-nāśa",
+        category: "maharaj-sanand",
+    },
+    {
+        image: "images/photo_6255588221761208701_y (1).jpg",
+        title: "Gauraaanga!",
         category: "newyork",
     },
     {
-        image: "images/photo_6282869746651218500_y (1).jpg",
-        description: "First day of Srutakirti prabhu as Srila prabhupada's servant",
+        image: "images/photo_6255588221761208699_x (1).jpg",
+        title: "You are not god you are dog!",
+        category: "maharaj-sanand",
+    },
+    {
+        image: "images/photo_6255588221761208597_y (1).jpg",
+        description: "Ever well-wisher",
+        category: "maharaj-sanand",
+    },
+    {
+        image: "images/photo_6251379085091653732_y (1).jpg",
+        title: "Sleep less!",
         category: "newyork",
+    },
+    {
+        image: "images/photo_6251379085091652799_x (1).jpg",
+        title: "Merry Christmas!",
+        category: "maharaj-sanand",
+    },
+    {
+        image: "images/photo_6251233352556331823_y (1).jpg",
+        title: " It is not A-B-C-D translation.",
+        category: "maharaj-sanand",
+    },
+    {
+        image: "images/photo_6251379085091652799_x (1).jpg",
+        title: "Merry Christmas!",
+        category: "maharaj-sanand",
+    },
+    {
+        image: "images/photo_6251379085091652799_x (1).jpg",
+        title: "Merry Christmas!",
+        category: "maharaj-sanand",
+    },
+    {
+        image: "images/photo_6251379085091652799_x (1).jpg",
+        title: "Merry Christmas!",
+        category: "maharaj-sanand",
+    },
+    {
+        image: "images/photo_6251379085091652799_x (1).jpg",
+        title: "Merry Christmas!",
+        category: "maharaj-sanand",
     },
     {
         title: "The symbol of devotional service in the highest degree is Radharani.",
