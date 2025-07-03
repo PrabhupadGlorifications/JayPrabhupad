@@ -273,24 +273,88 @@ const photoData = [
         category: "maharaj-sanand",
     },
     {
-        image: "images/photo_6251379085091652799_x (1).jpg",
-        title: "Merry Christmas!",
-        category: "maharaj-sanand",
+        title: "This is Chaitanya Bhāgvata.",
+        image: "images/photo_6242041027326231307_y (1).jpg",
+        category: "cb",
     },
     {
-        image: "images/photo_6251379085091652799_x (1).jpg",
-        title: "Merry Christmas!",
-        category: "maharaj-sanand",
+        title: "This is part 1 of Antya khanda..",
+        image: "images/photo_6242041027326231308_y.jpg",
+        category: "cb",
     },
     {
-        image: "images/photo_6251379085091652799_x (1).jpg",
-        title: "Merry Christmas!",
-        category: "maharaj-sanand",
+        description: "And in this... Is a prediction made by Lord Chaitanya which got fulfilled by some spiritual aristocrat..",
+        image: "images/photo_6242041027326231310_y.jpg",
+        category: "cb",
     },
     {
-        image: "images/photo_6251379085091652799_x (1).jpg",
-        title: "Merry Christmas!",
-        category: "maharaj-sanand",
+        image: "images/photo_6237537427698860483_x (1).jpg",
+        title: "The lotus footprints of Shrila Prabhupad.",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6233201233011786638_x (1).jpg",
+        title: "Prabhupād and little Saraswati",
+        description: "Vaishnava means Childlike Simplicity",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6230883587054485802_y (1).jpg",
+        description: "Prabhupad taught us what other gurus are not able to.",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6230883587054485801_y (1).jpg",
+        description: "Sri Siddhānta Saraswati as a young man.",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6230883587054485800_y (2).jpg",
+        title: "Elon and his Muskies",
+        category: "newyork",
+    },
+    {
+        video: "images/document_6230883586598247079.mp4",
+        type: "video",
+        title: "Prabhupad, Fiji island and Great snake Kalia.",
+        category: "quotes",
+    },
+    {
+        description: "Prabhupad with Maharaj Sanand",
+        image: "images/sanand1.jpg",
+        category: "pms",
+    },
+    {
+        description: "Prabhupad with Maharaj Sanand",
+        image: "images/sanand2.jpg",
+        category: "pms",
+    },
+    {
+        description: "Prabhupad with Maharaj Sanand",
+        image: "images/sanand3.jpg",
+        category: "pms",
+    },
+    {
+        description: "Prabhupad with Maharaj Sanand",
+        image: "images/sanand4.jpg",
+        category: "pms",
+    },
+    {
+        image: "images/photo_6208375020665818222_x (1).jpg",
+        title: "Seriously. How many of you are Chanting your 16 rounds?",
+        category: "newyork",
+    },
+    {
+        video: "images/document_6181302711766487520.mp4",
+        type: "video",
+        title: "Prabhupād chanting Narasimha Arati.",
+        category: "quotes",
+    },
+    {
+        video: "images/document_6145676817039627922.mp4",
+        type: "video",
+        title: "The curse of travelling",
+        category: "quotes",
     },
     {
         title: "The symbol of devotional service in the highest degree is Radharani.",
@@ -352,29 +416,6 @@ const photoData = [
         category: "quotes",
         categoryName: "Photos with Quotes"
     },
-    // Quotes Category
-    // Maharaj Sanand Category
-    {
-        title: "Prabhupad with Maharaj Sanand",
-        image: "images/sanand1.jpg",
-        category: "maharaj-sanand",
-    },
-    {
-        title: "Prabhupad with Maharaj Sanand",
-        image: "images/sanand2.jpg",
-        category: "maharaj-sanand",
-    },
-    {
-        title: "Prabhupad with Maharaj Sanand",
-        image: "images/sanand3.jpg",
-        category: "maharaj-sanand",
-    },
-    {
-        title: "Prabhupad with Maharaj Sanand",
-        image: "images/sanand4.jpg",
-        category: "maharaj-sanand",
-    },
-    // Comics Category
     {
         title: "The Mercy Comic",
         description: "Illustrating the boundless compassion of the spiritual master.",
@@ -418,7 +459,7 @@ const nextBtn = document.getElementById('next-btn');
 const noResults = document.getElementById('no-results');
 
 let currentFilter = 'all';
-let currentPhotoIndex = 0; 
+let currentPhotoIndex = 0;
 let filteredPhotos = [];
 function updateFilteredPhotos() {
     if (currentFilter === 'all') {
@@ -465,7 +506,9 @@ function updateCounts() {
         'quotes': photoData.filter(p => p.category === 'quotes').length,
         'comics': photoData.filter(p => p.category === 'comics').length,
         'shave': photoData.filter(p => p.category === 'shave').length,
-        'ann': photoData.filter(p => p.category === 'ann').length
+        'ann': photoData.filter(p => p.category === 'ann').length,
+        'cb': photoData.filter(p => p.category === 'cb').length,
+        'pms': photoData.filter(p => p.category === 'pms').length
     };
 
     Object.keys(counts).forEach(category => {
