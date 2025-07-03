@@ -27,6 +27,38 @@ const photoData = [
         category: "newyork",
     },
     {
+        video: "images/document_6197075433700202888.mp4",
+        type: "video",
+        title: "Sri Sri Radhā rasa bihari",
+        category: "quotes",
+    },
+    {
+        image: "images/photo_6190240174093486345_y.jpg",
+        title: "HH Vishnujan Swami Maharaj",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6190645369898124240_y.jpg",
+        title: "HH Bhakti Vikasa Swami & HH Sivarama Swami distribute a “𝐒𝐚𝐩𝐭𝐚𝐫𝐢𝐬𝐡𝐢” set on the streets of Atlanta!",
+        description: "Jaya Shrila Prabhupāda!",
+        category: "newyork",
+    },
+    {
+        image: "images/photo_6177226616460133760_y.jpg",
+        title: "Love Nowadays",
+        category: "maharaj-sanand",
+    },
+    {
+        image: "images/photo_6159055103751996069_x (1).jpg",
+        title: "#Ritwiks",
+        category: "maharaj-sanand",
+    },
+    {
+        image: "images/photo_6159055103751996290_y (1).jpg",
+        title: "#Ritwiks",
+        category: "maharaj-sanand",
+    },
+    {
         image: "images/photo_6327649088564216278_y (1).jpg",
         title: "'Your ever well-wisher'",
         category: "newyork",
@@ -82,12 +114,11 @@ const photoData = [
         title: "Srila Prabhupada Kirtan",
         type: "video",
         video: "images/vover.mp4",
-        category: "newyork"
+        category: "quotes"
     },
 
     {
         title: "Love Divine",
-        description: "Teaching about the highest form of love - love for God.",
         image: "images/vover.jpg",
         category: "quotes",
         categoryName: "Photos with Quotes"
