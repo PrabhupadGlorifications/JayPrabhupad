@@ -632,6 +632,9 @@ iframe {
   .dline {
   height: 1.5px;
 }
+.heading {
+  margin: 70px;
+}
 }
 
 html {
