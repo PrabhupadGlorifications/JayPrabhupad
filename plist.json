@@ -356,6 +356,12 @@
     },
     {
         "id": 74,
+        "title": "If I was living under a tree and called a press conference...",
+        "image": "images/tree.jpg",
+        "link": "tree.html"
+    },
+    {
+        "id": 74,
         "title": "Electrical jolt from the guru.",
         "link": "jolt.html"
     },
@@ -380,6 +386,11 @@
         "link": "animal.html"
     },
     {
+        "id": 78,
+        "title": "Prabhupada’s presence was so powerful",
+        "link": "presence.html"
+    },
+    {
         "id": 79,
         "title": "Utsāhād dhairyāt niścayāt.",
         "link": "udn.html"
@@ -393,6 +404,11 @@
         "id": 81,
         "title": "Prabhupada visits the Maharaja of Sanand.",
         "link": "sanand.html"
+    },
+    {
+        "id": 82,
+        "title": "The Ideal Leader",
+        "link": "Leader.html"
     },
     {
         "id": 82,
@@ -418,6 +434,16 @@
         "id": 86,
         "title": "'Your ever well-wisher'",
         "link": "wellwisher.html"
+    },
+    {
+        "id": 86,
+        "title": "Yes!",
+        "link": "tyes.html"
+    },
+    {
+        "id": 86,
+        "title": "silence'",
+        "link": "silence.html"
     },
     {
         "id": 87,
@@ -639,7 +665,7 @@
         "title": "Śrīla Prabhupāda, you have given us everything.",
         "link": "given.html"
     },
-     {
+    {
         "id": 130,
         "title": "Was Śrīla Prabhupāda old fashioned?",
         "link": "of.html"
@@ -723,12 +749,12 @@
         "id": 145,
         "title": "You can test yourself.",
         "link": "envy.html"
-    }, 
+    },
     {
         "id": 146,
         "title": "samskāra",
         "link": "sams.html"
-    }, 
+    },
     {
         "id": 146,
         "title": "It should be our definite policy that nobody is ill treated.",

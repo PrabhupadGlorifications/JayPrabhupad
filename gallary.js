@@ -310,6 +310,12 @@ const photoData = [
         category: "newyork",
     },
     {
+        image: "images/WhatsApp Image 2025-02-28 at 1.32.25 PM.jpeg",
+        title: "'It is not very encouraging, still I'm not a man to be disappointed.'",
+        description: "~ HDG A.C Bhaktivedanta Swami Srila Prabhupāda.",
+        category: "newyork",
+    },
+    {
         image: "images/photo_6230883587054485802_y (1).jpg",
         description: "Prabhupad taught us what other gurus are not able to.",
         category: "newyork",

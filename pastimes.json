@@ -427,6 +427,12 @@
     },
     {
         "id": 74,
+        "title": "If I was living under a tree and called a press conference...",
+        "image": "images/tree.jpg",
+        "link": "tree.html"
+    },
+    {
+        "id": 74,
         "title": "Electrical jolt from the guru.",
         "image": "images/jolt.jpg",
         "link": "jolt.html"
@@ -451,6 +457,12 @@
     },
     {
         "id": 78,
+        "title": "Prabhupada’s presence was so powerful",
+        "image": "images/presence.jpg",
+        "link": "presence.html"
+    },
+    {
+        "id": 78,
         "title": "'You are an animal if you can’t become determined.'",
         "image": "images/animal.jpg",
         "link": "animal.html"
@@ -472,6 +484,12 @@
         "title": "Prabhupada visits the Maharaja of Sanand.",
         "image": "images/sanand1.jpg",
         "link": "sanand.html"
+    },
+    {
+        "id": 82,
+        "title": "The Ideal Leader",
+        "image": "images/Leader.jpg",
+        "link": "Leader.html"
     },
     {
         "id": 82,
@@ -502,6 +520,18 @@
         "title": "'Your ever well-wisher'",
         "image": "images/wellwisher.jpg",
         "link": "wellwisher.html"
+    },
+    {
+        "id": 86,
+        "title": "Yes!",
+        "image": "images/tyes.jpg",
+        "link": "tyes.html"
+    },
+    {
+        "id": 86,
+        "title": "silence",
+        "image": "images/silence.jpg",
+        "link": "silence.html"
     },
     {
         "id": 87,
