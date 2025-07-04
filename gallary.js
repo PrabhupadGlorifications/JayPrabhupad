@@ -114,6 +114,12 @@ const photoData = [
         category: "newyork",
     },
     {
+        image: "images/WhatsApp Image 2025-04-16 at 11.37.13 AM (2).jpeg",
+        title: "What Prabhupāda has done, no one has done.",
+        description: "~ Vinoba Bhave",
+        category: "newyork",
+    },
+    {
         image: "images/photo_6330256537439814392_y (1).jpg",
         title: "Just Some Treasure..",
         category: "newyork",
