@@ -1,6 +1,16 @@
 const photoData = [
     // Singles Category
     {
+        image: "images/WhatsApp Image 2025-07-04 at 10.41.09 AM (1).jpeg",
+        title: "Acārya-śreshtha",
+        category: "newyork",
+    },
+     {
+        image: "images/WhatsApp Image 2025-07-04 at 10.41.09 AM.jpeg",
+        title: "Acārya-śreshtha",
+        category: "newyork",
+    },
+    {
         image: "images/rath.jpg",
         title: "Śrīla Prabhupāda ki!",
         category: "newyork",
