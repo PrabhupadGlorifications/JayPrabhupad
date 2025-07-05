@@ -220,37 +220,38 @@
                 .catch((error) => {
                     console.error("Error sending message:", error);
                 });
+        });
+    </script>
+    <script>
+        document.getElementById("subscribeForm").addEventListener("submit", function (e) {
+            e.preventDefault();
 
-            document.getElementById("subscribeForm").addEventListener("submit", function (e) {
-                e.preventDefault();
+            const email = document.getElementById("subscriberEmail").value.trim();
+            const agreed = document.getElementById("agreeTerms").checked;
+            const messageDiv = document.getElementById("subscribeMessage");
 
-                const email = document.getElementById("subscriberEmail").value.trim();
-                const agreed = document.getElementById("agreeTerms").checked;
-                const messageDiv = document.getElementById("subscribeMessage");
+            if (!email || !agreed) {
+                messageDiv.textContent = "Please enter your email and agree to the terms.";
+                messageDiv.style.color = "red";
+                return;
+            }
 
-                if (!email || !agreed) {
-                    messageDiv.textContent = "Please enter your email and agree to the terms.";
-                    messageDiv.style.color = "red";
-                    return;
-                }
-
-                const ref = db.ref("subscribers").push();
-                ref.set({
-                    email: email,
-                    agreed: agreed,
-                    timestamp: new Date().toISOString()
+            const ref = db.ref("subscribers").push();
+            ref.set({
+                email: email,
+                agreed: agreed,
+                timestamp: new Date().toISOString()
+            })
+                .then(() => {
+                    messageDiv.textContent = "Thank you for subscribing!";
+                    messageDiv.style.color = "green";
+                    document.getElementById("subscribeForm").reset();
                 })
-                    .then(() => {
-                        messageDiv.textContent = "Thank you for subscribing!";
-                        messageDiv.style.color = "green";
-                        document.getElementById("subscribeForm").reset();
-                    })
-                    .catch((error) => {
-                        console.error("Error saving subscriber:", error);
-                        messageDiv.textContent = "There was an error. Please try again.";
-                        messageDiv.style.color = "red";
-                    });
-            });
+                .catch((error) => {
+                    console.error("Error saving subscriber:", error);
+                    messageDiv.textContent = "There was an error. Please try again.";
+                    messageDiv.style.color = "red";
+                });
         });
     </script>
     <script src="script.js"></script>
