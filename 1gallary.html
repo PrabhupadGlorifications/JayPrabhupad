@@ -96,11 +96,28 @@
 
     <div id="footer-container"></div>
 
+    <!-- Firebase App (core) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <!-- Firebase Database -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "PGsite.firebaseapp.com",
+            databaseURL: "https://PGsite-default-rtdb.firebaseio.com",
+            projectId: "PGsite",
+            storageBucket: "PGsite.appspot.com",
+            messagingSenderId: "YOUR_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+    </script>
     <script src="script.js"></script>
     <script src="gallary.js"></script>
     <script src="head.js"></script>
     <script src="footer.js"></script>
-
 </body>
 
 </html>
