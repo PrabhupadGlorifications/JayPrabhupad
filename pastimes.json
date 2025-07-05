@@ -487,21 +487,21 @@
     },
     {
         "id": 84,
-        "title": "Maya may put so many doubts and worthless arguments.",
-        "image": "images/arguments.jpg",
-        "link": "arguments.html"
-    },
-    {
-        "id": 85,
-        "title": "'Your ever well-wisher'",
-        "image": "images/wellwisher.jpg",
-        "link": "wellwisher.html"
-    },
-    {
-        "id": 86,
         "title": "Yes!",
         "image": "images/tyes.jpg",
         "link": "tyes.html"
+    },
+    {
+        "id": 85,
+        "title": "Don't disturb Guru For rubbish things, don't demand!",
+        "image": "images/silence.jpg",
+        "link": "silence.html"
+    },
+    {
+        "id": 86,
+        "title": "He Opened the Door.",
+        "image": "images/door.jpg",
+        "link": "door.html"
     },
     {
         "id": 87,
@@ -509,7 +509,7 @@
         "image": "images/Leader.jpg",
         "link": "Leader.html"
     },
-    {
+     {
         "id": 88,
         "title": "The body of an ācārya is never burnt to ashes.",
         "image": "images/burn.jpg",
@@ -523,27 +523,28 @@
     },
     {
         "id": 90,
-        "title": "Prabhupad means what?",
-        "image": "images/means.jpg",
-        "link": "means.html"
-    },
-    {
-        "id": 91,
-        "title": "Don't disturb Guru For rubbish things, don't demand!",
-        "image": "images/silence.jpg",
-        "link": "silence.html"
-    },
-    {
-        "id": 92,
-        "title": "He Opened the Door.",
-        "image": "images/door.jpg",
-        "link": "door.html"
-    },
-    {
-        "id": 93,
         "title": "O husband of Radharani, please deliver me.",
         "image": "images/ha.jpg",
         "link": "deliver.html"
+    },
+    {
+        "id": 91,
+        "title": "Maya may put so many doubts and worthless arguments.",
+        "image": "images/arguments.jpg",
+        "link": "arguments.html"
+    },
+    {
+        "id": 92,
+        "title": "'Your ever well-wisher'",
+        "image": "images/wellwisher.jpg",
+        "link": "wellwisher.html"
+    },
+    
+    {
+        "id": 93,
+        "title": "Prabhupad means what?",
+        "image": "images/means.jpg",
+        "link": "means.html"
     },
     {
         "id": 94,

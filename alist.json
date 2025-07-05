@@ -185,12 +185,6 @@
     "link": "right.html"
   },
   {
-    "id": 33,
-    "title": "A woman should be addressed as 'mother.'",
-    "image": "images/mother.jpg",
-    "link": "mother.html"
-  },
-  {
     "id": 34,
     "title": "This is Just one of many examples.",
     "image": "images/example.jpg",
@@ -247,8 +241,8 @@
   {
     "id": 43,
     "title": "Kirtan Week",
-    "image": "images/Kirtanweek.jpg",
-    "link": "Kirtanweek.html"
+    "image": "images/kirtanweek.jpg",
+    "link": "kirtanweek.html"
   },
   {
     "id": 44,
