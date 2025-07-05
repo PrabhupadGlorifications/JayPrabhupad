@@ -821,6 +821,7 @@ const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const modalLikeBtn = document.getElementById('modal-like-btn');
 const modalHeartIcon = modalLikeBtn.querySelector('i');
+const modalShareBtn = document.getElementById('modal-share-btn');
 const noResults = document.getElementById('no-results');
 
 let currentFilter = 'all';
@@ -901,30 +902,27 @@ function createPhotoCard(photo) {
                     <i class="fas fa-share-alt"></i>
                 </button>
             </div>
-        </div>` : ''}
+        </div>` : ''
+        }
     `;
 
     const likeBtn = card.querySelector('.like-btn');
     const heartIcon = likeBtn.querySelector('i');
     const likeCountEl = likeBtn.querySelector('.like-count');
-
     const likeRef = db.ref('likes/' + photo.id);
     const isLiked = localStorage.getItem('liked_' + photo.id) === 'true';
 
-    // Sync initial heart color
     if (isLiked) {
         heartIcon.classList.add('fas', 'text-red-500');
         heartIcon.classList.remove('far');
         likeBtn.classList.add('text-red-500');
     }
 
-    // Firebase real-time count
     likeRef.on('value', snapshot => {
         const count = snapshot.val() || 0;
         likeCountEl.textContent = count;
     });
 
-    // Like toggle
     likeBtn.addEventListener('click', () => {
         const currentlyLiked = localStorage.getItem('liked_' + photo.id) === 'true';
 
@@ -943,7 +941,35 @@ function createPhotoCard(photo) {
         }
     });
 
-    // Click to open modal
+    // Share button functionality
+    const shareBtn = card.querySelector('.share-btn');
+    shareBtn.addEventListener('click', async (e) => {
+        e.stopPropagation(); // Don't trigger modal
+
+        const shareUrl = window.location.href.split('#')[0] + `#${photo.id}`;
+        const shareData = {
+            title: photo.title || 'Photo from Gallery',
+            text: photo.description || '',
+            url: shareUrl
+        };
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+            } catch (err) {
+                console.error('Share failed:', err);
+            }
+        } else {
+            try {
+                await navigator.clipboard.writeText(shareUrl);
+                alert("Link copied to clipboard!");
+            } catch (err) {
+                alert("Failed to copy the link.");
+            }
+        }
+    });
+
+    // Modal open
     card.addEventListener('click', (e) => {
         if (!e.target.closest('.like-btn') && !e.target.closest('.share-btn')) {
             openModal(photo);
@@ -952,6 +978,7 @@ function createPhotoCard(photo) {
 
     return card;
 }
+
 
 function openModal(photo) {
     currentPhotoIndex = filteredPhotos.findIndex(p => p.id === photo.id);
@@ -1005,6 +1032,31 @@ function updateModalContent(photo) {
         // Re-render photo cards to sync heart icon there
         renderFilteredPhotos();
     };
+    // Share from modal
+    modalShareBtn.onclick = async () => {
+        const shareUrl = window.location.href.split('#')[0] + `#${photo.id}`;
+        const shareData = {
+            title: photo.title || 'Photo from Gallery',
+            text: photo.description || '',
+            url: shareUrl
+        };
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+            } catch (err) {
+                console.error('Modal share failed:', err);
+            }
+        } else {
+            try {
+                await navigator.clipboard.writeText(shareUrl);
+                alert("Link copied to clipboard!");
+            } catch (err) {
+                alert("Failed to copy the link.");
+            }
+        }
+    };
+
 }
 
 function updateNavigationButtons() {
