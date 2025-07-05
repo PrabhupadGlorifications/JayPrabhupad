@@ -462,16 +462,10 @@
         "link": "presence.html"
     },
     {
-        "id": 78,
+        "id": 79,
         "title": "'You are an animal if you can’t become determined.'",
         "image": "images/animal.jpg",
         "link": "animal.html"
-    },
-    {
-        "id": 79,
-        "title": "Utsāhād dhairyāt niścayāt.",
-        "image": "images/udn.jpg",
-        "link": "udn.html"
     },
     {
         "id": 80,
@@ -487,78 +481,84 @@
     },
     {
         "id": 82,
-        "title": "The Ideal Leader",
-        "image": "images/Leader.jpg",
-        "link": "Leader.html"
-    },
-    {
-        "id": 82,
-        "title": "Prabhupad means what?",
-        "image": "images/means.jpg",
-        "link": "means.html"
+        "title": "Utsāhād dhairyāt niścayāt.",
+        "image": "images/udn.jpg",
+        "link": "udn.html"
     },
     {
         "id": 83,
-        "title": "I can simply pray to Krishna for revival of your old Krishna Consciousness.",
-        "image": "images/re.jpg",
-        "link": "pray.html"
-    },
-    {
-        "id": 84,
         "title": "Maya may put so many doubts and worthless arguments.",
         "image": "images/arguments.jpg",
         "link": "arguments.html"
     },
     {
-        "id": 85,
-        "title": "The body of an ācārya is never burnt to ashes.",
-        "image": "images/burn.jpg",
-        "link": "burn.html"
-    },
-    {
-        "id": 86,
+        "id": 84,
         "title": "'Your ever well-wisher'",
         "image": "images/wellwisher.jpg",
         "link": "wellwisher.html"
     },
     {
-        "id": 86,
+        "id": 85,
         "title": "Yes!",
         "image": "images/tyes.jpg",
         "link": "tyes.html"
     },
     {
         "id": 86,
-        "title": "silence",
+        "title": "The Ideal Leader",
+        "image": "images/Leader.jpg",
+        "link": "Leader.html"
+    },
+    {
+        "id": 87,
+        "title": "The body of an ācārya is never burnt to ashes.",
+        "image": "images/burn.jpg",
+        "link": "burn.html"
+    },
+    {
+        "id": 88,
+        "title": "I can simply pray to Krishna for revival of your old Krishna Consciousness.",
+        "image": "images/re.jpg",
+        "link": "pray.html"
+    },
+    {
+        "id": 89,
+        "title": "Prabhupad means what?",
+        "image": "images/means.jpg",
+        "link": "means.html"
+    },
+    {
+        "id": 90,
+        "title": "Don't disturb Guru For rubbish things, don't demand!",
         "image": "images/silence.jpg",
         "link": "silence.html"
     },
     {
-        "id": 87,
+        "id": 91,
         "title": "He Opened the Door.",
         "image": "images/door.jpg",
         "link": "door.html"
     },
     {
-        "id": 88,
+        "id": 92,
         "title": "O husband of Radharani, please deliver me.",
         "image": "images/ha.jpg",
         "link": "deliver.html"
     },
     {
-        "id": 89,
+        "id": 93,
         "title": "It is not A-B-C-D translation.",
         "image": "images/abcd.jpg",
         "link": "abcd.html"
     },
     {
-        "id": 90,
+        "id": 94,
         "title": "Srīla Prabhupāda maintain ISKCON.",
         "image": "images/maintain.jpg",
         "link": "maintain.html"
     },
     {
-        "id": 91,
+        "id": 95,
         "title": "Tirumangai Ālvar and Shrila Prabhupād.",
         "image": "images/alvar.jpg",
         "link": "alvar.html"
