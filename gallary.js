@@ -25,9 +25,15 @@ const photoData = [
         category: "newyork",
     },
     {
-        id: "tkgm",
+        id: "tkgm2",
         image: "images/photo_6260457297335667714_y.jpg",
         title: "HH Tamal Krishna Goswami Maharaj",
+        category: "newyork",
+    },
+    {
+        id: "grave",
+        image: "images/WhatsApp Image 2025-06-19 at 6.26.36 PM (1).jpeg",
+        title: "Meaning of being Grave",
         category: "newyork",
     },
     {

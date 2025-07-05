@@ -2,151 +2,181 @@
   {
     "id": 1,
     "title": "The glorious acarya, Krsna's Victory with Prabhupad's sword",
+    "image": "images/sword.jpg",
     "link": "sword.html"
   },
   {
     "id": 2,
     "title": "Ekadasi means Feasting not Fasting!",
+    "image": "images/ekadasi.jpg",
     "link": "ekadashi.html"
   },
   {
     "id": 3,
     "title": "The proper method of dressing Jagannatha is as a Ksatriya King.",
+    "image": "images/dressing.jpg",
     "link": "dress.html"
   },
   {
     "id": 4,
     "title": "One who is a Prabhupada-anuga, is certainly a Raganuga-bhakta.",
+    "image": "images/anuga.jpg",
     "link": "anuga.html"
   },
   {
     "id": 5,
     "title": "\"I RIDE AS A SERVANT\"",
+    "image": "images/ride.jpg",
     "link": "ride.html"
   },
   {
     "id": 6,
     "title": "Chaitanya Mahaprabhu His Life and Precepts.",
+    "image": "images/precept.jpg",
     "link": "precept.html"
   },
   {
     "id": 7,
     "title": "Vyas Puja, HH Bhakti Caru Swami Maharaj.",
+    "image": "images/vyas.jpg",
     "link": "bcsm.html"
   },
   {
     "id": 8,
     "title": "Slokas Applicable to Srila Prabhupad.",
+    "image": "images/shlokas.jpg",
     "link": "slokas.html"
   },
   {
     "id": 9,
     "title": "How can we Repay?",
+    "image": "images/who.jpg",
     "link": "repay.html"
   },
   {
     "id": 10,
     "title": "Meaning of Sādhu.",
+    "image": "images/sadhu.jpg",
     "link": "sadhu.html"
   },
   {
     "id": 11,
     "title": "SRILA PRABHUPĀD in ISKCON Thane.",
+    "image": "images/thane.jpg",
     "link": "thane.html"
   },
   {
     "id": 12,
     "title": "Bolo Sri Vrindāvan dhām ki! Jay!",
+    "image": "images/bolo.jpg",
     "link": "bolo.html"
   },
   {
     "id": 13,
     "title": "The Lord in His incarnation of Dhanvantari.",
+    "image": "images/dhanmmantri.jpg",
     "link": "dhanvantri.html"
   },
   {
     "id": 14,
     "title": "Srila Prabhupād ki! Jay!",
+    "image": "images/paramhansa.jpg",
     "link": "spjay.html"
   },
   {
     "id": 15,
     "title": "Oh Lord you are mercifully appeared in the land of Thane.",
+    "image": "images/jagannath.jpg",
     "link": "lthane.html"
   },
   {
     "id": 16,
     "title": "The Real Jagat-Guru.",
+    "image": "images/jagat.jpg",
     "link": "jagat.html"
   },
   {
     "id": 17,
     "title": "Sajjana.",
+    "image": "images/sajjan.jpg",
     "link": "sajjan.html"
   },
   {
     "id": 18,
     "title": "When He Takes Over!",
+    "image": "images/over.jpg",
     "link": "over.html"
   },
   {
     "id": 19,
     "title": "I should Stand For Who?",
+    "image": "images/stand.jpg",
     "link": "stand.html"
   },
   {
     "id": 20,
     "title": "'Before the creation there was only Nārāyaṇa.'",
+    "image": "images/isa.jpg",
     "link": "narayan.html"
   },
   {
     "id": 21,
     "title": "The Ācārya Of entire Universe!",
+    "image": "images/yellow.jpg",
     "link": "universe.html"
   },
   {
     "id": 22,
     "title": "Prabhupada is like the rising sun of Sri Chaitanya Mahaprabhu",
+    "image": "images/japan.jpg",
     "link": "japan.html"
   },
   {
     "id": 23,
     "title": "Lord Krsna Chandra's Chandra.",
+    "image": "images/chandra.jpg",
     "link": "chandra.html"
   },
   {
     "id": 24,
     "title": "8 Types of Prajalpa.",
+    "image": "images/prajalpa.jpg",
     "link": "prajalpa.html"
   },
   {
     "id": 26,
     "title": "The Timingila.",
+    "image": "images/timingal.jpg",
     "link": "timingal.html"
   },
   {
     "id": 27,
     "title": "Selected Quotes Of HDG Bhaktisiddhanta Saraswati Thakur Prabhupada.",
+    "image": "images/quotes.jpg",
     "link": "quotes.html"
   },
   {
     "id": 28,
     "title": "Ramakrishna mentally unstable paramhamsa.",
+    "image": "images/rm.jpg",
     "link": "rm.html"
   },
   {
     "id": 29,
     "title": "DON'T BECOME NEHRU!",
+    "image": "images/nehru.jpg",
     "link": "nehru.html"
   },
   {
     "id": 30,
     "title": "Prabhupād and His Kripa Murti.",
+    "image": "images/murti.jpg",
     "link": "murti.html"
   },
   {
     "id": 31,
     "title": "The decades of 1960's and 70's.",
+    "image": "images/decades.jpg",
     "link": "decades.html"
   },
   {
@@ -157,81 +187,97 @@
   {
     "id": 33,
     "title": "A woman should be addressed as 'mother.'",
+    "image": "images/mother.jpg",
     "link": "mother.html"
   },
   {
     "id": 34,
     "title": "This is Just one of many examples.",
+    "image": "images/example.jpg",
     "link": "example.html"
   },
   {
     "id": 35,
     "title": "This material world is fooling us.",
+    "image": "images/fool.jpg",
     "link": "fool.html"
   },
   {
     "id": 36,
     "title": "Jaya Prabhupāda! is not just a slogan or a part of Jaya dhvani.",
+    "image": "images/dhvani.jpg",
     "link": "dhvani.html"
   },
   {
     "id": 37,
     "title": "Srīla Prabhupāda you are lord of my life.",
+    "image": "images/life.jpg",
     "link": "life.html"
   },
   {
     "id": 38,
     "title": "Why You Glorify Srila Prabhupāda, so much?",
+    "image": "images/glorify.jpg",
     "link": "glorify.html"
   },
   {
     "id": 39,
     "title": "The Lord, who has assumed the form of a transcendental lion.",
+    "image": "images/lion.jpg",
     "link": "lion.html"
   },
   {
     "id": 40,
     "title": "Why you trust Śrīla Prabhupāda So much?",
+    "image": "images/trust.jpg",
     "link": "trust.html"
   },
   {
     "id": 41,
     "title": "SELL YOURSELF FOR KRSNA!",
+    "image": "images/sell.jpg",
     "link": "sell.html"
   },
   {
     "id": 42,
     "title": "Did you Offered your Obeisances today?",
+    "image": "images/obeisance.jpg",
     "link": "obeisance.html"
   },
   {
     "id": 43,
     "title": "Kirtan Week",
+    "image": "images/Kirtanweek.jpg",
     "link": "Kirtanweek.html"
   },
   {
     "id": 44,
     "title": "Sargal Singh is dead",
+    "image": "images/sargal.jpg",
     "link": "sargal.html"
   },
   {
     "id": 45,
     "title": "Problematic tunes",
+    "image": "images/tunes.jpg",
     "link": "tunes.html"
   },
   {
     "id": 46,
     "title": "The highest happiness",
+    "image": "images/highest.jpg",
     "link": "highest.html"
   },
   {
     "id": 47,
     "title": "How one does not become vaishnava even in assosiation of Devotees?",
+    "image": "images/snake.jpg",
     "link": "snake.html"
   },
   {
     "id": 48,
     "title": "Courage?",
+    "image": "images/Courage.jpg",
     "link": "Courage.html"
   }
 ]
