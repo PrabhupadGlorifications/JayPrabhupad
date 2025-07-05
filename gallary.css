@@ -293,6 +293,25 @@
     .filter-btn {
     font-size: 2.1rem;
     }
+    .card-actions button {
+        font-size: 1.6rem !important; /* increase icon size */
+        padding: 0.6rem !important;
+    }
+
+    .card-actions .like-count {
+        font-size: 1rem !important;
+    }
+
+    #modal-like-btn,
+    #modal-share-btn {
+        font-size: 1.8rem !important;
+        padding: 0.6rem !important;
+    }
+
+    #modal-like-btn i,
+    #modal-share-btn i {
+        font-size: 1.6rem !important;
+    }
 }
 
 /* Ensure card can show heart animation */
