@@ -38,16 +38,16 @@
                 ISKCON Vrindavan 50th anniversary, 6/4/25 <span class="count" id="ann-count">4</span>
             </button>
             <button class="filter-btn" data-filter="cb">
-                 Chaitanya Bhāgvata <span class="count" id="cb-count">3</span>
+                Chaitanya Bhāgvata <span class="count" id="cb-count">3</span>
             </button>
             <button class="filter-btn" data-filter="pms">
-                 Prabhupad With Maharaj Sanand <span class="count" id="pms-count">3</span>
+                Prabhupad With Maharaj Sanand <span class="count" id="pms-count">3</span>
             </button>
             <button class="filter-btn" data-filter="shave">
                 Prabhupad Shaving <span class="count" id="shave-count">8</span>
             </button>
             <button class="filter-btn" data-filter="km">
-                 Prabhupada at Kumbh Mela <span class="count" id="km-count">8</span>
+                Prabhupada at Kumbh Mela <span class="count" id="km-count">8</span>
             </button>
         </div>
 
@@ -64,10 +64,28 @@
         <button class="nav-btn next-btn" id="next-btn">&#8250;</button>
         <div class="modal-content">
             <img id="modal-img" class="modal-img" />
-            <video id="modal-video" class="modal-media" controls style="display: none; width: 100%; max-height: 80vh;"></video>
+            <video id="modal-video" class="modal-media" controls
+                style="display: none; width: 100%; max-height: 80vh;"></video>
             <div class="modal-info">
                 <div id="modal-title" class="photo-title"></div>
                 <div id="modal-description" class="photo-description"></div>
+                <div class="modal-info">
+                    <div id="modal-title" class="photo-title"></div>
+                    <div id="modal-description" class="photo-description"></div>
+
+                    <!-- 🔽 ADD THIS BELOW DESCRIPTION -->
+                    <div class="modal-actions flex items-center space-x-4 mt-2 justify-center">
+                        <button id="modal-like-btn"
+                            class="like-btn text-gray-500 text-xl hover:scale-110 transition-transform duration-200">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button id="modal-share-btn"
+                            class="share-btn text-gray-500 text-xl hover:scale-110 transition-transform duration-200">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
+                </div>
+
             </div>
 
         </div>

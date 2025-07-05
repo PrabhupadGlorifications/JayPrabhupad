@@ -5,7 +5,7 @@ const photoData = [
         title: "Acārya-śreshtha",
         category: "newyork",
     },
-     {
+    {
         image: "images/WhatsApp Image 2025-07-04 at 10.41.09 AM.jpeg",
         title: "Acārya-śreshtha",
         category: "newyork",
@@ -624,10 +624,10 @@ const photoData = [
         video: "images/document_6329900887921660112.mp4",
         type: "video",
         title: "Prabhupād devotees are everywhere! 🚩😂",
-        description: "(Yes but don't go to watch the movie now..🙂 Prabhupād will not like it) ⚠Warning ⚠" ,
+        description: "(Yes but don't go to watch the movie now..🙂 Prabhupād will not like it) ⚠Warning ⚠",
         category: "quotes",
     },
-     {
+    {
         description: "'Great unalloyed devotees of the Lord are compassionate toward the fallen, and therefore they travel all over the world with the mission of bringing souls back to Godhead, back to home.'",
         image: "images/photo_6327649088564216351_y (1).jpg",
         category: "newyork",
@@ -674,7 +674,7 @@ const photoData = [
         image: "images/photo_6327649088564216294_x (2).jpg",
         category: "newyork",
     },
-   {
+    {
         description: "For them I am always ready to come back from Goloka Vrindaban.",
         image: "images/photo_6327649088564216278_y (2).jpg",
         category: "newyork",
@@ -780,7 +780,7 @@ function createPhotoCard(photo) {
     const card = document.createElement('div');
     card.className = 'photo-card';
     card.dataset.category = photo.category;
-    card.onclick = () => openModal(photo);
+    card.style.position = 'relative'; // ensure overlay works
 
     const hasContent = photo.title || photo.description;
 
@@ -798,12 +798,86 @@ function createPhotoCard(photo) {
             <div class="photo-content">
                 ${photo.title ? `<div class="photo-title">${photo.title}</div>` : ''}
                 ${photo.description ? `<div class="photo-description">${photo.description}</div>` : ''}
+                
+                <div class="card-actions flex items-center space-x-4 mt-2">
+                    <button class="like-btn text-gray-500 text-xl hover:scale-110 transition-transform duration-200">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="share-btn text-gray-500 text-xl hover:scale-110 transition-transform duration-200">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
             </div>
         ` : ''}
     `;
 
+    const likeBtn = card.querySelector('.like-btn');
+    const shareBtn = card.querySelector('.share-btn');
+    const mediaElement = card.querySelector('.photo-img, video');
+
+    // LIKE Button click
+    likeBtn.addEventListener('click', () => {
+        const heartIcon = likeBtn.querySelector('i');
+        heartIcon.classList.toggle('fas');
+        heartIcon.classList.toggle('far');
+        likeBtn.classList.toggle('text-red-500');
+    });
+
+    // SHARE Button
+    shareBtn.addEventListener('click', async () => {
+        const shareData = {
+            title: photo.title || "Photo",
+            text: photo.description || "Check out this photo",
+            url: window.location.href
+        };
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+            } catch (err) {
+                console.error('Sharing failed:', err);
+            }
+        } else {
+            alert('Share not supported in your browser.');
+        }
+    });
+
+    // Single Click => open modal
+    mediaElement.addEventListener('click', () => {
+        openModal(photo);
+    });
+
+    // Double Click => like
+    mediaElement.addEventListener('dblclick', () => {
+        const heartIcon = likeBtn.querySelector('i');
+        const isLiked = heartIcon.classList.contains('fas');
+
+        if (!isLiked) {
+            heartIcon.classList.add('fas');
+            heartIcon.classList.remove('far');
+            likeBtn.classList.add('text-red-500');
+
+            // Floating Heart animation
+            const heartOverlay = document.createElement('div');
+            heartOverlay.innerHTML = `<i class="fas fa-heart text-red-500 text-6xl"></i>`;
+            heartOverlay.style.position = 'absolute';
+            heartOverlay.style.top = '50%';
+            heartOverlay.style.left = '50%';
+            heartOverlay.style.transform = 'translate(-50%, -50%)';
+            heartOverlay.style.pointerEvents = 'none';
+            heartOverlay.style.opacity = '0.8';
+            heartOverlay.style.zIndex = '10';
+            card.appendChild(heartOverlay);
+
+            setTimeout(() => {
+                heartOverlay.remove();
+            }, 700);
+        }
+    });
+
     return card;
 }
+
 
 
 // Setup event listeners
@@ -906,6 +980,42 @@ function updateModalContent(photo) {
     }
 
     modalCounter.textContent = `${currentPhotoIndex + 1} / ${filteredPhotos.length}`;
+    // Modal Like Button
+    const modalLikeBtn = document.getElementById('modal-like-btn');
+    const modalHeartIcon = modalLikeBtn.querySelector('i');
+
+    modalLikeBtn.onclick = () => {
+        modalHeartIcon.classList.toggle('fas');
+        modalHeartIcon.classList.toggle('far');
+        modalLikeBtn.classList.toggle('text-red-500');
+    };
+
+    // Modal Share Button
+    const modalShareBtn = document.getElementById('modal-share-btn');
+    modalShareBtn.onclick = async () => {
+        const shareData = {
+            title: photo.title || "Photo",
+            text: photo.description || "Check out this photo",
+            url: window.location.href
+        };
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+            } catch (err) {
+                console.error('Sharing failed:', err);
+                alert("Sharing failed.");
+            }
+        } else {
+            try {
+                await navigator.clipboard.writeText(shareData.url);
+                alert("Link copied to clipboard!");
+            } catch {
+                alert("Share not supported.");
+            }
+        }
+    };
+
 }
 
 
