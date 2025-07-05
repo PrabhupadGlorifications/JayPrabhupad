@@ -675,15 +675,16 @@ html {
 .subscribe-box {
   background: #f0f0f0;
   padding: 20px;
-  max-width: 400px;
+  max-width: 90%;
   margin: 30px auto;
   border-radius: 12px;
   border-bottom: 3px solid #f5a623;
   border-top: 3px solid #f5a623;
+  font-size: 22px;
 }
 
 .subscribe-box h2 {
-  font-size: 22px;
+  font-size: 30px;
   margin-bottom: 10px;
 }
 
@@ -694,10 +695,11 @@ html {
   border-radius: 6px;
   border: 1px solid #ccc;
   border-bottom: 3px solid #f5a623;
+  font-size: 22px;
 }
 
 .subscribe-box .terms {
-  font-size: 14px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
@@ -708,6 +710,7 @@ html {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 22px;
 }
 
 .subscribe-box button:hover {
@@ -716,6 +719,6 @@ html {
 
 #subscribeMessage {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 22px;
   color: green;
 }

@@ -58,19 +58,7 @@
     </div>
   </div>
 
-  <div class="subscribe-box">
-    <h2>Subscribe for Updates</h2>
-    <p>Get notified whenever we post new photos, pastimes, or articles.</p>
-    <form id="subscribeForm">
-      <input type="email" id="subscriberEmail" placeholder="Enter your email" required />
-      <div class="terms">
-        <input type="checkbox" id="agreeTerms" required />
-        <label for="agreeTerms">I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a></label>
-      </div>
-      <button type="submit">Subscribe</button>
-      <div id="subscribeMessage"></div>
-    </form>
-  </div>
+ 
 
 
   <div id="footer-container"></div>
@@ -82,55 +70,7 @@
   <script src="alist.js"></script>
   <script src="plist.js"></script>
 
-  <!-- Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-database-compat.js"></script>
-
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyCWxaABz6OSVfSniGEMdjbrWJDgmNRlzNQ",
-      authDomain: "pgsite1957.firebaseapp.com",
-      databaseURL: "https://pgsite1957-default-rtdb.firebaseio.com",
-      projectId: "pgsite1957",
-      storageBucket: "pgsite1957.firebasestorage.app",
-      messagingSenderId: "464761905973",
-      appId: "1:464761905973:web:c0d182ff433b029f8be27c"
-    };
-
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-
-    document.getElementById("subscribeForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const email = document.getElementById("subscriberEmail").value.trim();
-      const agreed = document.getElementById("agreeTerms").checked;
-      const messageDiv = document.getElementById("subscribeMessage");
-
-      if (!email || !agreed) {
-        messageDiv.textContent = "Please enter your email and agree to the terms.";
-        messageDiv.style.color = "red";
-        return;
-      }
-
-      const ref = db.ref("subscribers").push();
-      ref.set({
-        email: email,
-        agreed: agreed,
-        timestamp: new Date().toISOString()
-      })
-        .then(() => {
-          messageDiv.textContent = "Thank you for subscribing!";
-          messageDiv.style.color = "green";
-          document.getElementById("subscribeForm").reset();
-        })
-        .catch((error) => {
-          console.error("Error saving subscriber:", error);
-          messageDiv.textContent = "There was an error. Please try again.";
-          messageDiv.style.color = "red";
-        });
-    });
-  </script>
+  
 
 
 </body>
