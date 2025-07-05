@@ -192,6 +192,7 @@ footer {
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #000000 100%);
   position: relative;
   overflow: hidden;
+  border-top: 3px solid #f5a623;
 }
 
 footer::before {
@@ -668,4 +669,53 @@ html {
 
 .arrow {
   text-align: center;
+}
+
+
+.subscribe-box {
+  background: #f0f0f0;
+  padding: 20px;
+  max-width: 400px;
+  margin: 30px auto;
+  border-radius: 12px;
+  border-bottom: 3px solid #f5a623;
+  border-top: 3px solid #f5a623;
+}
+
+.subscribe-box h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.subscribe-box input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  border-bottom: 3px solid #f5a623;
+}
+
+.subscribe-box .terms {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.subscribe-box button {
+  background: #4caf50;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.subscribe-box button:hover {
+  background: #388e3c;
+}
+
+#subscribeMessage {
+  margin-top: 10px;
+  font-size: 14px;
+  color: green;
 }
