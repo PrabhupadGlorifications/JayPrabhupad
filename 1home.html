@@ -82,9 +82,9 @@
   <script src="alist.js"></script>
   <script src="plist.js"></script>
 
-<!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-database-compat.js"></script>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-database-compat.js"></script>
 
   <script>
     const firebaseConfig = {
@@ -99,6 +99,37 @@
 
     firebase.initializeApp(firebaseConfig);
     const db = firebase.database();
+
+    document.getElementById("subscribeForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById("subscriberEmail").value.trim();
+      const agreed = document.getElementById("agreeTerms").checked;
+      const messageDiv = document.getElementById("subscribeMessage");
+
+      if (!email || !agreed) {
+        messageDiv.textContent = "Please enter your email and agree to the terms.";
+        messageDiv.style.color = "red";
+        return;
+      }
+
+      const ref = db.ref("subscribers").push();
+      ref.set({
+        email: email,
+        agreed: agreed,
+        timestamp: new Date().toISOString()
+      })
+        .then(() => {
+          messageDiv.textContent = "Thank you for subscribing!";
+          messageDiv.style.color = "green";
+          document.getElementById("subscribeForm").reset();
+        })
+        .catch((error) => {
+          console.error("Error saving subscriber:", error);
+          messageDiv.textContent = "There was an error. Please try again.";
+          messageDiv.style.color = "red";
+        });
+    });
   </script>
 
 
