@@ -49,5 +49,28 @@ addSearchFunctionality('writingsSearch', 'writingsList');
 addSearchFunctionality('pastimesSearch', 'pastimesList');
 
 
+const form = document.getElementById("subscribeForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById("subscriberEmail").value;
+  const agreed = document.getElementById("agreeCheckbox").checked;
+
+  if (!email || !agreed) {
+    alert("Please enter your email and agree to the terms.");
+    return;
+  }
+
+  const subscriberRef = db.ref("subscribers").push();
+  subscriberRef.set({
+    email: email,
+    agreed: agreed,
+    timestamp: new Date().toISOString()
+  });
+
+  alert("Thank you for subscribing!");
+  form.reset();
+});
 
 

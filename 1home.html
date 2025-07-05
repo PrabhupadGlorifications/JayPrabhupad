@@ -81,7 +81,25 @@
   <script src="footer.js"></script>
   <script src="alist.js"></script>
   <script src="plist.js"></script>
-  <script src="gallary.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-database-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCWxaABz6OSVfSniGEMdjbrWJDgmNRlzNQ",
+      authDomain: "pgsite1957.firebaseapp.com",
+      databaseURL: "https://pgsite1957-default-rtdb.firebaseio.com",
+      projectId: "pgsite1957",
+      storageBucket: "pgsite1957.firebasestorage.app",
+      messagingSenderId: "464761905973",
+      appId: "1:464761905973:web:c0d182ff433b029f8be27c"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+  </script>
+
 
 </body>
 
