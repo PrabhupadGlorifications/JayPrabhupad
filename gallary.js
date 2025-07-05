@@ -1,6 +1,6 @@
 const photoData = [
     // Singles Category
-    {   
+    {
         id: "shresth",
         image: "images/WhatsApp Image 2025-07-04 at 10.41.09 AM (1).jpeg",
         title: "Acārya-śreshtha",
@@ -129,6 +129,7 @@ const photoData = [
         category: "newyork",
     },
     {
+        id: "gauridevi",
         image: "images/photo_6098312274637865755_y (1).jpg",
         description: "Srila Prabhupada with Gauri Devi Dasi. July 18th 1971, ISKCON  Boston Temple, 38 North Beacon Street.",
         category: "newyork",
@@ -702,12 +703,15 @@ const filterBtns = document.querySelectorAll('.filter-btn');
 const photosGrid = document.getElementById('photos-grid');
 const modal = document.getElementById('modal');
 const modalImg = document.getElementById('modal-img');
+const modalVideo = document.getElementById('modal-video');
 const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
 const modalCounter = document.getElementById('modal-counter');
 const closeModal = document.querySelector('.close-modal');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
+const modalLikeBtn = document.getElementById('modal-like-btn');
+const modalHeartIcon = modalLikeBtn.querySelector('i');
 const noResults = document.getElementById('no-results');
 
 let currentFilter = 'all';
@@ -722,21 +726,13 @@ function updateFilteredPhotos() {
     }
 }
 
+// Initialize the gallery
 function initGallery() {
     updateCounts();
     updateFilteredPhotos();
     renderFilteredPhotos();
     setupEventListeners();
     addScrollAnimations();
-}
-
-function filterPhotos(filter, btn) {
-    currentFilter = filter;
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    updateFilteredPhotos();
-    renderFilteredPhotos();
-    noResults.style.display = filteredPhotos.length === 0 ? 'block' : 'none';
 }
 
 function updateCounts() {
@@ -774,61 +770,90 @@ function createPhotoCard(photo) {
     card.dataset.category = photo.category;
     card.style.position = 'relative';
 
+    const isVideo = photo.type === 'video';
     const hasContent = photo.title || photo.description;
-    let mediaHTML = photo.type === 'video'
+
+    const mediaHTML = isVideo
         ? `<video class="photo-img" src="${photo.video}" muted autoplay loop playsinline></video>`
         : `<img src="${photo.image}" alt="${photo.title || 'Photo'}" class="photo-img">`;
 
     card.innerHTML = `
         ${mediaHTML}
         ${hasContent ? `
-            <div class="photo-content">
-                ${photo.title ? `<div class="photo-title">${photo.title}</div>` : ''}
-                ${photo.description ? `<div class="photo-description">${photo.description}</div>` : ''}
-                <div class="card-actions flex items-center space-x-4 mt-2">
-                    <button class="like-btn text-gray-500 text-xl hover:scale-110 transition-transform duration-200">
-                        <i class="far fa-heart"></i> <span class="like-count text-sm ml-1">0</span>
-                    </button>
-                    <button class="share-btn text-gray-500 text-xl hover:scale-110 transition-transform duration-200">
-                        <i class="fas fa-share-alt"></i>
-                    </button>
-                </div>
+        <div class="photo-content">
+            ${photo.title ? `<div class="photo-title">${photo.title}</div>` : ''}
+            ${photo.description ? `<div class="photo-description">${photo.description}</div>` : ''}
+            <div class="card-actions flex items-center space-x-4 mt-2">
+                <button class="like-btn text-gray-500 text-xl hover:scale-110 transition-transform duration-200">
+                    <i class="far fa-heart"></i>
+                    <span class="like-count text-sm ml-1">0</span>
+                </button>
+                <button class="share-btn text-gray-500 text-xl hover:scale-110 transition-transform duration-200">
+                    <i class="fas fa-share-alt"></i>
+                </button>
             </div>
-        ` : ''}
+        </div>` : ''}
     `;
 
     const likeBtn = card.querySelector('.like-btn');
     const heartIcon = likeBtn.querySelector('i');
     const likeCountEl = likeBtn.querySelector('.like-count');
-    const likeRef = db.ref('likes/' + photo.id);
 
+    const likeRef = db.ref('likes/' + photo.id);
+    const isLiked = localStorage.getItem('liked_' + photo.id) === 'true';
+
+    // Sync initial heart color
+    if (isLiked) {
+        heartIcon.classList.add('fas', 'text-red-500');
+        heartIcon.classList.remove('far');
+        likeBtn.classList.add('text-red-500');
+    }
+
+    // Firebase real-time count
     likeRef.on('value', snapshot => {
         const count = snapshot.val() || 0;
         likeCountEl.textContent = count;
-        if (currentPhotoIndex !== undefined && filteredPhotos[currentPhotoIndex]?.id === photo.id) {
-            const modalLikeCount = document.getElementById('modal-like-count');
-            if (modalLikeCount) modalLikeCount.textContent = count;
+    });
+
+    // Like toggle
+    likeBtn.addEventListener('click', () => {
+        const currentlyLiked = localStorage.getItem('liked_' + photo.id) === 'true';
+
+        if (currentlyLiked) {
+            heartIcon.classList.remove('fas', 'text-red-500');
+            heartIcon.classList.add('far');
+            likeBtn.classList.remove('text-red-500');
+            likeRef.transaction(current => Math.max((current || 1) - 1, 0));
+            localStorage.setItem('liked_' + photo.id, 'false');
+        } else {
+            heartIcon.classList.add('fas', 'text-red-500');
+            heartIcon.classList.remove('far');
+            likeBtn.classList.add('text-red-500');
+            likeRef.transaction(current => (current || 0) + 1);
+            localStorage.setItem('liked_' + photo.id, 'true');
         }
     });
 
-    likeBtn.addEventListener('click', () => {
-        heartIcon.classList.add('fas');
-        heartIcon.classList.remove('far');
-        likeBtn.classList.add('text-red-500');
-        likeRef.transaction(current => (current || 0) + 1);
+    // Click to open modal
+    card.addEventListener('click', (e) => {
+        if (!e.target.closest('.like-btn') && !e.target.closest('.share-btn')) {
+            openModal(photo);
+        }
     });
-
-    const media = card.querySelector('.photo-img, video');
-    if (media) {
-        media.addEventListener('click', () => openModal(photo));
-    }
 
     return card;
 }
 
+function openModal(photo) {
+    currentPhotoIndex = filteredPhotos.findIndex(p => p.id === photo.id);
+    updateModalContent(photo);
+    updateNavigationButtons();
+    modal.style.display = 'block';
+}
+
 function updateModalContent(photo) {
-    const modalVideo = document.getElementById('modal-video');
     const isVideo = photo.type === 'video';
+    const isLiked = localStorage.getItem('liked_' + photo.id) === 'true';
 
     if (isVideo) {
         modalImg.style.display = 'none';
@@ -837,46 +862,40 @@ function updateModalContent(photo) {
         modalVideo.load();
         modalVideo.play();
     } else {
-        modalImg.src = photo.image;
-        modalImg.style.display = 'block';
         modalVideo.pause();
         modalVideo.style.display = 'none';
+        modalImg.style.display = 'block';
+        modalImg.src = photo.image;
     }
 
     modalTitle.textContent = photo.title || '';
     modalDescription.textContent = photo.description || '';
     modalCounter.textContent = `${currentPhotoIndex + 1} / ${filteredPhotos.length}`;
 
-    const modalLikeBtn = document.getElementById('modal-like-btn');
-    const modalHeartIcon = modalLikeBtn.querySelector('i');
-    let modalLikeCount = document.getElementById('modal-like-count');
-
-    if (!modalLikeCount) {
-        modalLikeCount = document.createElement('span');
-        modalLikeCount.id = 'modal-like-count';
-        modalLikeCount.className = 'text-sm ml-1';
-        modalLikeBtn.appendChild(modalLikeCount);
-    }
+    // Sync like icon in modal
+    modalHeartIcon.className = isLiked ? 'fas fa-heart text-red-500' : 'far fa-heart';
+    modalLikeBtn.classList.toggle('text-red-500', isLiked);
 
     const likeRef = db.ref('likes/' + photo.id);
-    likeRef.on('value', snapshot => {
-        const count = snapshot.val() || 0;
-        modalLikeCount.textContent = count;
-    });
 
     modalLikeBtn.onclick = () => {
-        modalHeartIcon.classList.add('fas');
-        modalHeartIcon.classList.remove('far');
-        modalLikeBtn.classList.add('text-red-500');
-        likeRef.transaction(current => (current || 0) + 1);
-    };
-}
+        const currentlyLiked = localStorage.getItem('liked_' + photo.id) === 'true';
 
-function openModal(photo) {
-    currentPhotoIndex = filteredPhotos.findIndex(p => p.id === photo.id);
-    updateModalContent(photo);
-    updateNavigationButtons();
-    modal.style.display = 'block';
+        if (currentlyLiked) {
+            modalHeartIcon.className = 'far fa-heart';
+            modalLikeBtn.classList.remove('text-red-500');
+            likeRef.transaction(current => Math.max((current || 1) - 1, 0));
+            localStorage.setItem('liked_' + photo.id, 'false');
+        } else {
+            modalHeartIcon.className = 'fas fa-heart text-red-500';
+            modalLikeBtn.classList.add('text-red-500');
+            likeRef.transaction(current => (current || 0) + 1);
+            localStorage.setItem('liked_' + photo.id, 'true');
+        }
+
+        // Re-render photo cards to sync heart icon there
+        renderFilteredPhotos();
+    };
 }
 
 function updateNavigationButtons() {
@@ -900,31 +919,6 @@ function showNext() {
     }
 }
 
-function setupEventListeners() {
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const filter = btn.dataset.filter;
-            filterPhotos(filter, btn);
-        });
-    });
-
-    closeModal.addEventListener('click', () => modal.style.display = 'none');
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) modal.style.display = 'none';
-    });
-
-    prevBtn.addEventListener('click', showPrevious);
-    nextBtn.addEventListener('click', showNext);
-
-    document.addEventListener('keydown', (e) => {
-        if (modal.style.display === 'block') {
-            if (e.key === 'Escape') modal.style.display = 'none';
-            else if (e.key === 'ArrowLeft') showPrevious();
-            else if (e.key === 'ArrowRight') showNext();
-        }
-    });
-}
-
 function addScrollAnimations() {
     const cards = document.querySelectorAll('.photo-card');
     const observer = new IntersectionObserver((entries) => {
@@ -937,5 +931,41 @@ function addScrollAnimations() {
     cards.forEach(card => observer.observe(card));
 }
 
+function setupEventListeners() {
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.dataset.filter;
+            currentFilter = filter;
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            updateFilteredPhotos();
+            renderFilteredPhotos();
+            noResults.style.display = filteredPhotos.length === 0 ? 'block' : 'none';
+        });
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    modal.addEventListener('click', e => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    prevBtn.addEventListener('click', showPrevious);
+    nextBtn.addEventListener('click', showNext);
+
+    document.addEventListener('keydown', e => {
+        if (modal.style.display === 'block') {
+            if (e.key === 'Escape') modal.style.display = 'none';
+            if (e.key === 'ArrowLeft') showPrevious();
+            if (e.key === 'ArrowRight') showNext();
+        }
+    });
+}
+
+// Run when page is ready
 document.addEventListener('DOMContentLoaded', initGallery);
 
