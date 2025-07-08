@@ -182,6 +182,7 @@
   {
     "id": 32,
     "title": "Pranamāmi Sada Prabhupād Padam.",
+    "image": "images/pranam.jpg",
     "link": "right.html"
   },
   {
@@ -241,7 +242,7 @@
   {
     "id": 43,
     "title": "Kirtan Week",
-    "image": "images/kirtanweek.jpg",
+    "image": "images/Kirtanweek.jpg",
     "link": "kirtanweek.html"
   },
   {
