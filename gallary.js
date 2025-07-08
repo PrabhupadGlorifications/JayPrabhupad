@@ -874,6 +874,141 @@ function renderFilteredPhotos() {
     addScrollAnimations();
 }
 
+// Enhanced share function
+async function sharePhotoContent(photo) {
+    try {
+        const shareUrl = window.location.href.split('#')[0] + `#${photo.id}`;
+        
+        // Check if Web Share API with files is supported
+        if (navigator.share && navigator.canShare) {
+            const isVideo = photo.type === 'video';
+            const mediaUrl = isVideo ? photo.video : photo.image;
+            
+            try {
+                // Fetch the media file
+                const response = await fetch(mediaUrl);
+                const blob = await response.blob();
+                
+                // Create a file from the blob
+                const fileName = `${photo.title || 'photo'}.${isVideo ? 'mp4' : 'jpg'}`;
+                const file = new File([blob], fileName, { type: blob.type });
+                
+                // Prepare share data with file
+                const shareData = {
+                    title: photo.title || 'Photo from Gallery',
+                    text: photo.description ? `${photo.description}\n\n${shareUrl}` : shareUrl,
+                    files: [file]
+                };
+                
+                // Check if sharing files is supported
+                if (navigator.canShare(shareData)) {
+                    await navigator.share(shareData);
+                    return;
+                }
+            } catch (fileError) {
+                console.log('File sharing failed, trying text share:', fileError);
+            }
+        }
+        
+        // Fallback to Web Share API without files
+        if (navigator.share) {
+            const shareData = {
+                title: photo.title || 'Photo from Gallery',
+                text: photo.description ? `${photo.description}\n\n${shareUrl}` : shareUrl,
+                url: shareUrl
+            };
+            
+            try {
+                await navigator.share(shareData);
+                return;
+            } catch (shareError) {
+                console.log('Web Share API failed, trying clipboard:', shareError);
+            }
+        }
+        
+        // Fallback to clipboard
+        const shareText = `${photo.title || 'Photo from Gallery'}\n${photo.description || ''}\n${shareUrl}`;
+        
+        try {
+            await navigator.clipboard.writeText(shareText);
+            showShareNotification('Content copied to clipboard!');
+        } catch (clipboardError) {
+            // Final fallback - create a downloadable link
+            downloadMediaWithInfo(photo);
+        }
+        
+    } catch (error) {
+        console.error('Share failed:', error);
+        showShareNotification('Share failed. Please try again.');
+    }
+}
+
+// Function to download media with info
+function downloadMediaWithInfo(photo) {
+    const isVideo = photo.type === 'video';
+    const mediaUrl = isVideo ? photo.video : photo.image;
+    
+    // Create info text file
+    const infoText = `Title: ${photo.title || 'Untitled'}\n\nDescription: ${photo.description || 'No description'}\n\nURL: ${window.location.href.split('#')[0]}#${photo.id}`;
+    const infoBlob = new Blob([infoText], { type: 'text/plain' });
+    const infoUrl = URL.createObjectURL(infoBlob);
+    
+    // Download info file
+    const infoLink = document.createElement('a');
+    infoLink.href = infoUrl;
+    infoLink.download = `${photo.title || 'photo'}_info.txt`;
+    infoLink.click();
+    URL.revokeObjectURL(infoUrl);
+    
+    // Download media file
+    const mediaLink = document.createElement('a');
+    mediaLink.href = mediaUrl;
+    mediaLink.download = `${photo.title || 'photo'}.${isVideo ? 'mp4' : 'jpg'}`;
+    mediaLink.click();
+    
+    showShareNotification('Files downloaded successfully!');
+}
+
+// Show notification
+function showShareNotification(message) {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.textContent = message;
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #333;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        z-index: 10000;
+        font-size: 14px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        animation: slideIn 0.3s ease-out;
+    `;
+    
+    // Add animation keyframes if not already added
+    if (!document.getElementById('notification-styles')) {
+        const style = document.createElement('style');
+        style.id = 'notification-styles';
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    document.body.appendChild(notification);
+    
+    // Remove notification after 3 seconds
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}
+
 function createPhotoCard(photo) {
     const card = document.createElement('div');
     card.className = 'photo-card';
@@ -941,32 +1076,11 @@ function createPhotoCard(photo) {
         }
     });
 
-    // Share button functionality
+    // Enhanced share button functionality
     const shareBtn = card.querySelector('.share-btn');
     shareBtn.addEventListener('click', async (e) => {
         e.stopPropagation(); // Don't trigger modal
-
-        const shareUrl = window.location.href.split('#')[0] + `#${photo.id}`;
-        const shareData = {
-            title: photo.title || 'Photo from Gallery',
-            text: photo.description || '',
-            url: shareUrl
-        };
-
-        if (navigator.share) {
-            try {
-                await navigator.share(shareData);
-            } catch (err) {
-                console.error('Share failed:', err);
-            }
-        } else {
-            try {
-                await navigator.clipboard.writeText(shareUrl);
-                alert("Link copied to clipboard!");
-            } catch (err) {
-                alert("Failed to copy the link.");
-            }
-        }
+        await sharePhotoContent(photo);
     });
 
     // Modal open
@@ -978,7 +1092,6 @@ function createPhotoCard(photo) {
 
     return card;
 }
-
 
 function openModal(photo) {
     currentPhotoIndex = filteredPhotos.findIndex(p => p.id === photo.id);
@@ -1032,31 +1145,11 @@ function updateModalContent(photo) {
         // Re-render photo cards to sync heart icon there
         renderFilteredPhotos();
     };
-    // Share from modal
+    
+    // Enhanced share from modal
     modalShareBtn.onclick = async () => {
-        const shareUrl = window.location.href.split('#')[0] + `#${photo.id}`;
-        const shareData = {
-            title: photo.title || 'Photo from Gallery',
-            text: photo.description || '',
-            url: shareUrl
-        };
-
-        if (navigator.share) {
-            try {
-                await navigator.share(shareData);
-            } catch (err) {
-                console.error('Modal share failed:', err);
-            }
-        } else {
-            try {
-                await navigator.clipboard.writeText(shareUrl);
-                alert("Link copied to clipboard!");
-            } catch (err) {
-                alert("Failed to copy the link.");
-            }
-        }
+        await sharePhotoContent(photo);
     };
-
 }
 
 function updateNavigationButtons() {
@@ -1129,4 +1222,3 @@ function setupEventListeners() {
 
 // Run when page is ready
 document.addEventListener('DOMContentLoaded', initGallery);
-
